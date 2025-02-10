@@ -119,18 +119,18 @@
 	specstats_f = list("strength" = -2, "perception" = 2, "intelligence" = 2, "constitution" = -1, "endurance" = -1, "speed" = 2, "fortune" = 0)
 
 /datum/species/elf/snow/get_skin_list()
-    return sortList(list(
-        "Snow Elf" = SKIN_COLOR_SNOW_ELF // - (Pale)
-        "Plain Elf" = SKIN_COLOR_PLAIN_ELF, // - (White 2)
-        "Mountain Elf" = SKIN_COLOR_MOUNTAIN_ELF, // - (White 3)
-        "Coastal Elf" = SKIN_COLOR_COASTAL_ELF, // - (White 4)
-        "Wood Elf" = SKIN_COLOR_WOOD_ELF, // - (Mediterranean 1)
-        "Sea Elf" = SKIN_COLOR_SEA_ELF, // - (Mediterranean 2)
-        "Jungle Elf" = SKIN_COLOR_JUNGLE_ELF, // - (Latin)
-        "Savannah Elf" = SKIN_COLOR_SAVANNAH_ELF, // - (Middle-Eastern)
-        "Sand Elf" = SKIN_COLOR_SAND_ELF, // - (Black 1)
-        "Crimson Elf" = SKIN_COLOR_CRIMSON_ELF, // - (Black2)
-    ))
+	return sortList(list(
+	"Snow Elf" = SKIN_COLOR_SNOW_ELF // - (Pale)
+	"Plain Elf" = SKIN_COLOR_PLAIN_ELF, // - (White 2)
+	"Mountain Elf" = SKIN_COLOR_MOUNTAIN_ELF, // - (White 3)
+	"Coastal Elf" = SKIN_COLOR_COASTAL_ELF, // - (White 4)
+	"Wood Elf" = SKIN_COLOR_WOOD_ELF, // - (Mediterranean 1)
+	"Sea Elf" = SKIN_COLOR_SEA_ELF, // - (Mediterranean 2)
+	"Jungle Elf" = SKIN_COLOR_JUNGLE_ELF, // - (Latin)
+	"Savannah Elf" = SKIN_COLOR_SAVANNAH_ELF, // - (Middle-Eastern)
+	"Sand Elf" = SKIN_COLOR_SAND_ELF, // - (Black 1)
+	"Crimson Elf" = SKIN_COLOR_CRIMSON_ELF, // - (Black2)
+	))
 
 // =================================================================================
 /datum/species/human/northern
@@ -221,14 +221,14 @@
 	specstats_f = list("strength" = -1, "perception" = 2, "intelligence" = 0, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = 0)
 
 /datum/species/human/halfelf/get_skin_list()
-    return sortList(list(
-        "Timber-Gronn" = SKIN_COLOR_TIMBER_GRONN, // - (White 1)
-        "Solar-Hue" = SKIN_COLOR_SOLAR_HUE, // - (White 2)
-        "Walnut-Stine" = SKIN_COLOR_WALNUT_STINE, // - (White 3)
-        "Amber-Stained" = SKIN_COLOR_AMBER_STAINED, // - (White 4)
-        "Joshua-Aligned" = SKIN_COLOR_JOSHUA_ALIGNED, // - (Middle-Eastern)
-        "Arid-Birthed" = SKIN_COLOR_ARID_BIRTHED, // - (Black)
-    ))
+	return sortList(list(
+		"Timber-Gronn" = SKIN_COLOR_TIMBER_GRONN, // - (White 1)
+    	"Solar-Hue" = SKIN_COLOR_SOLAR_HUE, // - (White 2)
+		"Walnut-Stine" = SKIN_COLOR_WALNUT_STINE, // - (White 3)
+		"Amber-Stained" = SKIN_COLOR_AMBER_STAINED, // - (White 4)
+		"Joshua-Aligned" = SKIN_COLOR_JOSHUA_ALIGNED, // - (Middle-Eastern)
+		"Arid-Birthed" = SKIN_COLOR_ARID_BIRTHED, // - (Black)
+	))
 
 // =================================================================================
 /datum/species/halforc
