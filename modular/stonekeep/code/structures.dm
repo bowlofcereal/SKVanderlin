@@ -26,6 +26,15 @@
 | Tables |
 \-------*/
 
+/obj/structure/table/wood/plain
+	icon = 'modular/stonekeep/icons/tables.dmi'
+
+/obj/structure/table/wood/plain_alt
+	icon = 'modular/stonekeep/icons/tables.dmi'
+
+/obj/structure/table/wood/reinforced_alt
+	icon = 'modular/stonekeep/icons/tables.dmi'
+
 /obj/structure/table/vtable // modify with varedit for map1 big one
 	icon = 'modular/stonekeep/icons/tables.dmi'
 
