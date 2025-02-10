@@ -159,7 +159,6 @@
 	OFFSET_NECK_F = list(0,-1), OFFSET_MOUTH_F = list(0,-1), OFFSET_PANTS_F = list(0,0), \
 	OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,0))
 
-
 /datum/species/human/northern/random_name(gender,unique,lastname)
 	var/randname
 	if(unique)
@@ -223,7 +222,7 @@
 /datum/species/human/halfelf/get_skin_list()
 	return sortList(list(
 		"Timber-Gronn" = SKIN_COLOR_TIMBER_GRONN, // - (White 1)
-    	"Solar-Hue" = SKIN_COLOR_SOLAR_HUE, // - (White 2)
+		"Solar-Hue" = SKIN_COLOR_SOLAR_HUE, // - (White 2)
 		"Walnut-Stine" = SKIN_COLOR_WALNUT_STINE, // - (White 3)
 		"Amber-Stained" = SKIN_COLOR_AMBER_STAINED, // - (White 4)
 		"Joshua-Aligned" = SKIN_COLOR_JOSHUA_ALIGNED, // - (Middle-Eastern)
