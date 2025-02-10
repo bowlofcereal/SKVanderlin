@@ -1,9 +1,8 @@
-/* * * * * * * * * * * **
- *						*
- *		 Racism			*
- *						*
- *						*
- * * * * * * * * * * * **/
+/* * * * * * * **
+ *				*
+ *	 Racism		*
+ *				*
+ * * * * * * * * **/
 
 // =================================================================================
 /datum/species/elf/dark
@@ -17,7 +16,7 @@
 	stitchface, zombie or corpsewalker are most commonly thrown out by the elder races \
 	Dark Elves tend to be extremely arrogant of others plights, with selfishness \
 	being seen as a massive boon in their societies, leading to storng rivalries among their enclaves.\
- 	\
+	\
 	THIS IS A SHUNNED RACE. EXPECT A MORE DIFFICULT EXPERIENCE."
 
 	specstats = list("strength" = -1, "perception" = -1, "intelligence" = 1, "constitution" = 0, "endurance" = 1, "speed" = 2, "fortune" = 0)
