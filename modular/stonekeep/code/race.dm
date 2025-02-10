@@ -54,15 +54,15 @@
 	but is often also the cause of endless bickering and infighting over minute details. \
 	Dwarves are hearty and stout but not known for their speed or eyesight..."
 
-	specstats = list("strength" = 1, "perception" = -2, "intelligence" = 0, "constitution" = 3, "endurance" = 2, "speed" = -1, "fortune" = 0)
-	specstats_f = list("strength" = 0, "perception" = -1, "intelligence" = 1, "constitution" = 2, "endurance" = 2, "speed" = -1, "fortune" = 0)
+	specstats = list("strength" = 1, "perception" = -1, "intelligence" = 1, "constitution" = 2, "endurance" = 2, "speed" = -2, "fortune" = 0)
+	specstats_f = list("strength" = 0, "perception" = 0, "intelligence" = 1, "constitution" = 2, "endurance" = 2, "speed" = 2, "fortune" = 0)
 
 //DWARF SKIN TONES
-#define DWARF_MERCUR "d3b19f"
-#define DWARF_BRASS "ba9980"
+#define DWARF_MERCUR "ba9980"
+#define DWARF_BRASS "d3b19f"
 #define DWARF_FERRO "bc8d74"
 #define DWARF_PHOSPHORITE "967e70"
-#define DWARF_OBSIDIAN "7a544c"
+#define DWARF_OBSIDIAN "665855"
 #define DWARF_QUARTZ "8b7e70"
 #define DWARF_GRENZDWARF "ffe0d1"
 
@@ -151,7 +151,7 @@
 	are dominant in their species..."
 
 	specstats = list("strength" = 0, "perception" = 0, "intelligence" = 0, "constitution" = 1, "endurance" = 2, "speed" = 0, "fortune" = 1)
-	specstats_f = list("strength" = -1, "perception" = 1, "intelligence" = 1, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 1)
+	specstats_f = list("strength" = -1, "perception" = 1, "intelligence" = 0, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 1)
 
 	limbs_icon_m = 'icons/roguetown/mob/bodies/m/mt.dmi'
 	offset_features = list(OFFSET_ID = list(0,1), OFFSET_GLOVES = list(0,1), OFFSET_WRISTS = list(0,1),\
@@ -173,7 +173,7 @@
 #define HUMEN_VALORIAN "d9a284"
 #define HUMEN_STEPPE "c9a893"
 #define HUMEN_ISLANDER "ba9882"
-#define HUMEN_SOUTHLANDER "ac8369"
+#define HUMEN_SOUTHLANDER "795742"
 #define HUMEN_ZYBANTU "9c6f52"
 #define HUMEN_CRIMSONLANDS "684e3d"
 
@@ -257,7 +257,7 @@
 	Half-Elves also typically try to find identity, in a world that sees them primarly as perversions."
 
 	specstats = list("strength" = 0, "perception" = 1, "intelligence" = 0, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 0)
-	specstats_f = list("strength" = -1, "perception" = 2, "intelligence" = 1, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = 0)
+	specstats_f = list("strength" = -1, "perception" = 2, "intelligence" = 0, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = 0)
 
 
 // =================================================================================
@@ -282,7 +282,7 @@
 	and their unique anatomy makes them extremely susceptible to injury."
 
 	specstats = list("strength" = 0, "perception" = 2, "intelligence" = 1, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = -1)
-	specstats_f = list("strength" = 0, "perception" = 3, "intelligence" = 2, "constitution" = -2, "endurance" = -1, "speed" = 1, "fortune" = -1)
+	specstats_f = list("strength" = 0, "perception" = 3, "intelligence" = 1, "constitution" = -2, "endurance" = -1, "speed" = 1, "fortune" = -1)
 
 
 // =================================================================================

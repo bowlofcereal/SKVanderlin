@@ -108,6 +108,7 @@
 		"yes t": "aye t",
 		"yes h": "aye h",
 		"yes p": "aye p",
+		"yes y": "aye y",
 		"no t": "nae t",
 		"no c": "nae c",
 		"no h": "nae h",
@@ -141,8 +142,6 @@
  		"stare": "eyeball",
  		"stared": "eyeballed",
  		"stares": "eyeballs",
-
- 		"stupid": "klopper",
 
  		"swear": "sweir",
  		"sweared": "sweired",
