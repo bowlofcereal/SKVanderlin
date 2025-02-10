@@ -120,7 +120,7 @@
 
 /datum/species/elf/snow/get_skin_list()
 	return sortList(list(
-	"Snow Elf" = SKIN_COLOR_SNOW_ELF // - (Pale)
+	"Snow Elf" = SKIN_COLOR_SNOW_ELF, // - (Pale)
 	"Plain Elf" = SKIN_COLOR_PLAIN_ELF, // - (White 2)
 	"Mountain Elf" = SKIN_COLOR_MOUNTAIN_ELF, // - (White 3)
 	"Coastal Elf" = SKIN_COLOR_COASTAL_ELF, // - (White 4)
