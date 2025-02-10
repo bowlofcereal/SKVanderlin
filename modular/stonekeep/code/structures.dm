@@ -30,7 +30,7 @@
 	icon = 'modular/stonekeep/icons/tables.dmi'
 
 /obj/structure/table/wood/plain_alt
-	icon = 'modular/stonekeep/icons/tables.dmi'"
+	icon = 'modular/stonekeep/icons/tables.dmi'
 
 /obj/structure/table/wood/reinforced_alt
 	icon = 'modular/stonekeep/icons/tables.dmi'
