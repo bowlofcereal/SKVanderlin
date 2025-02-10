@@ -77,10 +77,7 @@
 	))
 /datum/species/dwarf/mountain/get_accent_list()
 	return strings("SKdwarf_replacement.json", "dwarf")
-/*
-/datum/species/dwarf/mountain/get_accent(mob/living/carbon/human/H)
-	return strings("SKdwarf_replacement.json", "dwarf")
-*/
+
 /datum/species/dwarf/mountain/random_name(gender,unique,lastname)
 
 	var/randname
@@ -102,23 +99,7 @@
 			randname = pick( world.file2list("strings/rt/names/dwarf/SKdwarmf.txt") )
 	return randname
 
-/*
-/datum/species/dwarf/mountain/get_accent(mob/living/carbon/human/H)
-	switch(H.skin_tone)
-		if(DWARF_ARGENT)
-			return strings("dwarf_replacement.json", "dwarf")
-		if(DWARF_AURUM)
-			return strings("dwarf_replacement.json", "dwarf")
-		if(DWARF_MERCUR)
-			return strings("dwarf_replacement.json", "dwarf")
-		if(DWARF_BRASS)
-			return strings("dwarf_replacement.json", "dwarf")
-		if(DWARF_FERRO)
-			return strings("dwarf_replacement.json", "dwarf")
-		if(DWARF_GRENZDWARF)
-			return strings("grenzelhoft_replacement.json", "grenzelhoft")
-	return null
-*/
+
 // =================================================================================
 /datum/species/elf/snow
 	possible_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_OLD)
@@ -137,6 +118,19 @@
 	specstats = list("strength" = -1, "perception" = 1, "intelligence" = 1, "constitution" = -1, "endurance" = 0, "speed" = 2, "fortune" = 0)
 	specstats_f = list("strength" = -2, "perception" = 2, "intelligence" = 2, "constitution" = -1, "endurance" = -1, "speed" = 2, "fortune" = 0)
 
+/datum/species/elf/snow/get_skin_list()
+    return sortList(list(
+        "Snow Elf" = SKIN_COLOR_SNOW_ELF // - (Pale)
+        "Plain Elf" = SKIN_COLOR_PLAIN_ELF, // - (White 2)
+        "Mountain Elf" = SKIN_COLOR_MOUNTAIN_ELF, // - (White 3)
+        "Coastal Elf" = SKIN_COLOR_COASTAL_ELF, // - (White 4)
+        "Wood Elf" = SKIN_COLOR_WOOD_ELF, // - (Mediterranean 1)
+        "Sea Elf" = SKIN_COLOR_SEA_ELF, // - (Mediterranean 2)
+        "Jungle Elf" = SKIN_COLOR_JUNGLE_ELF, // - (Latin)
+        "Savannah Elf" = SKIN_COLOR_SAVANNAH_ELF, // - (Middle-Eastern)
+        "Sand Elf" = SKIN_COLOR_SAND_ELF, // - (Black 1)
+        "Crimson Elf" = SKIN_COLOR_CRIMSON_ELF, // - (Black2)
+    ))
 
 // =================================================================================
 /datum/species/human/northern
@@ -165,40 +159,7 @@
 	OFFSET_NECK_F = list(0,-1), OFFSET_MOUTH_F = list(0,-1), OFFSET_PANTS_F = list(0,0), \
 	OFFSET_SHIRT_F = list(0,0), OFFSET_ARMOR_F = list(0,0), OFFSET_UNDIES_F = list(0,0))
 
-//HUMEN SKIN TONES
-#define HUMEN_GRENZELHOFT "ffe0d1"
-#define HUMEN_LOWLANDER "fcccb3"
-#define HUMEN_MAINLANDER "edc6b3"
-#define HUMEN_HEARTFELT "e2b9a3"
-#define HUMEN_VALORIAN "d9a284"
-#define HUMEN_STEPPE "c9a893"
-#define HUMEN_ISLANDER "ba9882"
-#define HUMEN_SOUTHLANDER "795742"
-#define HUMEN_ZYBANTU "9c6f52"
-#define HUMEN_CRIMSONLANDS "684e3d"
 
-/datum/species/human/northern/get_skin_list()
-	return sortList(list(
-		"Grenzelhoft" = HUMEN_GRENZELHOFT,
-		"Lowlander" = HUMEN_LOWLANDER,
-		"Mainlander" = HUMEN_MAINLANDER,
-		"Steppe" = HUMEN_STEPPE,
-		"Valorian" = HUMEN_VALORIAN,
-		"Heartfelt" = HUMEN_HEARTFELT,
-		"Islander" = HUMEN_ISLANDER,
-		"Southlander" = HUMEN_SOUTHLANDER,
-		"Zybantu" = HUMEN_ZYBANTU,
-		"Crimson Lands" = HUMEN_CRIMSONLANDS,
-	))
-/*
-/datum/species/human/northern/get_accent(mob/living/carbon/human/H)
-	switch(H.skin_tone)
-		if(SKIN_COLOR_GRENZELHOFT)
-			return strings("SKgrenzelhoft_replacement.json", "grenzelhoft")
-		if(SKIN_COLOR_STEPPE)
-			return strings("SKsteppe_replacement.json", "steppe")
-	return null
-*/
 /datum/species/human/northern/random_name(gender,unique,lastname)
 	var/randname
 	if(unique)
@@ -259,6 +220,15 @@
 	specstats = list("strength" = 0, "perception" = 1, "intelligence" = 0, "constitution" = 0, "endurance" = 0, "speed" = 1, "fortune" = 0)
 	specstats_f = list("strength" = -1, "perception" = 2, "intelligence" = 0, "constitution" = -1, "endurance" = 0, "speed" = 1, "fortune" = 0)
 
+/datum/species/human/halfelf/get_skin_list()
+    return sortList(list(
+        "Timber-Gronn" = SKIN_COLOR_TIMBER_GRONN, // - (White 1)
+        "Solar-Hue" = SKIN_COLOR_SOLAR_HUE, // - (White 2)
+        "Walnut-Stine" = SKIN_COLOR_WALNUT_STINE, // - (White 3)
+        "Amber-Stained" = SKIN_COLOR_AMBER_STAINED, // - (White 4)
+        "Joshua-Aligned" = SKIN_COLOR_JOSHUA_ALIGNED, // - (Middle-Eastern)
+        "Arid-Birthed" = SKIN_COLOR_ARID_BIRTHED, // - (Black)
+    ))
 
 // =================================================================================
 /datum/species/halforc
