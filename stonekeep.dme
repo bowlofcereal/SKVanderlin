@@ -1898,4 +1898,12 @@
 #include "modular\stonekeep\code\structures.dm"
 #include "modular\stonekeep\code\turfs.dm"
 #include "modular\stonekeep\code\weapons.dm"
+#include "modular\stonekeep\code\jobs\job_adventurers.dm"
+#include "modular\stonekeep\code\jobs\job_blacklist.dm"
+#include "modular\stonekeep\code\jobs\job_pilgrims.dm"
+#include "modular\stonekeep\code\jobs\job_racelocks.dm"
+#include "modular\stonekeep\code\jobs\new\bathmaid.dm"
+#include "modular\stonekeep\code\jobs\new\boltslinger.dm"
+#include "modular\stonekeep\code\jobs\new\nightman.dm"
+#include "modular\stonekeep\code\jobs\new\zealot.dm"
 // END_INCLUDE
