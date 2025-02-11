@@ -27,3 +27,11 @@
 	name = "stone table (single)"
 	result = /obj/structure/table/stone_small
 
+/*	.................   Unique Feldsher recipes   ................... */
+/datum/crafting_recipe/nitmaiden_license
+	name = "Nitemaiden health license"
+	time = 4 SECONDS
+	reqs = list(/obj/item/paper = 1,
+		/obj/item/natural/feather = 1)
+	result = /obj/item/paper/feldsher_certificate
+	category = CAT_NONE
