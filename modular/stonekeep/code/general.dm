@@ -5,6 +5,10 @@
  *						*
  * * * * * * * * * * * **/
 
+#define NORMAL_TOWNER_RACES 	list("Humen","Elf","Half-Elf","Dwarf")
+#define EXPANDED_TOWNER_RACES 	list("Humen","Elf","Aasimar","Half-Elf","Dwarf")
+#define PEASANT_RACES 			list("Humen","Aasimar","Half-Elf","Dwarf")
+
 // =================================================================================
 // -------------- SOAP -----------------
 /obj/item/soap
@@ -129,3 +133,19 @@
 
 /obj/item/clothing/head/peaceflower
 	icon = 'modular/stonekeep/icons/misc.dmi'
+
+
+// =================================================================================
+/*----------------\
+| Lighting tweaks |
+\----------------*/
+// base was 8, 5 for torches
+
+/obj/machinery/light/rogue/firebowl
+	brightness = 10
+
+/obj/machinery/light/rogue/wallfire
+	brightness = 9
+
+/obj/machinery/light/rogue/torchholder
+	brightness = 7

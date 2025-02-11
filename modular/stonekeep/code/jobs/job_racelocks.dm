@@ -9,7 +9,6 @@
 /datum/job/roguetown/lord
 	allowed_races = list(
 		"Humen",
-		"Elf",
 		"Dwarf"
 	)
 
@@ -19,14 +18,12 @@
 		"Elf"
 	)
 
-
 /datum/job/roguetown/royalguard
 	allowed_races = list(
 		"Humen",
 		"Dwarf",
 		"Aasimar"
 	)
-
 
 /datum/job/roguetown/feldsher	// TOWN DOC NOT COURT ONLY. THERES NOT 200 players to support five separate ecologies/economies
 	department_flag = SERFS
@@ -61,13 +58,8 @@
 		"Aasimar"
 	)
 
-
 /datum/job/roguetown/steward
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Dwarf"
-	)
+	allowed_races = list("Humen","Elf","Dwarf")
 
 /datum/job/roguetown/merchant
 	allowed_races = list(
@@ -118,71 +110,30 @@
 	)
 	allowed_ages = list(AGE_ADULT)
 
+
 // ============		Towner		=============
 /datum/job/roguetown/tailor
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Half-Elf",
-		"Dwarf")
-
+	allowed_races = NORMAL_TOWNER_RACES
 /datum/job/roguetown/innkeep
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Half-Elf",
-		"Dwarf")
-
+	allowed_races = NORMAL_TOWNER_RACES
 /datum/job/roguetown/carpenter
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Half-Elf",
-		"Dwarf")
-
+	allowed_races = NORMAL_TOWNER_RACES
 /datum/job/roguetown/armorsmith
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Half-Elf",
-		"Dwarf")
-
+	allowed_races = EXPANDED_TOWNER_RACES
 /datum/job/roguetown/weaponsmith
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Half-Elf",
-		"Dwarf")
+	allowed_races = EXPANDED_TOWNER_RACES
 
 /datum/job/roguetown/artificer
 	title = "Mason"  // Need new spawner due to title change ROGTODO
-	allowed_races = list(
-		"Humen",
-		"Elf",
-		"Half-Elf",
-		"Dwarf",
-		"Aasimar",
-	)
-
-
+	allowed_races = EXPANDED_TOWNER_RACES
 
 
 // ============		Peasants	=============
 /datum/job/roguetown/cook
-	allowed_races = list(
-		"Humen",
-		"Half-Elf",
-		"Dwarf",
-		"Aasimar",
-	)
+	allowed_races = PEASANT_RACES
 
 /datum/job/roguetown/farmer
-	allowed_races = list(
-		"Humen",
-		"Half-Elf",
-		"Dwarf",
-		"Aasimar",
-	)
+	allowed_races = PEASANT_RACES
 
 /datum/job/roguetown/prisoner
 	allowed_races = list(
@@ -223,9 +174,7 @@
 		"Humen",
 		"Half-Elf",
 		"Dwarf",
-		"Tiefling",
-		"Dark Elf",
-		"Aasimar"
+		"Tiefling"
 	)
 
 /datum/job/roguetown/fisher
