@@ -83,8 +83,5 @@
 | Washing |
 \--------*/
 
-/turf/open/water/swamp
-	wash_in = FALSE
-
 /turf/open/water/bath
 	wash_in = FALSE
