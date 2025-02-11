@@ -35,3 +35,20 @@
 		/obj/item/natural/feather = 1)
 	result = /obj/item/paper/feldsher_certificate
 	category = CAT_NONE
+
+/*--------------\
+| Anvil Recipes |
+\--------------*/
+/datum/anvil_recipe/weapons/iron/lucerne
+	name = "Poleaxe (+Bar, +Small Log)"
+	recipe_name = "a Poleaxe"
+
+/datum/anvil_recipe/weapons/iron/spear_iron
+	name = "Spear (+Small Log)"
+	recipe_name = "a Spear"
+	createmultiple = FALSE
+
+/datum/anvil_recipe/weapons/steel/peasant_flail
+	name = "Crusher (+Chain, +Small Log)"
+	recipe_name = "a two-handed flail"
+
