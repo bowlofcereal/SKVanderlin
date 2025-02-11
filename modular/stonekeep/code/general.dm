@@ -5,6 +5,10 @@
  *						*
  * * * * * * * * * * * **/
 
+#define NORMAL_TOWNER_RACES 	list("Humen","Elf","Half-Elf","Dwarf")
+#define EXPANDED_TOWNER_RACES 	list("Humen","Elf","Aasimar","Half-Elf","Dwarf")
+#define PEASANT_RACES 			list("Humen","Aasimar","Half-Elf","Dwarf")
+
 // =================================================================================
 // -------------- SOAP -----------------
 /obj/item/soap
@@ -93,4 +97,56 @@
 /datum/plant_def/onion
 	icon = 'modular/stonekeep/icons/crops.dmi'
 
+// =================================================================================
+/*-------\
+| Papers |
+\-------*/
+
+/obj/item/paper/note_about_dwarfs
+	name = "report to Guild on steel deliveries"
+	info = "Last yils deliverie of steele from the dwarf outposte in the northeast: 83 ingots of finest steel. None hath been delivered this yil, this will not do. For the good of the Makers Guild, this must be investigated."
+
+/obj/item/paper/reminder_about_dwarfs
+	name = "note about steel deliveries"
+	info = "Makers! The northern dwarves delivery of steele is much delayed this yil. Make do or go get it from them, the Guild cannot do more to solve this."
+
+/obj/item/paper/feldsher_certificate
+	name = "feldsher health certificate"
+	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
+	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date. (signed by the town feldsher, the date is a few weeks ago)"
+/obj/item/paper/feldsher_certificate/expired
+	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
+	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date.  (signed by the town feldsher, the date is half a year ago)"
+/obj/item/paper/feldsher_certificate/fake
+	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
+	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date.  (signature is undreadable, the date is a few weeks ago)"
+/obj/item/paper/feldsher_certificate/Initialize()
+	..()
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "certificate"
+
+
+// =================================================================================
+/*------\
+| Items |
+\------*/
+
+/obj/item/clothing/head/peaceflower
+	icon = 'modular/stonekeep/icons/misc.dmi'
+
+
+// =================================================================================
+/*----------------\
+| Lighting tweaks |
+\----------------*/
+// base was 8, 5 for torches
+
+/obj/machinery/light/rogue/firebowl
+	brightness = 10
+
+/obj/machinery/light/rogue/wallfire
+	brightness = 9
+
+/obj/machinery/light/rogue/torchholder
+	brightness = 7
 
