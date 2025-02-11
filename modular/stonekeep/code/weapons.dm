@@ -32,6 +32,12 @@
 /obj/item/rogueweapon/polearm/spear/bonespear
 	icon_state = "bonespear"
 
+/obj/item/rogueweapon/polearm/spear/hoplite
+	desc = "A humble spear with a bronze head, a rare survivor from the battles long past that nearly destroyed Grimoria."
+
+/obj/item/rogueweapon/polearm/spear/hoplite/winged
+	desc = "A humble spear with a bronze head, a rare survivor from the battles long past that nearly destroyed Grimoria."
+
 /obj/item/rogueweapon/flail/peasant
 	name = "crusher"
 	desc = "To break, smash and chastise thy foes."
@@ -41,31 +47,31 @@
 
 //................ Onehanders ............... //
 /obj/item/rogueweapon/mace/goden/shillelagh
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/mace/steel
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/knife/hunting
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/mace/cudgel
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/knife/cleaver
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/knife/villager
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/pick/paxe
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/hammer/sledgehammer
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/mace/copperbludgeon
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/flail/sflail
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'

@@ -228,7 +228,11 @@
 //................ Malumite helmet ............... //
 /obj/item/clothing/head/roguetown/helmet/leather/minershelm/malumite
 	name = "bowl of fire"
-	desc = "The fires of creation burn ever on, to praise saint Malum."
+	desc = "The fires of industry burn ever on, to praise saint Malum."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/64x64.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
 	armor = ARMOR_PLATE_BAD
