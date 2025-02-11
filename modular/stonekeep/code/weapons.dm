@@ -32,6 +32,12 @@
 /obj/item/rogueweapon/polearm/spear/bonespear
 	icon_state = "bonespear"
 
+/obj/item/rogueweapon/polearm/spear/hoplite
+	desc = "A humble spear with a bronze head, a rare survivor from the battles long past that nearly destroyed Grimoria."
+
+/obj/item/rogueweapon/polearm/spear/hoplite/winged
+	desc = "A humble spear with a bronze head, a rare survivor from the battles long past that nearly destroyed Grimoria."
+
 /obj/item/rogueweapon/flail/peasant
 	name = "crusher"
 	desc = "To break, smash and chastise thy foes."
