@@ -61,7 +61,7 @@
 	name = "Abyssor"
 	domain = "God of Seas and Storms"
 	desc = "The World-Whale, the sovereign Force of the seas and storms."
-	flaws= "Reckless, Stubborn, Destructive"
+	flaws= "Unforgiving, Stubborn, Destructive"
 	worshippers = "Sailors of the Sea and Sky, Horrid Sea-Creachers, Fog Islanders"
 	sins = "Fear, Hubris, Forgetfulness"
 	boons = "Leeches will not latch onto you in dirty water."
@@ -103,7 +103,7 @@
 
 /datum/patron/divine/ravox
 	name = "Ravox"
-	domain = "Saint of Warfare, Struggle, and Chivalry"
+	domain = "God of Warfare, Struggle, and Chivalry"
 	desc = "The blade of the Pantheon, a patron of all who struggle in warfare."
 	flaws = "Careless, Aggressive, Prideful"
 	worshippers = "Warriors, Sellswords, Guardsmen"
@@ -122,7 +122,7 @@
 
 /datum/patron/divine/xylix
 	name = "Xylix"
-	domain = "Saint of Trickery, Freedom, and Inspiration"
+	domain = "God of Trickery, Freedom, and Inspiration"
 	desc = "Perhaps the greatest Jester to have ever lived. Some say the greatest trick he ever pulled was making the world believe he never existed."
 	flaws = "Petulance, Deception, Gambling-Prone"
 	worshippers = "Cheats, Performers, The Hopeless"
@@ -148,8 +148,8 @@
 /datum/patron/divine/pestra
 	name = "Pestra"
 	domain = "Saint of Healing, Alchemy, and Prophecy"
-	desc = "The finest alchemist to ever live, made saint by her own brew. Said to have been a hunchback."
-	flaws = "Drunkenness, Crudeness, Irresponsibility"
+	desc = "A legendary alchemist, they claim she invented the very art. Said to have been a hunchback."
+	flaws = "Drunkard, Crude, Sloppy"
 	worshippers = "The Ill and Infirm, Alchemists, Physicians"
 	sins = "´Curing´ Abnormalities, Refusing to help the ill, Failure to prepare"
 	boons = "You may consume rotten food without being sick."
@@ -166,8 +166,8 @@
 
 /datum/patron/divine/malum
 	name = "Malum"
-	domain = "Saint of Toil, Value, and Craft"
-	desc = "Father of the dwarves, master of crafting and industry."
+	domain = "Saint of Toil, Industry, and Skill"
+	desc = "The perfect dwarf, said to have become a God after dying while still working at the anvil despite having become blind from age half a century earlier."
 	flaws = "Obsessive, Exacting, Overbearing"
 	worshippers = "Smiths, Miners, Sculptors"
 	sins = "Cheating, Shoddy Work, Suicide"
@@ -178,15 +178,15 @@
 	t2 = /obj/effect/proc_holder/spell/invoked/hammerfall
 	t3 = /obj/effect/proc_holder/spell/invoked/heatmetal
 	confess_lines = list(
-		"MALUM IS MY FORGE!",
+		"MALUM BREAK MY BONDS!",
 		"TRUE VALUE IS IN THE TOIL!",
 		"I AM AN INSTRUMENT OF CREATION!",
 	)
 
 /datum/patron/divine/eora
 	name = "Eora"
-	domain = "Saint of Love, Life, and Beauty"
-	desc = "Crafted from the heart of Psydon, a spreader of love and beauty, and strengthener of bonds."
+	domain = "God of Love, Life, and Beauty"
+	desc = "The Mother, devoted to love and beauty. Bonds forged by love is truer than any steel."
 	flaws= "Naive, Impulsive, Ignorant"
 	worshippers = "Mothers, Artists, Married Couples"
 	sins = "Sadism, Abandonment, Ruining Beauty"
