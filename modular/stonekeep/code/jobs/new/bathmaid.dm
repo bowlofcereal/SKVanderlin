@@ -20,7 +20,7 @@
 	allowed_sexes = list(FEMALE)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED)
 	outfit = /datum/outfit/job/roguetown/nitemaiden
-	display_order = JDO_NITEMAIDEN
+	display_order = JDO_APOTHECARY // ROGTODO
 	give_bank_account = TRUE
 	min_pq = -20
 	can_random = FALSE
@@ -37,7 +37,7 @@
 
 
 
-	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
+//	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)	ROGTODO
 
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE) // To wrestle people out of the baths

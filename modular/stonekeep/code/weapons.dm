@@ -41,31 +41,31 @@
 
 //................ Onehanders ............... //
 /obj/item/rogueweapon/mace/goden/shillelagh
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/mace/steel
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/knife/hunting
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/mace/cudgel
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/knife/cleaver
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/knife/villager
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/pick/paxe
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/hammer/sledgehammer
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/mace/copperbludgeon
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'
 
 /obj/item/rogueweapon/flail/sflail
-	icon = 'modular/stonekeep/icons/weapons_32.dmi'
+	icon = 'modular/stonekeep/icons/weapons.dmi'

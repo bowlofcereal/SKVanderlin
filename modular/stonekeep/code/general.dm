@@ -120,3 +120,12 @@
 	..()
 	icon = 'modular/stonekeep/icons/misc.dmi'
 	icon_state = "certificate"
+
+
+// =================================================================================
+/*------\
+| Items |
+\------*/
+
+/obj/item/clothing/head/peaceflower
+	icon = 'modular/stonekeep/icons/misc.dmi'

@@ -36,8 +36,10 @@
 	icon_state = "drakonb"
 
 /obj/item/clothing/shoes/roguetown/boots/leather/advanced/drakon
-	color = "#9473a2"
+	color = "#755a81"
 /obj/item/clothing/gloves/roguetown/leather/advanced/drakon
-	color = "#9473a2"
+	color = "#745980"
 /obj/item/clothing/cloak/cape/drakon
 	color = CLOTHING_BLOOD_RED
+
+// shadowpants & belt

@@ -31,11 +31,10 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/webs
 	pants = /obj/item/clothing/under/roguetown/trou/leather
 	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	belt = /obj/item/storage/belt/rogue/leather/nitemaster
+// 	belt = /obj/item/storage/belt/rogue/leather/nitemaster ROGTODO
 	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
-	beltl = /obj/item/keyring/niteman
-	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
+//	beltl = /obj/item/keyring/niteman	ROGTODO
+//	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)	ROGTODO
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
