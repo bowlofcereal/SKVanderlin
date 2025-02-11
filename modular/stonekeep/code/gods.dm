@@ -279,16 +279,16 @@
 /datum/patron/inhumen/matthios
 	name = "Matthios"
 	domain = "God of Thievery, Ill-Gotten Gains, and Highwaymen"
-	desc = "Legendary humen bandit whose greatest thievery was a spark of divinity through which He ascended himself. It is because of He that nobles clutch their coin purses to their chests in town."
+	desc = "Said to have stolen a spark of the divine, taking fire from the jealous gods and giving it to humenkind. Gifted his lessons of thievery and subversion to his devoted followers."
 	flaws = "Pride, Greed, Reckless"
 	worshippers = "Outlaws, Noble-Haters, Downtrodden Peasantry"
 	sins = "Clumsiness, Hesitation, Humility"
 	boons = "You can see the most expensive item someone is carrying."
 	added_traits = list(TRAIT_MATTHIOS_EYES)
 	confess_lines = list(
-		"MATTHIOS STEALS FROM THE WORTHLESS!",
-		"MATTHIOS IS JUSTICE FOR THE COMMON MAN!",
-		"MATTHIOS IS MY LORD, I SHALL BE HIS MARTYR!",
+		"MATTHIOS STEAL MY PAIN!",
+		"MATTHIOS WILL SAVE ME!",
+		"MATTHIOS, MUST I BE YOUR MARTYR?!",
 	)
 
 /datum/patron/inhumen/baotha

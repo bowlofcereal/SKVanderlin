@@ -149,3 +149,4 @@
 
 /obj/machinery/light/rogue/torchholder
 	brightness = 7
+
