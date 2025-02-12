@@ -556,7 +556,7 @@ Admin logging is provided for orgasms and if you try to initiate sex with corpse
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	appearance_flags = NO_CLIENT_COLOR
 
-/obj/effect/decal/cleanable/coom/Initialize(mapload, list/datum/disease/diseases)
+/obj/effect/decal/cleanable/coom/Initialize(mapload)
 	. = ..()
 	pixel_x = rand(-8, 8)
 	pixel_y = rand(-8, 8)
