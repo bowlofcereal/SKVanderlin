@@ -25,7 +25,7 @@
 	outfit = /datum/outfit/job/roguetown/jester
 	display_order = JDO_JESTER
 	bypass_lastclass = TRUE
-	min_pq = -25
+	min_pq = -20
 	give_bank_account = TRUE
 
 /datum/outfit/job/roguetown/jester/pre_equip(mob/living/carbon/human/H)
@@ -138,7 +138,7 @@
 		/obj/item/natural/stone,
 		/obj/item/natural/poo,
 		/obj/item/natural/feather,
-		/obj/item/reagent_containers/food/snacks/rogue/crackerscooked
+		/obj/item/reagent_containers/food/snacks/hardtack
 		)
 
 	var/japery = pick(japery_list)
