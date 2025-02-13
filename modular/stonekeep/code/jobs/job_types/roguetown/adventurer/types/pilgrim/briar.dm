@@ -7,7 +7,7 @@
 	tutorial = "Stoic gardeners or flesh-eating predators, all can follow Dendors path. <br>His Briars scorn civilized living, many embracing their animal nature, being fickle and temperamental."
 //	allowed_patrons = list(/datum/patron/divine/dendor)		this doesn't work so long its a subclass type. Besides its preferable to forceswitch as it does to make selection less clunky.
 	cmode_music = 'sound/music/cmode/combat_dendor.ogg'
-	maximum_possible_slots = 2
+	maximum_possible_slots = 2	// to be lowered to 2? once testing is done
 
 /datum/outfit/job/roguetown/adventurer/briar/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -121,7 +121,7 @@
 /datum/crafting_recipe/dendor/sacrifice_growing
 	name = "green sacrifice to Dendor (unique)"
 	structurecraft = /obj/structure/fluff/psycross/crafted/shrine/dendor_gote
-	reqs = list(/obj/item/reagent_containers/food/snacks/grub/silk = 1,
+	reqs = list(/obj/item/natural/worms/grub_silk = 1,
 				/obj/item/reagent_containers/food/snacks/produce/swampweed = 1,
 				/obj/item/reagent_containers/food/snacks/produce/poppy = 1)
 	result = /obj/item/blessing_of_dendor_growing

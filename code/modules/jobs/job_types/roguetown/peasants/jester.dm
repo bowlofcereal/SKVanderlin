@@ -140,7 +140,7 @@
 		/obj/item/natural/stone,
 		/obj/item/natural/poo,
 		/obj/item/natural/feather,
-		/obj/item/reagent_containers/food/snacks/rogue/crackerscooked
+		/obj/item/reagent_containers/food/snacks/hardtack
 		)
 
 	var/japery = pick(japery_list)
