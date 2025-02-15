@@ -231,16 +231,16 @@
 //	req_imperial = TRUE
 	craftdiff = 3
 
-/datum/crafting_recipe/roguetown/leather/boots_hardened
-	name = "shoes (hardened leather boots)"
-	result = /obj/item/clothing/shoes/roguetown/boots/leather/hardened
-	reqs = 	list(/obj/item/natural/hide/cured = 2)
+/datum/crafting_recipe/roguetown/leather/boots_heavy
+	name = "shoes (heavy leather boots)"
+	result = /obj/item/clothing/shoes/roguetown/boots/leather/heavy
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/leather/boots_fencing
 	name = "shoes (fencing boots)"
 	result = /obj/item/clothing/shoes/roguetown/boots/leather/fencing
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/ingot/iron = 1)
 	craftdiff = 5
 
 
@@ -259,7 +259,7 @@
 /datum/crafting_recipe/roguetown/leather/gloves_fencing
 	name = "gloves (fencing)"
 	result = /obj/item/clothing/gloves/roguetown/fencer
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2)
 	craftdiff = 4
 
 
@@ -332,9 +332,9 @@
 	/obj/item/natural/head/saiga = 1)
 	craftdiff = 1
 
-/datum/crafting_recipe/roguetown/leather/hood_padded
-	name = "hood (padded leather)"
-	result = /obj/item/clothing/head/roguetown/roguehood/padded
+/datum/crafting_recipe/roguetown/leather/hood_heavy
+	name = "hood (heavy leather)"
+	result = /obj/item/clothing/head/roguetown/roguehood/heavy
 	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 

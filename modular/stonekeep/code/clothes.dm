@@ -23,7 +23,7 @@
 	dynamic_hair_suffix = ""
 	body_parts_covered = HEAD | NOSE | EYES
 
-/obj/item/clothing/head/roguetown/roguehood/padded
+/obj/item/clothing/head/roguetown/roguehood/heavy
 	name = "padded hood"
 
 
@@ -866,8 +866,8 @@
 
 /obj/item/clothing/shoes/roguetown/grenzelhoft
 	armor = ARMOR_PADDED
-/obj/item/clothing/shoes/roguetown/boots/leather/hardened
-	name = "hardened leather boots"
+/obj/item/clothing/shoes/roguetown/boots/leather/heavy
+	name = "heavy leather boots"
 	desc = "Well-heeled boots. The leather thick enough to resist wear and tear."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
