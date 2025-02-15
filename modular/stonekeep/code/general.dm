@@ -634,3 +634,86 @@
 	icon = 'modular/stonekeep/icons/bear.dmi'
 	alpha = 240
 	color = "#e9e7d7"
+/datum/sprite_accessory/facial_hair/stubble
+	name = "Stubble"
+	icon = 'modular/stonekeep/icons/facial.dmi'
+	icon_state = "facial_stubble"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/mob/living/carbon/human/proc/try_grow_beard()
+
+	if(!(dna?.species))
+		return
+
+	// Certain races dont grow beards
+	if(!(dna.species in RACES_WITH_BEARD_GROWTH))
+		return
+
+	if(!(STUBBLE in dna.species.species_traits))
+		return
+
+	if(mob_biotypes & MOB_UNDEAD)
+		return
+
+	// Change this if you want female dwarves with beard growth
+	if(gender != MALE)
+		return
+
+	var/datum/bodypart_feature/hair/facial/beard = get_bodypart_feature_of_slot(BODYPART_FEATURE_FACIAL_HAIR)
+	if(!beard)
+		return
+
+	if(beard.accessory_type == /datum/sprite_accessory/facial_hair/shaved)
+		beard.accessory_type = /datum/sprite_accessory/facial_hair/stubble
+		to_chat(src, span_warning("My face itches."))
+		update_hair()
+
+// Darkling debuffs
+/datum/status_effect/debuff/darkling_glare
+	id = "darkling_glare"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/darkling_glare
+	effectedstats = list("perception" = -1)
+	duration = 10 SECONDS
+
+/atom/movable/screen/alert/status_effect/debuff/darkling_glare
+	name = "Eye Strain"
+	desc = "My eyes are starting to water, the light burns."
+	icon_state = "stressb"
+
+/datum/status_effect/debuff/darkling_migraine
+	id = "darkling_migraine"
+	alert_type = /atom/movable/screen/alert/status_effect/debuff/darkling_migraine
+	effectedstats = list("endurance" = -1, "intelligence" = -1) //Will basically always be stacked with the eye strain penalty
+	duration = 20 SECONDS
+
+/atom/movable/screen/alert/status_effect/debuff/darkling_migraine
+	name = "Migraine"
+	icon_state = "muscles"
+	desc = "My head is pounding, I need to get away from the light and rest a while!"
+
+
+/datum/stressevent/darkling_toobright
+	stressadd = 1
+	desc = span_red("It's too bright, the light hurts my eyes.")
+	timer = 30 SECONDS
+/datum/stressevent/darkling_migraine
+	stressadd = 3
+	desc = "My head is pounding, I can barely think. I need to get away from the light and rest a while!"
+	timer = 1 MINUTES
+
+
+/datum/species/elf/dark/on_species_gain(mob/living/carbon/C, datum/species/old_species)
+	. = ..()
+	C.AddComponent(/datum/component/darkling)
+
+/datum/status_effect/buff/darkling_darkly
+	id = "Darkling"
+	alert_type =  /atom/movable/screen/alert/status_effect/buff/darkling_darkly
+	effectedstats = list("perception" = 1)
+	duration = 5 SECONDS
+
+/atom/movable/screen/alert/status_effect/buff/darkling_darkly
+	name = "Darkling"
+	desc = "You are at home in the dark. Unbothered. In your lane. Moisturized."
+	icon_state = "stressg"
