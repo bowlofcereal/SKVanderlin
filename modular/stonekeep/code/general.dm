@@ -305,17 +305,18 @@
 */
 
 /*	..................   Misc   ................... */
-/obj/item/roguestatue/gnome
+/obj/item/roguestatue/gnome	// for the wizards tower
 	name = "petrified gnome"
 	desc = "A literal gnome, turned to stone by powerful magicks. Rather unsettling, or a fascinating experiment, depending on your point of view."
-//	icon_state = "gnome_petrified"
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "petrignome"
 	smeltresult = null
 
 /obj/structure/fluff/shipssprote
 	name = ""
 	desc = ""
-//	icon = 'icons/obj/atmospherics/pipes/disposal.dmi'
-//	icon_state = "pipe"
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "sprote"
 	mouse_opacity = 0
 	color = "#5a4621"
 	pixel_y = -16
@@ -335,6 +336,14 @@
 /obj/effect/decal/remains/human/old/small
 	icon_state = "remainslarva"
 
+
+/obj/structure/fluff/walldeco/rags
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "wallrags1"
+/obj/structure/fluff/walldeco/rags/alt
+	icon_state = "wallrags2"
+/obj/structure/fluff/walldeco/rags/skull
+	icon_state = "wallskull"
 
 // ======================================================================
 /*	..................   Colony Spider Web   ................... */
@@ -425,7 +434,7 @@
 
 
 
-
+// Corpses
 /obj/effect/mob_spawn/human/orc/corpse
 	icon = 'icons/effects/blood.dmi'
 	icon_state = "remains"
@@ -850,6 +859,7 @@
 			else
 				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
 
+// makes barrels climbable, its really weird they arent.
 /obj/structure/fermenting_barrel
 	climbable = TRUE
 	climb_offset = 8
