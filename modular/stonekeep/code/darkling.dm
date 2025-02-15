@@ -3,7 +3,6 @@
 	var/last_light_stress = 0																///Value of last light stress tick, used for determining blinding effects
 	var/max_light_stress = 100																///Maximum allowed light stress that the darkling can accumulate
 	var/next_blind																			///World time when the darkling is able to be blinded again by bright lights
-	var/mob/living/carbon/darkling
 
 /datum/component/darkling/Initialize(...)
 	. = ..()
