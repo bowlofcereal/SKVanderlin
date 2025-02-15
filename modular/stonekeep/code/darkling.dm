@@ -19,7 +19,7 @@
 		character.put_in_hands(hood, forced = TRUE)
 
 //Proc used for updating light stress, occurs every health update so around once every 2 seconds
-/datum/component/darkling/proc/update_light_stress(/mob/living/carbon/human)\
+/datum/component/darkling/proc/update_light_stress(/mob/living/carbon/human)
 	var/mob/living/carbon/human/darkling
 	//Closing our eyes or being blind/blindfolded lets us recovery very quickly
 	if(darkling.eyesclosed || darkling.eye_blind)
