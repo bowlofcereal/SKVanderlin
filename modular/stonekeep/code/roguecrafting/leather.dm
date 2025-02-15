@@ -240,7 +240,7 @@
 /datum/crafting_recipe/roguetown/leather/boots_fencing
 	name = "shoes (fencing boots)"
 	result = /obj/item/clothing/shoes/roguetown/boots/leather/fencing
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/fat = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 5
 
 
@@ -259,7 +259,7 @@
 /datum/crafting_recipe/roguetown/leather/gloves_fencing
 	name = "gloves (fencing)"
 	result = /obj/item/clothing/gloves/roguetown/fencer
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/fat = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 
 
@@ -280,7 +280,7 @@
 /datum/crafting_recipe/roguetown/leather/pants_padded
 	name = "pants (padded leather)"
 	result = /obj/item/clothing/under/roguetown/leather/padded
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/fat = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 5
 
 
@@ -293,7 +293,7 @@
 /datum/crafting_recipe/roguetown/leather/bracers_hardened
 	name = "bracers (heavy leather)"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather/hardened
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/fat = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 
 
@@ -335,7 +335,7 @@
 /datum/crafting_recipe/roguetown/leather/hood_padded
 	name = "hood (padded leather)"
 	result = /obj/item/clothing/head/roguetown/roguehood/padded
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/fat = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 
 

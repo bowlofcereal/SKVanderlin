@@ -718,26 +718,134 @@
 	desc = "You are at home in the dark. Unbothered. In your lane. Moisturized."
 	icon_state = "stressg"
 
+
+/datum/status_effect/debuff/badvision
+	effectedstats = list("perception" = -6, "speed" = -2,"fortune" = -5)
+	duration = 100
+
+
+
 /obj/item/reagent_containers/food/snacks/fat
-	fried_type = /obj/effect/spawner/roguemap/tallow
+	fried_type = /obj/item/reagent_containers/food/snacks/tallow
+	cooktime = 15 SECONDS
 
 
-/obj/effect/spawner/roguemap/tallow
-	spawned = list(/obj/item/reagent_containers/food/snacks/tallow)
-	lootmin = 2
-	lootmax = 2
-	fan_out_items = TRUE
-
-// TALLOW is used as an intermediate crafting ingredient for other recipes.
+// -------------- TALLOW (fried fat for crafting) -----------------
 /obj/item/reagent_containers/food/snacks/tallow
 	name = "tallow"
 	desc = "Fatty tissue is harvested from slain creachurs and rendered of its membraneous sinew to produce a hard shelf-stable \
-	grease. Useful for making processed leather clothing, but little else."
+	grease. Useful for making processed leather clothing, but little else. Can be sliced into smaller pieces before use to be less wasteful. Inedible"
 	icon = 'modular/stonekeep/icons/misc.dmi'
 	icon_state = "tallow"
 	tastes = list("grease" = 1, "oil" = 1, "regret" =1)
-	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 2)
+	bitesize = 2
+	slice_path = /obj/item/reagent_containers/food/snacks/tallow/piece
+	slices_num = 2
+	slice_batch = FALSE
+	slice_sound = TRUE
 	eat_effect = /datum/status_effect/debuff/uncookedfood
-	bitesize = 1
-	dropshrink = 0.4
 
+/obj/item/reagent_containers/food/snacks/tallow/update_icon()
+	if(slices_num)
+		icon_state = "tallow"
+	else
+		icon_state = "tallowslice"
+
+/obj/item/reagent_containers/food/snacks/tallow/On_Consume(mob/living/eater)
+	..()
+	changefood(slice_path, eater)
+
+/obj/item/reagent_containers/food/snacks/tallow/piece
+	name = "piece of tallow"
+	desc = "Inedible. Ready for use in crafting."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "tallowslice"
+	bitesize = 1
+	slices_num = FALSE
+	slice_path = FALSE
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+
+
+/*	..................   Astrata Shrine   ................... */
+/obj/structure/fluff/psycross/crafted/shrine/astrata
+	name = "The Sun Queen"
+	desc = ""
+	icon = 'modular/stonekeep/icons/64x64.dmi'
+	icon_state = "astrata"
+	pixel_x = -19
+
+/*	..................   Necra Shrine   ................... */
+/obj/structure/fluff/psycross/crafted/shrine/necra
+	name = "The Undermaiden"
+	desc = ""
+	icon = 'modular/stonekeep/icons/64x64.dmi'
+	icon_state = "necra"
+	pixel_x = -16
+
+/*	..................   Dendor Shrine   ................... */
+/obj/structure/fluff/psycross/crafted/shrine/dendor
+	name = "The Tree Father"
+	desc = ""
+	icon = 'modular/stonekeep/icons/64x64.dmi'
+	icon_state = "mystical"
+	pixel_x = -10
+
+/*	..................   Abyssor Shrine   ................... */
+/obj/structure/fluff/psycross/crafted/shrine/abyssor
+	name = "The World Whale"
+	desc = ""
+	icon = 'modular/stonekeep/icons/96x96.dmi'
+	icon_state = "abyssor"
+	bound_width = 64
+	pixel_x = -25
+
+/*	..................   Abandoned Malum Shrine (Dromkis revenge)   ................... */	// Not meant to be craftable, its abandoned and got a reward for relight it, special for malumites
+/obj/structure/fluff/psycross/crafted/shrine/malum
+	name = "abandoned statue of Malum"
+	desc = "The fire has gone out, the statue cold. The bowl on top is made to hold coal."
+	icon = 'modular/stonekeep/icons/64x64.dmi'
+	icon_state = "malum"
+	bound_width = 64
+	var/datum/looping_sound/fireloop/soundloop
+	var/refueled
+	var/on
+
+/obj/structure/fluff/psycross/crafted/shrine/malum/attackby(obj/item/A, mob/user, params)
+	if(istype(A, /obj/item/rogueore/coal))
+		if(refueled)
+			return
+		else
+			icon_state = "malum_fueled"
+			refueled = TRUE
+			playsound(src.loc, 'modular/stonekeep/sound/stone_scrape.ogg', 100)
+			qdel(A)
+/obj/structure/fluff/psycross/crafted/shrine/malum/spark_act()
+	fire_act()
+/obj/structure/fluff/psycross/crafted/shrine/malum/fire_act(added, maxstacks)
+	if(!on)
+		playsound(src.loc, 'sound/items/firelight.ogg', 100)
+		soundloop = new /datum/looping_sound/fireloop(src,FALSE)
+		soundloop.start()
+		on = TRUE
+		name = "statue of Malum"
+		icon_state = "malum_fire"
+		set_light(5, 4, 30, l_color = LIGHT_COLOR_YELLOW)
+		update_icon()
+		soundloop.start()
+		malums_blessings()
+		return TRUE
+/obj/structure/fluff/psycross/crafted/shrine/malum/Destroy()
+	QDEL_NULL(soundloop)
+	. = ..()
+
+/obj/structure/fluff/psycross/crafted/shrine/malum/proc/malums_blessings(mob/living/carbon/human)
+	for(var/mob/living/carbon/H in hearers(7, loc))
+		switch(H.patron?.type)
+			if(/datum/patron/divine/malum)
+				H.adjust_triumphs(1)
+				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
+				playsound(H, 'modular/stonekeep/sound/triumph_w.ogg', 100, FALSE, -5)
+			else
+				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
