@@ -183,6 +183,10 @@
 /obj/machinery/light/rogue/torchholder
 	brightness = 7
 
+
+// =============================================================================
+// ========================		WEATHER EDITS		============================
+
 // braziers, magic fire, lamps etc are rain resistant, standing fires and torch holders are not
 /obj/machinery/light/rogue/torchholder/Initialize()
 	. = ..()
@@ -207,12 +211,6 @@
 	. = ..()
 	GLOB.weather_act_upon_list -= src
 
-
-
-// =================================================================================
-/*---------------\
-| Weather tweaks |
-\---------------*/
 /obj/item/flashlight/flare/torch/Initialize()
 	. = ..()
 	GLOB.weather_act_upon_list += src
@@ -247,7 +245,8 @@
 
 
 
-
+// =============================================================================
+// ========================		BLOOD PREMAPPED		============================
 /*	..................   For premapped blood skipping timers, diseases etc   ................... */
 /obj/effect/decal/cleanable/blood_neu
 	name = "blood"
@@ -547,8 +546,8 @@
 	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
 
 
-
-// ======================================================================
+// =============================================================================
+// ==============================	FLORA	====================================
 
 /*	..................   Pigflowers   ................... */
 /obj/structure/flora/rogueflower // ausbushes recolored
@@ -604,8 +603,27 @@
 /obj/structure/flora/roguegrass/stalky/update_icon()
 	dir = pick(GLOB.cardinals)
 
+/*	..................   Bear pelt better   ................... */
+/obj/structure/bearpelt
+	icon = 'modular/stonekeep/icons/bear.dmi'
+	alpha = 240
+	color = "#e9e7d7"
 
-// ===================================================================================
+// makes barrels climbable, its really weird they arent.
+/obj/structure/fermenting_barrel
+	climbable = TRUE
+	climb_offset = 8
+
+
+/datum/supply_pack/rogue/narcotics/soap	// correct soap now
+	name = "Herbal Soap"
+	cost = 20
+	contains = /obj/item/soap
+
+
+// =============================================================================
+// ============================		LANDMARKS	================================
+
 /*	..................   Dwarf Outpost   ................... */
 /obj/effect/landmark/map_load_mark/dwarf_outpost
 	name = "Dwarf Outpost"
@@ -638,11 +656,9 @@
 	mappath = "_maps/map_files/templates/stonehamlet/roadblock_2.dmm"
 
 
+// =============================================================================
+// ========================		MORNING STUBBLE		============================
 
-/obj/structure/bearpelt
-	icon = 'modular/stonekeep/icons/bear.dmi'
-	alpha = 240
-	color = "#e9e7d7"
 /datum/sprite_accessory/facial_hair/stubble
 	name = "Stubble"
 	icon = 'modular/stonekeep/icons/facial.dmi'
@@ -678,7 +694,10 @@
 		to_chat(src, span_warning("My face itches."))
 		update_hair()
 
-// Darkling debuffs
+
+// =============================================================================
+// ================		DARK ELF DARKLING SYSTEM		========================
+
 /datum/status_effect/debuff/darkling_glare
 	id = "darkling_glare"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/darkling_glare
@@ -776,6 +795,8 @@
 	eat_effect = /datum/status_effect/debuff/uncookedfood
 	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
 
+// =================================================================
+// ================		TEMPLE FLUFF		========================
 
 /*	..................   Astrata Shrine   ................... */
 /obj/structure/fluff/psycross/crafted/shrine/astrata
@@ -859,7 +880,4 @@
 			else
 				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
 
-// makes barrels climbable, its really weird they arent.
-/obj/structure/fermenting_barrel
-	climbable = TRUE
-	climb_offset = 8
+
