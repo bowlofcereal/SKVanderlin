@@ -335,13 +335,13 @@
 /obj/effect/decal/remains/human/old/small
 	icon_state = "remainslarva"
 
-/*
+
 // ======================================================================
 /*	..................   Colony Spider Web   ................... */
 /obj/structure/innocent_web
 	name = ""
 	desc = ""
-	icon = 'icons/roguetown/misc/tallstructure.dmi'
+	icon = 'modular/stonekeep/icons/misc.dmi'
 	icon_state = "innocentweb1"
 	layer = ABOVE_ALL_MOB_LAYER
 	density = FALSE
@@ -406,4 +406,231 @@
 				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
 				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/colony (get_turf(src))
 				qdel(src)
+
+
+/mob/living/simple_animal/hostile/retaliate/rogue/spider/colony // colony spider
+	name = "hairy spider"
+	desc = "The forest canopies hides more than leaves...These creachers make honey from flowers and spin silk from their abdomen, when not consuming prey."
+	icon_state = "spider"
+	icon_living = "spider"
+	icon_dead = "spider-dead"
+	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange = 1,
+							/obj/item/natural/silk = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange= 2,
+							/obj/item/reagent_containers/food/snacks/spiderhoney = 1,
+							/obj/item/natural/silk = 2)
+	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange = 2,
+							/obj/item/reagent_containers/food/snacks/spiderhoney = 2,
+							/obj/item/natural/silk = 3)
+
+
+
+
+/obj/effect/mob_spawn/human/orc/corpse
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "remains"
+	color = "#aa9b00"
+	mob_type = /mob/living/carbon/human/species/orc
+
+/obj/effect/mob_spawn/human/orc/corpse/savageorc
+	mob_name = "Savage Orc"
+	name = "Savage Orc"
+	skin_tone = "#50715C"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/savageorc
+
+/obj/effect/mob_spawn/human/orc/corpse/savageorc2
+	mob_name = "Savage Orc"
+	name = "Savage Orc"
+	skin_tone = "#50715C"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/savageorc2
+
+/datum/outfit/savageorc
+//	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag	Vanderlin clothing
+	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
+	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
+
+/datum/outfit/savageorc2
+//	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag
+	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
+	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
+	head = /obj/item/clothing/head/roguetown/helmet/leather
+
+/obj/effect/mob_spawn/human/orc/corpse/orcmarauder
+	mob_name = "Orc Marauder"
+	name = "Orc Marauder"
+	skin_tone = "#50715C"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+//	outfit = /datum/outfit/orcmarauder  doesnt actually equip this TO DO
+	mob_type = /mob/living/carbon/human/species/orc/marauder
+/*
+/datum/outfit/orcmarauder
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	pants =	/obj/item/clothing/under/roguetown/chainlegs
+	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
+	head = /obj/item/clothing/head/roguetown/helmet/leather
 */
+/obj/effect/mob_spawn/human/orc/corpse/orcravager
+	mob_name = "Orc Ravager"
+	name = "Orc Ravager"
+	skin_tone = "#50715C"
+	hairstyle = "Bald"
+	facial_hairstyle = "Shaved"
+	outfit = /datum/outfit/orcravager
+
+/datum/outfit/orcravager
+	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
+	pants =	/obj/item/clothing/under/roguetown/chainlegs
+	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
+	head = /obj/item/clothing/head/roguetown/helmet/skullcap
+	gloves = /obj/item/clothing/gloves/roguetown/chain
+	neck = /obj/item/clothing/neck/roguetown/chaincoif
+///	mask = /obj/item/clothing/mask/rogue/skullmask	Vanderlin clothing TO DO review it
+
+/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion
+	color = "#82aa00"
+	mob_type = /mob/living/carbon/human/species/orc/dwarfinvasion
+
+/mob/living/carbon/human/species/orc/dwarfinvasion/after_creation()
+	..()
+	equipOutfit(new /datum/outfit/job/roguetown/npc/orc/dead_invader)
+
+/datum/outfit/job/roguetown/npc/orc/dead_invader/pre_equip(mob/living/carbon/human/H)
+	..()
+	var/loadout = rand(1,5)
+	switch(loadout)
+		if(1)
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+		if(2)
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			cloak = /obj/item/clothing/cloak/raincloak/brown
+		if(3)
+			cloak = /obj/item/clothing/cloak/raincloak/brown
+		if(4)
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			cloak = /obj/item/clothing/cloak/raincloak/brown
+		if(5)
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
+			cloak = /obj/item/clothing/cloak/raincloak/brown
+
+/*	..................   Dwarf Underdweller Corpse   ................... */
+/obj/effect/mob_spawn/human/corpse/damaged/underdweller
+	icon = 'icons/effects/blood.dmi'
+	icon_state = "remains"
+	color = "#aa9b00"
+	mob_type = /mob/living/carbon/human/species/dwarf/mountain
+	mob_name = "Dwarf Underdweller"
+	name = "Dwarf Underdweller"
+	hairstyle = "Miner"
+	facial_hairstyle = "Pick"
+	outfit = /datum/outfit/deadunderdweller
+
+/datum/outfit/deadunderdweller
+	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
+	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor/red
+	pants = /obj/item/clothing/under/roguetown/trou/leather
+	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes/buckle
+	backl = /obj/item/storage/backpack/rogue/backpack
+	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
+
+
+
+// ======================================================================
+
+/*	..................   Pigflowers   ................... */
+/obj/structure/flora/rogueflower // ausbushes recolored
+	name = "flowers"
+	icon = 'modular/stonekeep/icons/pigflora.dmi'
+	icon_state = "reedbush_1"
+
+/obj/structure/flora/rogueflower/fallenleaves
+	icon_state = "leaves"
+	alpha = 200
+/obj/structure/flora/rogueflower/fallenleaves/Initialize()
+	dir = pick(GLOB.cardinals)
+	. = ..()
+
+/obj/structure/flora/rogueflower/reedbush
+	icon_state = "reedbush_1"
+/obj/structure/flora/rogueflower/reedbush/Initialize()
+	icon_state = "reedbush_[rand(1, 4)]"
+	. = ..()
+
+/obj/structure/flora/rogueflower/lavendergrass
+	icon_state = "lavendergrass_1"
+/obj/structure/flora/rogueflower/lavendergrass/Initialize()
+	icon_state = "lavendergrass_[rand(1, 4)]"
+	. = ..()
+
+/obj/structure/flora/rogueflower/ywflowers
+	icon_state = "ywflowers_1"
+/obj/structure/flora/rogueflower/ywflowers/Initialize()
+	icon_state = "ywflowers_[rand(1, 3)]"
+	. = ..()
+
+/obj/structure/flora/rogueflower/brflowers
+	icon_state = "brflowers_1"
+/obj/structure/flora/rogueflower/brflowers/Initialize()
+	icon_state = "brflowers_[rand(1, 3)]"
+	. = ..()
+
+/obj/structure/flora/rogueflower/ppflowers
+	icon_state = "ppflowers_1"
+
+/obj/structure/flora/rogueflower/ppflowers/Initialize()
+	icon_state = "ppflowers_[rand(1, 3)]"
+	. = ..()
+
+/obj/structure/flora/roguegrass/stalky
+	name = ""
+	desc = ""
+	icon = 'modular/stonekeep/icons/pigflora.dmi'
+	icon_state = "stalkygrass"
+	opacity = FALSE
+
+/obj/structure/flora/roguegrass/stalky/update_icon()
+	dir = pick(GLOB.cardinals)
+
+
+// ===================================================================================
+/*	..................   Dwarf Outpost   ................... */
+/obj/effect/landmark/map_load_mark/dwarf_outpost
+	name = "Dwarf Outpost"
+	templates = list( "Dwarf_Outpost_1","Dwarf_Outpost_2" )
+
+/datum/map_template/dwarf_outpost_i
+	name = "Dwarf Outpost Orc"
+	id = "Dwarf_Outpost_1"
+	mappath = "_maps/map_files/templates/dwarf_outpost/Dwarf_Outpost_1.dmm"
+
+/datum/map_template/dwarf_outpost_ii
+	name = "Dwarf Outpost Beastmen"
+	id = "Dwarf_Outpost_2"
+	mappath = "_maps/map_files/templates/dwarf_outpost/Dwarf_Outpost_2.dmm"
+
+
+/*	..................   Roadblock   ................... */
+/obj/effect/landmark/map_load_mark/hamlet_roadblock
+	name = "Roadblock"
+	templates = list( "roadblock_1","roadblock_2" )
+
+/datum/map_template/roadblock_i
+	name = "Roadblock"
+	id = "roadblock_1"
+	mappath = "_maps/map_files/templates/stonehamlet/roadblock_1.dmm"
+
+/datum/map_template/roadblock_ii
+	name = "No roadblock"
+	id = "roadblock_2"
+	mappath = "_maps/map_files/templates/stonehamlet/roadblock_2.dmm"
+
+
+
+/obj/structure/bearpelt
+	icon = 'modular/stonekeep/icons/bear.dmi'
+	alpha = 240
+	color = "#e9e7d7"
