@@ -50,14 +50,34 @@
 
 /obj/item/clothing/suit/roguetown/shirt/robe/eora
 	name = "eoran robe"
-	desc = "Holy robes, intended for use by followers of Eora"
+	desc = "Holy robes, intended for use by followers of Eora. Two layers, some choose to discard the outer one to display their physique."
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
 	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
 	icon_state = "eorarobes"
+	var/fanatic_wear = FALSE
+/obj/item/clothing/suit/roguetown/shirt/robe/eora/attack_right(mob/user)
+	switch(fanatic_wear)
+		if(FALSE)
+			name = "open eoran robe"
+			desc = "Used by more radical followers of the Eoran Church"
+			body_parts_covered = null
+			icon_state = "eorastraps"
+			fanatic_wear = TRUE
+			to_chat(usr, span_warning("Now wearing radically!"))
+		if(TRUE)
+			name = "eoran robe"
+			desc = "Holy robes, intended for use by followers of Eora"
+			body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
+			icon_state = "eorarobes"
+			fanatic_wear = FALSE
+			to_chat(usr, span_warning("Now wearing normally!"))
+	update_icon()
+	if(ismob(loc))
+		var/mob/L = loc
+		L.update_inv_armor()
 
-/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt
-	name = "eoran straps"
+/obj/item/clothing/suit/roguetown/shirt/robe/eora/alt // obsolete
 	desc = "Sanctified, form fitting straps. Used by more radical followers of the Eoran Church"
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'

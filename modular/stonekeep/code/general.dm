@@ -717,3 +717,27 @@
 	name = "Darkling"
 	desc = "You are at home in the dark. Unbothered. In your lane. Moisturized."
 	icon_state = "stressg"
+
+/obj/item/reagent_containers/food/snacks/fat
+	fried_type = /obj/effect/spawner/roguemap/tallow
+
+
+/obj/effect/spawner/roguemap/tallow
+	spawned = list(/obj/item/reagent_containers/food/snacks/tallow)
+	lootmin = 2
+	lootmax = 2
+	fan_out_items = TRUE
+
+// TALLOW is used as an intermediate crafting ingredient for other recipes.
+/obj/item/reagent_containers/food/snacks/tallow
+	name = "tallow"
+	desc = "Fatty tissue is harvested from slain creachurs and rendered of its membraneous sinew to produce a hard shelf-stable \
+	grease. Useful for making processed leather clothing, but little else."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "tallow"
+	tastes = list("grease" = 1, "oil" = 1, "regret" =1)
+	list_reagents = list(/datum/reagent/consumable/nutriment = 1)
+	eat_effect = /datum/status_effect/debuff/uncookedfood
+	bitesize = 1
+	dropshrink = 0.4
+

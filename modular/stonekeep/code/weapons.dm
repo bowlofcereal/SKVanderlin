@@ -37,6 +37,9 @@
 /obj/item/rogueweapon/mace/goden
 	icon = 'modular/stonekeep/icons/weapons_64.dmi'
 
+/obj/item/rogueweapon/polearm/woodstaff
+	slot_flags = null
+
 /obj/item/rogueweapon/polearm/woodstaff/aries/noc // for noc priest
 	name = "staff of lunar epiphany"
 	icon_state = "naledistaff"
@@ -764,3 +767,18 @@
 	bloody_icon = 'icons/effects/blood.dmi'
 
 
+//................ Rabbet Visage ............... //
+/obj/item/clothing/head/roguetown/padded/rabbetvisage
+	name = "rabbet visage"
+	desc = "A painted wooden rabbet worn by the faithful of Eora, usually during their rituals."
+	icon_state = "eoramask"
+	icon = 'modular/stonekeep/icons/clothing.dmi'
+	mob_overlay_icon = 'modular/stonekeep/icons/onmob/64x64.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	dynamic_hair_suffix = ""
+
+/obj/item/clothing/head/roguetown/roguehood/padded
+	name = "padded hood"
