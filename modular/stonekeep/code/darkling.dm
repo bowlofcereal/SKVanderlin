@@ -18,7 +18,7 @@
 		character.put_in_hands(hood, forced = TRUE)
 
 //Proc used for updating light stress, occurs every health update so around once every 2 seconds
-/datum/component/darkling/proc/update_light_stress(/mob/living/carbon/human)
+/datum/component/darkling/proc/update_light_stress()
 	var/mob/living/carbon/human/darkling
 	//Closing our eyes or being blind/blindfolded lets us recovery very quickly
 	if(darkling.eyesclosed || darkling.eye_blind)
@@ -35,14 +35,14 @@
 
 
 //Triggers on movement. This is mostly so that getting blinded by lights is more responsive, instead of having to linger beside them
-/datum/component/darkling/proc/check_light_on_move(/mob/living/carbon/human)
+/datum/component/darkling/proc/check_light_on_move()
 	var/mob/living/carbon/human/darkling
 	var/light_stress = get_light_stress_value(darkling)
 	if(light_stress > 0.2 && light_stress - last_light_stress > 0.5) //Checks if we've just barreled into the light
 		try_blind_darkling(darkling)
 
 //Used to blind us when exposed to strong lights. Has a cooldown between blindings.
-/datum/component/darkling/proc/try_blind_darkling(/mob/living/carbon/human)
+/datum/component/darkling/proc/try_blind_darkling()
 	var/mob/living/carbon/human/darkling
 	//So that we aren't spamming people too much
 	if(next_blind > world.time || get_face_covered(darkling))
@@ -55,7 +55,7 @@
 	to_chat(parent, span_danger("Bright lights, too fast! My eyes couldn't adjust."))
 
 //Applies the effects of our current light stress accumulation threshold
-/datum/component/darkling/proc/apply_stress_effects(/mob/living/carbon/human)
+/datum/component/darkling/proc/apply_stress_effects()
 	var/mob/living/carbon/human/darkling
 	//Small buff when in the dark and fully rested
 	if(src.current_light_stress == 0)
@@ -76,7 +76,7 @@
 		darkling.apply_status_effect(/datum/status_effect/debuff/darkling_migraine)
 
 //Calculates incoming light stress based on turf lumcount and character stats
-/datum/component/darkling/proc/get_light_stress_value(/mob/living/carbon/human)
+/datum/component/darkling/proc/get_light_stress_value()
 	var/mob/living/carbon/human/darkling
 	var/turf/T = get_turf(parent)
 	var/light_amount = T.get_lumcount()
@@ -93,7 +93,7 @@
 	return incoming_light_stress
 
 
-/datum/component/darkling/proc/get_face_covered(/mob/living/carbon/human)
+/datum/component/darkling/proc/get_face_covered()
 	var/mob/living/carbon/human/darkling
 	if((darkling.wear_mask && (darkling.wear_mask.flags_inv & HIDEFACE)) || (darkling.head && (darkling.head.flags_inv & HIDEFACE)))
 		return 1
