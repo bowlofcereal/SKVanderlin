@@ -150,7 +150,7 @@
 /datum/crafting_recipe/roguetown/leather/armor_hardened
 	name = "armor (heavy leather armor)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/heavy
-	reqs = list(/obj/item/natural/hide/cured = 3)
+	reqs = list(/obj/item/natural/hide/cured = 3, /obj/item/reagent_containers/food/snacks/fat = 1)
 	craftdiff = 4
 //	req_imperial = TRUE
 
