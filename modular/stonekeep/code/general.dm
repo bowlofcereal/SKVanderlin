@@ -849,3 +849,7 @@
 				playsound(H, 'modular/stonekeep/sound/triumph_w.ogg', 100, FALSE, -5)
 			else
 				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
+
+/obj/structure/fermenting_barrel
+	climbable = TRUE
+	climb_offset = 8
