@@ -5,8 +5,8 @@ It´s pretty good. Also extra good mood boost for sex, but still a bit barebones
 	flag = JESTER
 	department_flag = PEASANTS
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 4
+	total_positions = 3
+	spawn_positions = 3
 
 	allowed_races = list(
 		"Humen",
@@ -34,7 +34,9 @@ It´s pretty good. Also extra good mood boost for sex, but still a bit barebones
 	armor = /obj/item/clothing/suit/roguetown/shirt/dress/gen/sexy
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/key/nitemaiden
-	beltl = /obj/item/storage/belt/rogue/pouch/nitemaiden
+	beltl = /obj/item/storage/belt/rogue/pouch/coins/poor
+	r_hand = /obj/item/paper/feldsher_certificate/maybe
+	l_hand = /obj/item/soap
 
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 
@@ -51,14 +53,5 @@ It´s pretty good. Also extra good mood boost for sex, but still a bit barebones
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 
 
-//Nitemaiden pouch
-/obj/item/storage/belt/rogue/pouch/nitemaiden/PopulateContents()
-	if(prob(50))
-		new /obj/item/paper/feldsher_certificate(src)
-	else
-		new /obj/item/paper/feldsher_certificate/expired(src)
-	new /obj/item/soap(src)
-	new /obj/item/roguecoin/copper/pile(src)
-
-/obj/item/bath/soap // replaced by fixing /obj/item/soap
+/obj/item/bath/soap // replaced by fixing /obj/item/soap nuke ROGTODO
 
