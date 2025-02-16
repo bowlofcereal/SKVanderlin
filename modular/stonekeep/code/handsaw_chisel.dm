@@ -501,7 +501,6 @@
 
 
 /obj/item/natural/glass/shard
-	icon = 'icons/obj/shards.dmi'
-	item_state =""
+	item_state = "shard"
 
 /obj/effect/decal/cleanable/debris/stony	// temp ROGTODO
