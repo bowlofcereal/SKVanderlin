@@ -136,8 +136,10 @@
 	name = "feldsher health certificate"
 	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
 	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date. (signed by the town feldsher, the date is a few weeks ago)"
-	grid_width = 32
-	grid_height = 32
+
+/obj/item/paper/feldsher_certificate/update_icon_state()
+	icon_state = "certificate"
+
 /obj/item/paper/feldsher_certificate/expired
 	info = "The wearer hath passed the feldshers monthly inspection as mandated by the pestilence laws, and is not a bearer of maladies to infect our towne.   \
 	Thus they are allowede legally to ply the nitemaidens trade. I so swear on this date.  (signed by the town feldsher, the date is half a year ago)"
@@ -639,7 +641,7 @@
 /obj/structure/bearpelt
 	icon = 'modular/stonekeep/icons/bear.dmi'
 	alpha = 240
-	color = "#e9e7d7"
+	color = "#cdcbba"
 
 // makes barrels climbable, its really weird they arent.
 /obj/structure/fermenting_barrel
@@ -922,11 +924,20 @@
 /obj/structure/chair/pew/right/proc/GetRightPewArmrest()
 	return mutable_appearance('modular/stonekeep/icons/pews.dmi', "pewend_right_armrest")
 
+/obj/item/reagent_containers/food/snacks
+	var/hard_distill
 
+/obj/item/reagent_containers/food/snacks/produce/onion
+	can_distill = FALSE
+	hard_distill = TRUE
+
+/obj/item/reagent_containers/food/snacks/produce/potato
+	can_distill = FALSE
+	hard_distill = TRUE
 
 /obj/structure/fermenting_barrel/distillery
 	name = "distillery"
-	desc = "Copper vat that turns produce into hard liquor."
+	desc = "Copper vat that turns certain produce into hard liquor."
 	icon = 'modular/stonekeep/icons/distillery.dmi'
 	icon_state = "distillery"
 	anchored = TRUE
@@ -937,7 +948,7 @@
 /datum/looping_sound/distillery
 	mid_sounds = list('modular/stonekeep/sound/distillery.ogg'=1)
 	mid_length = 7 SECONDS
-	volume = 80
+	volume = 70
 
 /obj/structure/fermenting_barrel/distillery/Initialize()
 	. = ..()
@@ -947,3 +958,88 @@
 /obj/structure/fermenting_barrel/distillery/Destroy()
 	explosion(src.loc,-1,-1,2, flame_range = 4)	// small explosion, plus a very large fireball.
 	return ..()
+/obj/structure/fermenting_barrel/distillery/try_ferment(obj/item/reagent_containers/food/snacks/fruit, mob/user, batch_process)
+	if(!fruit.hard_distill)
+		if(!batch_process)
+			to_chat(user, span_warning("Not suitable for distillation."))
+		return FALSE
+	else if(!user.transferItemToLoc(fruit,src))
+		if(!batch_process)
+			to_chat(user, span_warning("[fruit] is stuck to my hand!"))
+		return FALSE
+	if(!batch_process)
+		to_chat(user, span_info("I place [fruit] into [src]."))
+	addtimer(CALLBACK(src, PROC_REF(makeWine), fruit), rand(1 MINUTES, 3 MINUTES))
+	return TRUE
+
+
+//................	Debris decals (result from crafting or destroying items thats just visual)	............... //
+/obj/effect/decal/cleanable/debris
+	name = ""
+	desc = ""
+	icon = 'modular/stonekeep/icons/crafting.dmi'
+	icon_state = "tiny"
+	beauty = -20
+/obj/effect/decal/cleanable/debris/Initialize()
+	. = ..()
+	setDir(pick(GLOB.cardinals))
+
+/obj/effect/decal/cleanable/debris/ex_act()
+	qdel(src)
+
+
+/obj/effect/decal/cleanable/debris/glassy
+	name = "glass shards"
+	icon_state = "tiny"
+	beauty = -100
+/obj/effect/decal/cleanable/debris/glassy/Crossed(mob/living/L)
+	. = ..()
+	playsound(loc,'sound/foley/glass_step.ogg', 50, FALSE)
+
+/obj/effect/decal/cleanable/debris/stony
+	name = "stone chippings"
+	icon_state = "pebbly"
+
+/obj/effect/decal/cleanable/debris/woody	// sawdust gets cleared by weather
+	name = "sawdust"
+	icon_state = "woody"
+/obj/effect/decal/cleanable/debris/woody/Initialize()
+	START_PROCESSING(SSprocessing, src)
+	GLOB.weather_act_upon_list += src
+	. = ..()
+/obj/effect/decal/cleanable/debris/woody/Destroy()
+	STOP_PROCESSING(SSprocessing, src)
+	GLOB.weather_act_upon_list -= src
+	. = ..()
+/obj/effect/decal/cleanable/debris/woody/weather_act_on(weather_trait, severity)
+	qdel(src)
+
+/obj/effect/decal/cleanable/debris/clay
+	name = "clay shards"
+	icon_state = "clay"
+
+
+
+/obj/item/kitchen/platter/clay/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)
+	new /obj/effect/decal/cleanable/debris/clay(get_turf(src))
+	playsound(get_turf(src), 'sound/foley/break_clay.ogg', 90, TRUE)
+	..()
+	qdel(src)
+
+/obj/item/reagent_containers/glass/bowl/clay/throw_impact(atom/hit_atom, datum/thrownthing/thrownthing)
+	new /obj/effect/decal/cleanable/debris/clay(get_turf(src))
+	playsound(get_turf(src), 'sound/foley/break_clay.ogg', 90, TRUE)
+	..()
+	qdel(src)
+
+
+
+/obj/item/paper/getonmobprop(tag)
+	. = ..()
+	if(tag)
+		switch(tag)
+			if("gen")
+				return list("shrink" = 0.3,"sx" = 0,"sy" = -1,"nx" = 6,"ny" = -1,"wx" = 1,"wy" = 0,"ex" = 7,"ey" = -1,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 2,"sflip" = 0,"wflip" = 0,"eflip" = 8)
+			if("onbelt")
+				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
+

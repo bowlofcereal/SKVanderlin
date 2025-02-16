@@ -176,7 +176,7 @@
 		desc = ""
 	. = ..()
 
-/obj/effect/decal/cleanable/shreds/clay
+/obj/effect/decal/cleanable/shreds/clay	// obsolete ROGTODO
 	color = "#916258"
 
 /obj/effect/decal/cleanable/glitter
