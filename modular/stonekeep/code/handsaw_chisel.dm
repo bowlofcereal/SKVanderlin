@@ -501,6 +501,9 @@
 
 
 /obj/item/natural/glass/shard
+	icon = 'modular/stonekeep/icons/crafting.dmi'
+	lefthand_file = 'modular/stonekeep/icons/onmob/lefthand.dmi'
+	righthand_file = 'modular/stonekeep/icons/onmob/righthand.dmi'
 	item_state = "shard"
 
 /obj/effect/decal/cleanable/debris/stony	// temp ROGTODO
