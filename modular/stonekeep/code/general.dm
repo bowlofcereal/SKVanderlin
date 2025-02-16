@@ -49,7 +49,7 @@
 	user.changeNext_move(CLICK_CD_MELEE)
 	var/turf/bathspot = get_turf(target)				// Checks for being in a bath and being undressed
 	if(!istype(bathspot, /turf/open/water/bath))
-		if((!locate(/obj/structure/chair/comfy/bathtub) in target.loc))
+		if((!locate(/obj/structure/table/wood/bathtub) in target.loc))
 			to_chat(user, span_warning("They must be in the bath water!"))
 			return
 	if(!ishuman(target))
