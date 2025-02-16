@@ -22,6 +22,7 @@
 	display_order = 19
 	give_bank_account = 100
 	min_pq = 0
+	allowed_patrons = list(/datum/patron/divine/noc)
 
 /datum/outfit/job/roguetown/archivist/pre_equip(mob/living/carbon/human/H)
 	..()

@@ -249,3 +249,28 @@
 
 /obj/item/undies/f
 	body_parts_covered = CHEST|GROIN
+
+
+//.................Guild Clothing..................//
+
+//Maker's Guild - CLOTHING_WINESTAIN_RED, CLOTHING_SOOT_BLACK
+
+/obj/item/clothing/head/roguetown/headband/makers
+	color = CLOTHING_SOOT_BLACK
+
+/obj/item/clothing/cloak/apron/makers
+	color = CLOTHING_SOOT_BLACK
+
+/obj/item/clothing/suit/roguetown/shirt/shortshirt/makers
+	color = CLOTHING_WINESTAIN_RED
+
+/obj/item/clothing/under/roguetown/tights/makers
+	color = CLOTHING_SOOT_BLACK
+
+//Provisoner's Guild - CLOTHING_SPRING_GREEN, CLOTHING_OLD_LEATHER
+
+/obj/item/clothing/suit/roguetown/shirt/shortshirt/provisoner
+	color = CLOTHING_SPRING_GREEN
+
+/obj/item/clothing/under/roguetown/tights/provisoner
+	color = CLOTHING_SPRING_GREEN
