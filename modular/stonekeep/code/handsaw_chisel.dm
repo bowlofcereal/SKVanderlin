@@ -499,4 +499,9 @@
 	. = ..()
 	playsound(loc,'modular/stonekeep/sound/glass_step.ogg', 100, FALSE)
 
+
+/obj/item/natural/glass/shard
+	icon = 'icons/obj/shards.dmi'
+	item_state =""
+
 /obj/effect/decal/cleanable/debris/stony	// temp ROGTODO
