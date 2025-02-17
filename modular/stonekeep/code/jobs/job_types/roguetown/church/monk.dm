@@ -69,10 +69,12 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/dendor
 			H.cmode_music = 'sound/music/cmode/garrison/CombatForestGarrison.ogg'
 		if(/datum/patron/divine/abyssor)
-			head = /obj/item/clothing/head/roguetown/roguehood/random
+			head = /obj/item/clothing/head/roguetown/padded/shrinekeeper
 			neck = /obj/item/clothing/neck/roguetown/psycross/silver/abyssor
-			shoes = /obj/item/clothing/shoes/roguetown/boots
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/plain
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/shrinekeeper
+			shirt = /obj/item/clothing/suit/roguetown/shirt/rags/monkgarb/random
+			shoes = /obj/item/clothing/shoes/roguetown/sandals/geta
+			wrists = /obj/item/clothing/wrists/roguetown/shrinekeeper
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 			H.mind?.adjust_skillrank(/datum/skill/labor/fishing, 1, TRUE)
 		if(/datum/patron/divine/ravox)

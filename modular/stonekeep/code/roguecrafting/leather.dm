@@ -45,7 +45,7 @@
 	reqs = list(/obj/item/natural/fur/volf = 1,
 	/obj/item/natural/head/volf = 1)
 	craftdiff = 2
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/cloak
 	name = "cloak (leather)"
@@ -109,52 +109,43 @@
 	result = /obj/item/clothing/suit/roguetown/armor/leather/basic
 	reqs = list(/obj/item/natural/hide/cured = 2)
 	craftdiff = 1
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/armor_corset
+/datum/crafting_recipe/roguetown/leather/armor/corset
 	name = "armor (corset)"
 	result = /obj/item/clothing/suit/roguetown/armor/corset
 	reqs = list(/obj/item/natural/hide/cured = 1)
-	craftdiff = 1
-//	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/armor_vest
+/datum/crafting_recipe/roguetown/leather/armor/vest
 	name = "armor (leather vest)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/vest
 	reqs = list(/obj/item/natural/hide/cured = 1)
-	craftdiff = 1
-//	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/armor_jacket
+/datum/crafting_recipe/roguetown/leather/armor/jacket
 	name = "armor (leather jacket)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/jacket
 	reqs = list(/obj/item/natural/hide/cured = 2)
-	craftdiff = 1
-//	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/armor_sea
+/datum/crafting_recipe/roguetown/leather/armor/sea
 	name = "armor (sea jacket)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/jacket/sea
 	reqs = list(/obj/item/natural/hide/cured = 2)
 	craftdiff = 2
-//	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/hidearmor
+/datum/crafting_recipe/roguetown/leather/armor/hide
 	name = "armor (fur)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/hide
 	reqs = list(/obj/item/natural/hide = 2,
 				/obj/item/natural/fur = 1)
 	craftdiff = 2
-//	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/armor_hardened
+/datum/crafting_recipe/roguetown/leather/armor/heavy
 	name = "armor (heavy leather armor)"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/heavy
 	reqs = list(/obj/item/natural/hide/cured = 3, /obj/item/reagent_containers/food/snacks/fat = 1)
 	craftdiff = 4
-//	req_imperial = TRUE
 
-/datum/crafting_recipe/roguetown/leather/armor_masterwork
+/datum/crafting_recipe/roguetown/leather/armor/heavycoat
 	name = "armor (heavy leather coat"
 	result = /obj/item/clothing/suit/roguetown/armor/leather/heavy/coat
 	reqs = 	list(/obj/item/natural/hide/cured = 4, /obj/item/reagent_containers/food/snacks/fat = 1)
@@ -175,12 +166,12 @@
 /datum/crafting_recipe/roguetown/leather/sandals
 	name = "shoes (sandals)"
 	result = /obj/item/clothing/shoes/roguetown/sandals
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/shoes
 	name = "shoes (simple}"
 	result = /obj/item/clothing/shoes/roguetown/simpleshoes
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/furlinedboots
 	name = "shoes (fur lined boots)"
@@ -192,43 +183,43 @@
 /datum/crafting_recipe/roguetown/leather/boots
 	name = "shoes (leather boots) {ip}"
 	result = /obj/item/clothing/shoes/roguetown/boots/leather
-//	req_imperial = TRUE
+	req_imperial = TRUE
 	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/leather/boots_short
 	name = "shoes (short boots)"
 	result = /obj/item/clothing/shoes/roguetown/shortboots
-//	req_imperial = TRUE
+	req_imperial = TRUE
 	craftdiff = 1
 
 /datum/crafting_recipe/roguetown/leather/gladiator
 	name = "shoes (gladiator sandals)"
 	result = /obj/item/clothing/shoes/roguetown/gladiator
 	craftdiff = 2
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/boots_noble
 	name = "shoes (noble boots)"
 	result = /obj/item/clothing/shoes/roguetown/nobleboot
-//	req_imperial = TRUE
+	req_imperial = TRUE
 	craftdiff = 2
 
 /datum/crafting_recipe/roguetown/leather/boots_dark
 	name = "shoes (riding boots)"
 	result = /obj/item/clothing/shoes/roguetown/ridingboots
-//	req_imperial = TRUE
+	req_imperial = TRUE
 	craftdiff = 2
 
 /datum/crafting_recipe/roguetown/leather/boots_dark
 	name = "shoes (riding boots)"
 	result = /obj/item/clothing/shoes/roguetown/ridingboots
-//	req_imperial = TRUE
+	req_imperial = TRUE
 	craftdiff = 2
 
 /datum/crafting_recipe/roguetown/leather/boots_dark
 	name = "shoes (dark boots)"
 	result = /obj/item/clothing/shoes/roguetown/boots
-//	req_imperial = TRUE
+	req_imperial = TRUE
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/leather/boots_heavy
@@ -269,18 +260,18 @@
 	name = "pants (leather)"
 	result = list(/obj/item/clothing/under/roguetown/trou/leather)
 	reqs = list(/obj/item/natural/hide/cured = 2)
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/pants_heavy
 	name = "pants (heavy leather)"
 	result = /obj/item/clothing/under/roguetown/leather/heavy
-	reqs = 	list(/obj/item/natural/hide/cured = 3)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 
 /datum/crafting_recipe/roguetown/leather/pants_padded
 	name = "pants (padded leather)"
 	result = /obj/item/clothing/under/roguetown/leather/padded
-	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
+	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/natural/cloth = 2)
 	craftdiff = 5
 
 
@@ -288,7 +279,7 @@
 /datum/crafting_recipe/roguetown/leather/bracers
 	name = "bracers (leather)"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/bracers_hardened
 	name = "bracers (heavy leather)"
@@ -323,7 +314,7 @@
 	result = /obj/item/clothing/head/roguetown/helmet/leather
 	reqs = list(/obj/item/natural/hide = 2)
 	craftdiff = 1
-//	req_imperial = TRUE
+	req_imperial = TRUE
 
 /datum/crafting_recipe/roguetown/leather/antlerhood
 	name = "hood (antler)"
