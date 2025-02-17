@@ -34,12 +34,12 @@
 	head = /obj/item/clothing/head/roguetown/brimmed
 	cloak = /obj/item/clothing/cloak/raincloak/furcloak/brown
 	armor = /obj/item/clothing/suit/roguetown/armor/leather/hide
-	backr = /obj/item/storage/backpack/rogue/satchel
+	backr = /obj/item/ammo_holder/quiver/arrows
 	backl = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 	belt = /obj/item/storage/belt/rogue/leather
-	beltr = /obj/item/ammo_holder/quiver/arrows
+	beltr = /obj/item/rogueweapon/axe/iron
 	beltl = /obj/item/storage/meatbag
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/flashlight/flare/torch/lantern = 1, /obj/item/rogueweapon/axe/iron = 1)
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/bait = 1, /obj/item/rogueweapon/knife/hunting = 1, /obj/item/flashlight/flare/torch/lantern = 1)
 	gloves = /obj/item/clothing/gloves/roguetown/leather
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
@@ -59,9 +59,9 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/labor/lumberjacking, 3, TRUE)
+		H.change_stat("endurance", 1)
+		H.change_stat("perception", 3)
 		if(H.age == AGE_OLD)
 			H.mind?.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 			H.mind?.adjust_skillrank(/datum/skill/craft/traps, 1, TRUE)
-		else
-			H.change_stat("endurance", 1)
-			H.change_stat("perception", 3)
+

@@ -46,11 +46,14 @@
 	belt = /obj/item/storage/belt/rogue/leather
 	cloak = /obj/item/clothing/cloak/apron/makers
 	backl =	/obj/item/rogueweapon/hammer/sledgehammer
-	beltl = /obj/item/storage/belt/rogue/pouch/coins/mid
 	beltr = /obj/item/storage/keyring/armorsmith
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/makers
-	if(H.patron == /datum/patron/divine/malum)
-		neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
+	switch(H.patron?.type)
+		if(/datum/patron/divine/malum)
+			neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
+			backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/mid)
+		else
+			neck = /obj/item/storage/belt/rogue/pouch/coins/mid
 	H.change_stat("strength", 1)
 	H.change_stat("endurance", 2)
 	H.change_stat("speed", -1)

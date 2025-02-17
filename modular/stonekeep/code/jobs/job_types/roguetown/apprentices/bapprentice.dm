@@ -37,20 +37,26 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/sewing, pick(1,2,3), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/tanning, pick(1,2,3), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/carpentry, pick(1,2,3), TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/labor/mining, pick(1,2,3), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/engineering, 1, TRUE)
 
 		id = /obj/item/clothing/ring/silver/makers_guild
 		shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/makers
 		pants = /obj/item/clothing/under/roguetown/tights/makers
-		shoes = /obj/item/clothing/shoes/roguetown/simpleshoes
+		shoes = /obj/item/clothing/shoes/roguetown/shortboots
 		belt = /obj/item/storage/belt/rogue/leather/rope
 		backr = /obj/item/storage/backpack/rogue/satchel
 		gloves = /obj/item/clothing/gloves/roguetown/leather
-		beltr = /obj/item/storage/belt/rogue/pouch/coins/low
+		beltr = /obj/item/storage/keyring/armorsmith
 		beltl = /obj/item/rogueweapon/hammer/iron
-		backpack_contents = list(/obj/item/storage/keyring/armorsmith)
-		if(H.patron == /datum/patron/divine/malum)
-			neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
+
+		switch(H.patron?.type)
+			if(/datum/patron/divine/malum)
+				neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum_steel
+				backpack_contents = list(/obj/item/storage/belt/rogue/pouch/coins/poor)
+			else
+				neck = /obj/item/storage/belt/rogue/pouch/coins/poor
+
 
 		H.change_stat("endurance", 1)
 		H.change_stat("constitution", 1)
