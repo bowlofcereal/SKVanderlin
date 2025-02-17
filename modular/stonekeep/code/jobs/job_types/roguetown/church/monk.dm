@@ -33,7 +33,7 @@
 	belt = /obj/item/storage/belt/rogue/leather/rope
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/poor
 	beltl = /obj/item/key/church
-	backl = /obj/item/rogueweapon/polearm/woodstaff/quarterstaff
+	r_hand = /obj/item/rogueweapon/polearm/woodstaff/quarterstaff
 	backpack_contents = list(/obj/item/needle)
 	switch(H.patron?.type)
 		if(/datum/patron/divine/astrata)
@@ -44,7 +44,7 @@
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/astrata
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 		if(/datum/patron/divine/eora)
-			head = /obj/item/clothing/head/roguetown/padded/operavisage
+			head = /obj/item/clothing/head/roguetown/padded/rabbetvisage
 			neck = /obj/item/clothing/neck/roguetown/psycross/silver/eora
 			shoes = /obj/item/clothing/shoes/roguetown/sandals
 			armor = /obj/item/clothing/suit/roguetown/shirt/robe/eora
@@ -91,10 +91,10 @@
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 			H.mind?.adjust_skillrank(/datum/skill/misc/stealing, 1, TRUE)
 		if(/datum/patron/divine/malum)
-			head = /obj/item/clothing/head/roguetown/roguehood/random
+			head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm/malumite
 			neck = /obj/item/clothing/neck/roguetown/psycross/silver/malum
 			shoes = /obj/item/clothing/shoes/roguetown/boots
-			armor = /obj/item/clothing/suit/roguetown/shirt/robe/plain
+			armor = /obj/item/clothing/suit/roguetown/shirt/robe/malum
 			backpack_contents += /obj/item/rogueweapon/hammer/iron
 			H.cmode_music = 'sound/music/cmode/adventurer/CombatMonk.ogg'
 		else // Failsafe

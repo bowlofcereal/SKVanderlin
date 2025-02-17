@@ -1,7 +1,7 @@
 /datum/crafting_recipe/roguetown
 	always_availible = TRUE
 	skillcraft = /datum/skill/craft/crafting
-
+/*
 /datum/crafting_recipe/roguetown/blowgun
 	name = "blowgun"
 	result = /obj/item/gun/ballistic/revolver/grenadelauncher/blowgun
@@ -220,6 +220,13 @@
 				/obj/item/ammo_casing/caseless/rogue/arrow/stone)
 	reqs = list(/obj/item/grown/log/tree/stick = 5,
 				/obj/item/natural/stone = 5)
+
+/datum/crafting_recipe/roguetown/poisondart
+	name = "poison dart"
+	result = /obj/item/ammo_casing/caseless/rogue/dart/poison
+	reqs = list(/obj/item/ammo_casing/caseless/rogue/dart = 1,
+				/obj/item/reagent_containers/food/snacks/produce/jacksberry/poison = 1)
+	craftdiff = 0
 
 /datum/crafting_recipe/roguetown/poisonarrow
 	name = "poison arrow"
@@ -491,22 +498,13 @@
 // Woodcutting recipe
 /datum/crafting_recipe/roguetown/lumberjacking
 	skillcraft = /datum/skill/labor/lumberjacking
-	tools = list(/obj/item/rogueweapon/knife/hunting = 1)
+	tools = list(/obj/item/rogueweapon/knife = 1)
 
 /datum/crafting_recipe/roguetown/lumberjacking/cart_upgrade
-	name = "upgrade cog"
-	result = /obj/item/cart_upgrade/level_1
-	reqs = list(/obj/item/grown/log/tree/small = 2,
-				/obj/item/natural/stone = 1)
-	craftdiff = 2
-
-/datum/crafting_recipe/roguetown/lumberjacking/cart_upgrade2
-	name = "advanced upgrade cog"
-	result = /obj/item/cart_upgrade/level_2
-	reqs = list(/obj/item/grown/log/tree/small = 4,
-				/obj/item/cart_upgrade/level_1 = 1,
-				/obj/item/ingot/iron = 1)
-	craftdiff = 4
+	name = "wooden cog"
+	result = /obj/item/roguegear/wood/basic
+	reqs = list(/obj/item/natural/wood/plank = 2)
+	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/wood_hammer
 	name = "wooden mallet"
@@ -550,3 +548,4 @@
 	reqs = list(/obj/item/natural/fibers = 1, /obj/item/grown/log/tree/stick = 2)
 	craftdiff = 1
 	skillcraft = /datum/skill/craft/crafting
+*/
