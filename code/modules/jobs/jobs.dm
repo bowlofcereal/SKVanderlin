@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(noble_positions, list(
 GLOBAL_LIST_INIT(garrison_positions, list(
 	"Royal Knight",
 	"Veteran",
-	"Garrison Guard",
+	"City Watchmen",
 	"Men-at-arms",
 	"Jailor",
 	"Dungeoneer",
@@ -42,7 +42,7 @@ GLOBAL_LIST_INIT(serf_positions, list(
 	"Weaponsmith",
 	"Tailor",
 	"Alchemist",
-	"Artificier",
+	"Artificer",
 	"Matron",
 	"Physicker",
 	"Scribe",
