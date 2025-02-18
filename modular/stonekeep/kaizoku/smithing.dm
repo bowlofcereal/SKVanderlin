@@ -603,7 +603,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
-	created_item = /obj/item/rogueweapon/battle/ono
+	created_item = /obj/item/rogueweapon/axe/battle/ono
 	craftdiff = 3
 
 /datum/anvil_recipe/weapons/changfu
@@ -612,7 +612,7 @@
 	appro_skill = /datum/skill/craft/weaponsmithing
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/woodcut/changfu
+	created_item = /obj/item/rogueweapon/axe/iron/changfu
 
 //Unique few
 /datum/anvil_recipe/weapons/jitte

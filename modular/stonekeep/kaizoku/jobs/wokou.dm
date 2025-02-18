@@ -104,7 +104,7 @@
 			if(prob(60))
 				beltl = /obj/item/rogueweapon/sickle/kama
 			else
-				beltl = /obj/item/rogueweapon/woodcut/changfu // luckyroll. Now you have an axe.
+				beltl = /obj/item/rogueweapon/axe/iron/changfu // luckyroll. Now you have an axe.
 			H.mind.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 			to_chat(H, span_warning("<span class='info'>Farmlands shall never struggle under my might, as I came from the Outskirts where the demons once brew, I slaughtered the Grezenholft like pigs - and I can do it again. May the waters fortalify the soil I step on.</span>"))
 

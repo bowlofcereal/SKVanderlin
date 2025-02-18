@@ -404,27 +404,19 @@
 // =================================================================
 // ========================		AXE		============================
 
-/obj/item/rogueweapon/battle/ono
+/obj/item/rogueweapon/axe/battle/ono
 	slot_flags = ITEM_SLOT_HIP
-	force = 15
-	force_wielded = 25
-	possible_item_intents = list(/datum/intent/axe/cut)
 	name = "nagai ono"
 	desc = "A battleaxe of Abyssariad design with a longer handle and shorter blade than its Humen counterpart. The increased leverage, reduced weight, and smaller striking area give it greater use against armor, while the longer handle makes it easier to parry with."
 	icon_state = "ono"
-	max_blade_int = 500
-	smeltresult = /obj/item/ingot/steel
-	gripped_intents = list(/datum/intent/axe/cut,/datum/intent/axe/battleaxe/chop/ono)
 	parrysound = list('sound/combat/parry/wood/parrywood (1).ogg', 'sound/combat/parry/wood/parrywood (2).ogg', 'sound/combat/parry/wood/parrywood (3).ogg')
-	swingsound = BLADEWOOSH_MED
-	associated_skill = /datum/skill/combat/axesmaces
 	minstr = 8
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
-	max_blade_int = 200
-	max_integrity = 300
-	wdefense = 6
+	max_blade_int = 180
+	max_integrity = INTEGRITY_STANDARD
+	wdefense = GOOD_PARRY
 
-/obj/item/rogueweapon/battle/getonmobprop(tag)
+/obj/item/rogueweapon/axe/battle/ono/getonmobprop(tag)
 	if(tag)
 		switch(tag)
 			if("gen")
@@ -457,24 +449,13 @@
 	axe_cut = 5 //You'd be surprised to know that the axe head design for throwing is the same one for cutting wood, but lighter.
 	embedding = list("embedded_pain_multiplier" = 3, "embed_chance" = 20, "embedded_fall_chance" = 60)
 
-/obj/item/rogueweapon/woodcut/changfu
+/obj/item/rogueweapon/axe/iron/changfu
 	name = "iron changfu"
 	desc = "The tool of justice, hardwork and destruction, all in one."
 	icon_state = "changfu"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
-	wdefense = 4 //Battle designed.
+	wdefense = AVERAGE_PARRY
 	axe_cut = 3 //Not as viable for cutting as the other one, less than a hatchet in fact.
-
-/datum/intent/axe/battleaxe/chop/ono //because actual battle axes don't have stupid large blades.
-	name = "chop"
-	icon_state = "inchop"
-	blade_class = BCLASS_CHOP
-	attack_verb = list("chops", "hacks")
-	animname = "chop"
-	hitsound = list('sound/combat/hits/bladed/genchop (1).ogg', 'sound/combat/hits/bladed/genchop (2).ogg', 'sound/combat/hits/bladed/genchop (3).ogg')
-	penfactor = AP_HEAVYAXE_STAB
-	swingdelay = 1
-	misscost = 10
 
 
 // =================================================================
@@ -624,37 +605,6 @@
 // =================================================================
 // ========================		FLAIL	============================
 
-/datum/intent/flail/strike/ranged/smash
-	name = "smash"
-	chargetime = 5
-	no_early_release = TRUE
-	penfactor = 80
-	recovery = 10
-	damfactor = 1.2
-	chargedloop = /datum/looping_sound/flailswing
-	keep_looping = TRUE
-	icon_state = "insmash"
-	blade_class = BCLASS_SMASH
-	attack_verb = list("smashes")
-	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
-	misscost = 10
-
-/datum/intent/flail/strike/ranged
-	name = "strike"
-	blade_class = BCLASS_BLUNT
-	attack_verb = list("strikes", "hits")
-	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
-	swingdelay = 5
-	penfactor = 5
-	icon_state = "instrike"
-	misscost = 5
-	reach = 2
-	recovery = 10
-	chargedloop = /datum/looping_sound/flailswing
-	keep_looping = TRUE
-	chargetime = 10
-	no_early_release = TRUE
-
 /datum/intent/flail/cut
 	name = "cut"
 	blade_class = BCLASS_CUT
@@ -687,20 +637,6 @@
 	misscost = 10
 	chargetime = 10
 
-/datum/intent/flail/strike/smash
-	name = "smash"
-	chargetime = 5
-	no_early_release = TRUE
-	penfactor = 80
-	recovery = 10
-	damfactor = 1.2
-	chargedloop = /datum/looping_sound/flailswing
-	keep_looping = TRUE
-	icon_state = "insmash"
-	blade_class = BCLASS_SMASH
-	attack_verb = list("smashes")
-	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
-	misscost = 5
 
 /obj/item/rogueweapon/flail/sflail/kusarifundo
 	name = "kusari fundo"
@@ -717,18 +653,13 @@
 	icon_state = "nunchaku"
 
 /obj/item/rogueweapon/flail/kusarigama
-	force = DAMAGE_NORMAL_FLAIL
 	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/strike/smash, /datum/intent/flail/cut, /datum/intent/flail/cut/chop)
 	name = "kusarigama"
 	desc = "A handle with a sickle-like blade, featuring a chain that ends in a spiked ball. Versatile weapon adapted to defeat sword-wielding foes."
 	icon_state = "kusarigama"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	sharpness = IS_SHARP
-	wlength = WLENGTH_NORMAL
-	w_class = WEIGHT_CLASS_NORMAL
-	slot_flags = ITEM_SLOT_HIP
 	blade_dulling = DULLING_BASHCHOP
-	associated_skill = /datum/skill/combat/whipsflails
 	smeltresult = /obj/item/ingot/steel
 	parrysound = list('sound/combat/parry/parrygen.ogg')
 	swingsound = BLUNTWOOSH_MED
