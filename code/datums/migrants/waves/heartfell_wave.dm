@@ -12,7 +12,7 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
 	belt = /obj/item/storage/belt/rogue/leather/black
 	neck = /obj/item/clothing/neck/roguetown/gorget
-	head = /obj/item/clothing/head/roguetown/heartfelt
+	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/heartfelt
 	shoes = /obj/item/clothing/shoes/roguetown/ridingboots/gutal
 	pants = /obj/item/clothing/under/roguetown/trou/tobi/dark
 	cloak = /obj/item/clothing/cloak/newheartfelt
