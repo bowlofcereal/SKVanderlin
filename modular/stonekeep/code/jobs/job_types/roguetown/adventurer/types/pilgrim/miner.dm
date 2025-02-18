@@ -52,7 +52,7 @@
 	if(H.dna.species.id == "dwarf")
 		head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
 		id = /obj/item/clothing/ring/silver/makers_guild
-		beltr = /obj/item/roguekey/blacksmith
+		beltr = /obj/item/key/blacksmith
 		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 	else
 		beltr = /obj/item/flashlight/flare/torch/lantern

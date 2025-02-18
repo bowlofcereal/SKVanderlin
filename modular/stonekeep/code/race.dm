@@ -205,9 +205,27 @@
 	Aasimar are known for their incredible strength and resilience, and are a prized addition to any shield wall. \
 	However, they possess less capacity for independent thought due to their wartime construction."
 
+	hairyness = ""
 	specstats = list("strength" = 1, "perception" = 0, "intelligence" = -2, "constitution" = 3, "endurance" = 1, "speed" = 0, "fortune" = -1)
 	specstats_f = list("strength" = 1, "perception" = 0, "intelligence" = -2, "constitution" = 3, "endurance" = 1, "speed" = 0, "fortune" = -1)
 
+//AASIMAR SKIN TONES
+#define SKIN_COLOR_PLANETAR "#976b20" //goldbrown
+#define SKIN_COLOR_SOLAR "#ded4a6" //yellowhite
+#define SKIN_COLOR_EMPYREA "#b7ad72" //Pale yellow
+#define SKIN_COLOR_GAEIA "#db904f" //Orange
+#define SKIN_COLOR_CELESTIAL "#e1c565" //Gold
+#define SKIN_COLOR_OLYMPIA "#cfdd9e" //yellowgreen
+
+/datum/species/aasimar/get_skin_list()
+	return sortList(list(
+		"Planetar" = SKIN_COLOR_PLANETAR,
+		"Solar" = SKIN_COLOR_SOLAR,
+		"Empyrea" = SKIN_COLOR_EMPYREA,
+		"Gaeia" = SKIN_COLOR_GAEIA,
+		"Celestial" = SKIN_COLOR_CELESTIAL,
+		"Olympia" = SKIN_COLOR_OLYMPIA,
+	))
 
 // =================================================================================
 /datum/species/human/halfelf
