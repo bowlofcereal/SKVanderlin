@@ -1056,25 +1056,3 @@
 	dropshrink = 0.5
 
 
-GLOBAL_LIST_INIT(character_flaws, list(
-	"Alcoholic"=/datum/charflaw/addiction/alcoholic,
-	"Devout Follower"=/datum/charflaw/addiction/godfearing,
-	"Smoker"=/datum/charflaw/addiction/smoker,
-	"Junkie"=/datum/charflaw/addiction/junkie,
-	"Cyclops (R)"=/datum/charflaw/noeyer,
-	"Cyclops (L)"=/datum/charflaw/noeyel,
-	"Greedy"=/datum/charflaw/greedy,
-	"Narcoleptic"=/datum/charflaw/narcoleptic,
-	"Masochist"=/datum/charflaw/masochist,
-	"Bad Sight"=/datum/charflaw/badsight,
-	"Paranoid"=/datum/charflaw/paranoid,
-	"Clingy"=/datum/charflaw/clingy,
-	"Isolationist"=/datum/charflaw/isolationist,
-	"Fire Servant"=/datum/charflaw/addiction/pyromaniac,
-	"Thief-Borne"=/datum/charflaw/addiction/kleptomaniac,
-	"Pain Freek"=/datum/charflaw/addiction/masochist,
-	"Hunted"=/datum/charflaw/hunted,
-	"Random Flaw or No Flaw"=/datum/charflaw/randflaw,
-	"Guaranteed No Flaw (3 TRI)"=/datum/charflaw/noflaw,
-	"Love-Fiend"=/datum/charflaw/addiction/lovefiend,	//STONEKEEP EDIT
-	))
