@@ -11,11 +11,7 @@
 		"Dwarf",
 		"Tiefling",
 		"Dark Elf",
-		"Aasimar",
-		"Changeling",
-		"Skylancer",
-		"Ogrun",
-		"Undine"
+		"Aasimar"
 	)
 	outfit = /datum/outfit/job/roguetown/adventurer/peasant
 	category_tags = list(CTAG_PILGRIM)

@@ -14,15 +14,12 @@
 		"Tiefling",
 		"Dark Elf",
 		"Aasimar",
-		"Changeling",
-		"Skylancer",
-		"Ogrun",
-		"Undine"
+		"Changeling"
 	)
 	outfit = /datum/outfit/job/roguetown/adventurer/physicker
 	category_tags = list(CTAG_PILGRIM)
 	maximum_possible_slots = 2
-//	apprentice_name = "Physicker Apprentice"
+	apprentice_name = "Physicker Apprentice"
 
 /datum/outfit/job/roguetown/adventurer/physicker/pre_equip(mob/living/carbon/human/H)
 	..()
