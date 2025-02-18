@@ -507,6 +507,7 @@
 	icon_state = "mino"
 	inhand_mod = FALSE
 	hoodtype = null
+	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/cloaks.dmi'
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/detailed/tabards.dmi'
 	sleevetype = "shirt"
@@ -1126,6 +1127,7 @@
 	name = "template BUGREPORT"
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
+	icon_state = ""
 	sellprice = VALUE_CHEAP_IRON_HELMET
 	max_integrity = INTEGRITY_POOR
 
