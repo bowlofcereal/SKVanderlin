@@ -16,7 +16,7 @@
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_IMMORTAL)
 	tutorial = "You are a soldier in the ruler's garrison. Your experience, training, and equipment may vary... but you are the first line of defense against the horrors that encroach on Vanderlin."
-	display_order = JDO_GARRISONGUARD
+	display_order = JDO_CITYWATCHMEN
 	whitelist_req = FALSE
 	bypass_lastclass = TRUE
 
@@ -89,7 +89,6 @@ Design philosphy:
 	H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.change_stat(STATKEY_STR, 1)
 	H.change_stat(STATKEY_END, 2)
 	H.change_stat(STATKEY_CON, 1)
@@ -125,7 +124,6 @@ Design philosphy:
 	H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
-	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.change_stat(STATKEY_STR, 2)
 	H.change_stat(STATKEY_END, 1)
 	H.change_stat(STATKEY_CON, 2)
@@ -177,7 +175,6 @@ Design philosphy:
 	H.mind?.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/tanning, 1, TRUE)
-	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.change_stat(STATKEY_PER, 2)
 	H.change_stat(STATKEY_END, 1)
 	H.change_stat(STATKEY_SPD, 2)
@@ -212,7 +209,6 @@ Design philosphy:
 	H.mind?.adjust_skillrank(/datum/skill/misc/swimming, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/climbing, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 4, TRUE)
-	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.change_stat(STATKEY_END, 2)
 	H.change_stat(STATKEY_SPD, 2)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)

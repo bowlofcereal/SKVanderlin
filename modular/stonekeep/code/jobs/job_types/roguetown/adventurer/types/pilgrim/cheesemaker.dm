@@ -26,7 +26,6 @@
 	H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/crafting, 2, TRUE)
-	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/labor/taming, 1, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 4, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/labor/farming, 2, TRUE)

@@ -34,7 +34,6 @@
 	H.mind?.adjust_skillrank(/datum/skill/misc/athletics, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/misc/medicine, 2, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
-	H.mind?.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
 	if(H.gender == MALE)
 		pants = /obj/item/clothing/under/roguetown/trou/leather
 		shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
@@ -62,7 +61,6 @@
 	H.change_stat("endurance", 1)
 	H.change_stat("speed", 1)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC)
-	if(prob(25))
-		if(!H.has_language(/datum/language/elvish))
-			H.grant_language(/datum/language/elvish)
-			to_chat(H, "<span class='info'>I can speak Elfish with ,e before my speech.</span>")
+	if(!H.has_language(/datum/language/elvish))
+		H.grant_language(/datum/language/elvish)
+		to_chat(H, "<span class='info'>I can speak Elfish with ,e before my speech.</span>")

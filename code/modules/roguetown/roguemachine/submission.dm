@@ -75,7 +75,7 @@ This is a filter that blocks use of the machine for that role. Could be expanded
 This is a filter that blocks use of the machine for that role. Could be expanded, made more complex, made for races or whatever.*/
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-	var/canread = user.can_read(src, TRUE)
+//	var/canread = user.can_read(src, TRUE)
 	var/contents = "<center>SUBMISSION HOLE<BR>"
 
 	contents += "----------<BR>"
@@ -91,9 +91,10 @@ This is a filter that blocks use of the machine for that role. Could be expanded
 	for(var/datum/roguestock/stockpile/R in SStreasury.stockpile_datums)
 		contents += "[R.name] - [R.payout_price] - [R.demand2word()]"
 		contents += "<BR>"
-
+	/* Sadly, some of the classes that rely on using the submission hole are illiterate, like soilson.
 	if(!canread)
 		contents = stars(contents)
+	*/
 	var/datum/browser/popup = new(user, "VENDORTHING", "", 370, 220)
 	popup.set_content(contents)
 	popup.open()
@@ -146,7 +147,7 @@ GLOBAL_VAR(feeding_hole_reset_timer)
 		return
 	user.changeNext_move(CLICK_CD_MELEE)
 	playsound(loc, 'sound/misc/beep.ogg', 100, FALSE, -1)
-	var/canread = user.can_read(src, TRUE)
+//	var/canread = user.can_read(src, TRUE)
 	var/contents = "<center>FEEDING HOLE<BR>"
 
 	contents += "----------<BR>"
@@ -154,9 +155,10 @@ GLOBAL_VAR(feeding_hole_reset_timer)
 	contents += "Feed the hole<BR>"
 
 	contents += "</center>"
-
+	/* Sadly, some of the classes that rely on using the feeding hole are illiterate like soilson.
 	if(!canread)
 		contents = stars(contents)
+	*/
 	var/datum/browser/popup = new(user, "FEEDINGHOLE", "", 370, 220)
 	popup.set_content(contents)
 	popup.open()

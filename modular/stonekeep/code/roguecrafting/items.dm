@@ -602,7 +602,7 @@
 /datum/crafting_recipe/roguetown/lumberjacking
 	skillcraft = /datum/skill/labor/lumberjacking
 	tools = list(/obj/item/rogueweapon/knife/hunting = 1)
-
+/*
 /datum/crafting_recipe/roguetown/lumberjacking/cart_upgrade
 	name = "upgrade cog"
 	result = /obj/item/cart_upgrade/level_1
@@ -617,7 +617,7 @@
 				/obj/item/cart_upgrade/level_1 = 1,
 				/obj/item/ingot/iron = 1)
 	craftdiff = 4
-
+*/
 /datum/crafting_recipe/roguetown/wood_hammer
 	name = "tool (wooden mallet)"
 	result = /obj/item/rogueweapon/hammer/wood
