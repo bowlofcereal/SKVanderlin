@@ -86,7 +86,7 @@
 		shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt/shinobi
 		belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ninja
 		armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
-		beltr = /obj/item/quiver/arrows
+		beltr = /obj/item/ammo_holder/quiver/arrows
 		beltl = /obj/item/rogueweapon/knife/kaiken
 		backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
 

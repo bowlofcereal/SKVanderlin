@@ -75,7 +75,7 @@
 			head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/duulga
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/hankyu
 			backl = /obj/item/storage/backpack/rogue/satchel
-			beltr = /obj/item/quiver/arrows
+			beltr = /obj/item/ammo_holder/quiver/arrows
 			if(prob(60))
 				beltl = /obj/item/rogueweapon/huntingknife/kunai //so they HAVE something to use in melee combat.
 			else

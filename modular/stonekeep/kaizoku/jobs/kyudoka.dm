@@ -49,7 +49,7 @@
 	backl = /obj/item/storage/backpack/rogue/satchel
 	beltr = /obj/item/flashlight/flare/torch/lantern
 	backpack_contents = list(/obj/item/bait = 1, /obj/item/rogueweapon/huntingknife/kunai = 1)
-	beltl = /obj/item/quiver/arrows
+	beltl = /obj/item/ammo_holder/quiver/arrows
 	H.change_stat("perception", 2)
 	H.change_stat("endurance", 1)
 	H.change_stat("speed", 1)

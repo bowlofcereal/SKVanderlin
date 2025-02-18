@@ -93,7 +93,7 @@
 			wrists = /obj/item/clothing/wrists/roguetown/bracers/bonebracer
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 			beltl = /obj/item/flashlight/flare/torch/lantern
-			backl = /obj/item/quiver/arrows
+			backl = /obj/item/ammo_holder/quiver/arrows
 			belt = /obj/item/storage/belt/rogue/leather
 
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)

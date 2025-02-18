@@ -84,7 +84,7 @@
 		if("Yumibushi(Ranged)") // Ranged Focus.
 			H.set_blindness(0)
 			backr = /obj/item/gun/ballistic/revolver/grenadelauncher/bow/long/yumi
-			beltl = /obj/item/quiver/arrows
+			beltl = /obj/item/ammo_holder/quiver/arrows
 			beltr = /obj/item/rogueweapon/sword/uchigatana
 			if(H.mind)
 				H.mind.adjust_skillrank(/datum/skill/combat/bows, 4, TRUE)
