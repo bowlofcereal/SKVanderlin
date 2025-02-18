@@ -13,8 +13,8 @@
 		"Dark Elf",
 		"Aasimar"
 	)
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 	flag = LUMBERJACK
 	department_flag = PEASANTS
 	display_order = JDO_CARPENTER

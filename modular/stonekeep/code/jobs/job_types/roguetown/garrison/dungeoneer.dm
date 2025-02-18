@@ -3,8 +3,8 @@
 	flag = DUNGEONEER
 	department_flag = GARRISON // we should move this to the keep since that is where they now work, tending to the prisoners.
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 0
+	spawn_positions = 0
 
 	allowed_races = list(
 		"Humen",

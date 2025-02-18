@@ -34,7 +34,7 @@
 // 	belt = /obj/item/storage/belt/rogue/leather/nitemaster ROGTODO
 	beltr = /obj/item/rogueweapon/knife/dagger/steel/special
 //	beltl = /obj/item/keyring/niteman	ROGTODO
-//	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)	ROGTODO
+	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 	if(H.mind)
 		H.mind.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
 		H.mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
