@@ -1076,7 +1076,7 @@
 	block2add = FOV_RIGHT|FOV_LEFT
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR
 
-	armor = list("melee" = 90, "bullet" = 80, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_PLATE
 	body_parts_covered = HEAD_EXCEPT_MOUTH
 
 /obj/item/clothing/head/roguetown/helmet/visored/zunari/cursed/Initialize()
@@ -1110,7 +1110,7 @@
 	desc = "The thick, oil-boiled layered leather helmet used by Abyssariads Dustriders \
 	from the arid, steppelands on the heart of the Fog Islands."
 	icon_state = "arisan_duulga"
-	armor = list("melee" = 40, "bullet" = 15, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_GOOD
 	prevent_crits = list(BCLASS_BLUNT, BCLASS_TWIST)
 	body_parts_covered = HEAD|HAIR|EARS|NOSE|MOUTH
 	resistance_flags = FLAMMABLE // Made of leather
@@ -1427,13 +1427,13 @@
 	prevent_crits = list(BCLASS_STAB) //This one is too thin to actually protect someone beyond stabbing wounds. Cut would have too much 'blunt'.
 	resistance_flags = FIRE_PROOF
 	icon_state = "ivory_head"
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_PADDED
 	anvilrepair = null
 	smeltresult = /obj/item/ash
 	sewrepair = FALSE
 	blocksound = SOFTHIT
 	sellprice = 10
-	max_integrity = 150
+	max_integrity = INTEGRITY_POOR
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
 
@@ -1444,9 +1444,9 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_STAB) //Bones are not good against blunt.
 	body_parts_covered = HEAD|HAIR|EARS
 	flags_inv = HIDEEARS
-	max_integrity = 200
+	max_integrity = INTEGRITY_STANDARD
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 60, "bullet" = 50, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_PADDED_GOOD
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head64.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
@@ -1461,9 +1461,9 @@
 	prevent_crits = list(BCLASS_CUT, BCLASS_CHOP, BCLASS_STAB) //Bones are not good against blunt.
 	body_parts_covered = HEAD|EARS|HAIR|NOSE|EYES|FACE
 	flags_inv = HIDEEARS
-	max_integrity = 250
+	max_integrity = INTEGRITY_STANDARD
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
-	armor = list("melee" = 60, "bullet" = 60, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_BAD
 	block2add = FOV_RIGHT|FOV_LEFT
 	bloody_icon_state = null
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'

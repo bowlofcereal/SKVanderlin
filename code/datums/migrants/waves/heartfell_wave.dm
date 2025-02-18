@@ -1,6 +1,6 @@
 /datum/migrant_role/heartfelt/lord
 	name = "Lord of Heartfelt"
-	greet_text = "You are the Lord of Heartfelt, ruler of a once-prosperous barony now in ruin. Guided by your Magos, you journey to Vanderlin, seeking aid to restore your domain to its former glory, or perhaps claim a new throne."
+	greet_text = "You are the proud Lord of Heartfelt, from the Fog Isles. Here to ask for aid, to claim a new throne or some more nebulous purpose."
 	outfit = /datum/outfit/job/roguetown/heartfelt/lord
 	allowed_sexes = list(MALE)
 	allowed_races = list("Humen")
@@ -9,19 +9,19 @@
 
 /datum/outfit/job/roguetown/heartfelt/lord/pre_equip(mob/living/carbon/human/H)
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
 	belt = /obj/item/storage/belt/rogue/leather/black
 	neck = /obj/item/clothing/neck/roguetown/gorget
-	head = /obj/item/clothing/head/roguetown/helmet
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	pants = /obj/item/clothing/under/roguetown/tights/black
-	cloak = /obj/item/clothing/cloak/heartfelt
+	head = /obj/item/clothing/head/roguetown/heartfelt
+	shoes = /obj/item/clothing/shoes/roguetown/ridingboots/gutal
+	pants = /obj/item/clothing/under/roguetown/trou/tobi/dark
+	cloak = /obj/item/clothing/cloak/newheartfelt
 	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	beltl = /obj/item/scomstone
-	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-	beltl = /obj/item/rogueweapon/sword/long
+	gloves = /obj/item/clothing/gloves/roguetown/leather/abyssal/black
+	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
+	beltl = /obj/item/rogueweapon/sword/long/tachi
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/crossbows, 3, TRUE)
@@ -41,13 +41,19 @@
 		H.change_stat(STATKEY_PER, 2)
 		H.change_stat(STATKEY_LCK, 2)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
-	ADD_TRAIT(H, TRAIT_NOSEGRAB, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
-	H.cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
+	if(!HAS_TRAIT(H, TRAIT_KAIZOKU))
+		ADD_TRAIT(H, TRAIT_KAIZOKU, TRAIT_GENERIC)
+		to_chat(H, "<span class='info'I am an Islander, and I respectively have the culture of one.</span>")
+	H.cmode_music = 'modular/stonekeep/kaizoku/sound/combat/combat_emperor.ogg'
+	if(H.dna.species.id == "human")	// safeguard if its unlocked for more abyssariads later
+		H.skin_tone = SKIN_COLOR_TROPICALDRY
+		H.grant_language(/datum/language/abyssal)
+
 /datum/migrant_role/heartfelt/lady
 	name = "Lady of Heartfelt"
-	greet_text = "You are the Lady of Heartfelt, once a respected noblewoman now struggling to survive in a desolate landscape. With your home in ruins, you look to Vanderlin, hoping to find new purpose or refuge amidst the chaos."
+	greet_text = "You are the Lady of Heartfelt, a noblewoman from the Fog Islands fallen upon hard times."
 	outfit = /datum/outfit/job/roguetown/heartfelt/lady
 	allowed_sexes = list(FEMALE)
 	allowed_races = list("Humen")
@@ -87,7 +93,13 @@
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
-	H.cmode_music = 'sound/music/cmode/nobility/combat_noble.ogg'
+	if(!HAS_TRAIT(H, TRAIT_KAIZOKU))
+		ADD_TRAIT(H, TRAIT_KAIZOKU, TRAIT_GENERIC)
+		to_chat(H, "<span class='info'I am an Islander, and I respectively have the culture of one.</span>")
+	H.cmode_music = 'modular/stonekeep/kaizoku/sound/combat/combat_emperor.ogg'
+	if(H.dna.species.id == "human")	// safeguard if its unlocked for more abyssariads later
+		H.skin_tone = SKIN_COLOR_TROPICALDRY
+		H.grant_language(/datum/language/abyssal)
 /datum/migrant_role/heartfelt/hand
 	name = "Hand of Heartfelt"
 	greet_text = "You are the Hand of Heartfelt, burdened by the perception of failure in protecting your Lord's domain. Despite doubts from others, your loyalty remains steadfast as you journey to Vanderlin, determined to fulfill your duties."
@@ -98,19 +110,24 @@
 
 /datum/outfit/job/roguetown/heartfelt/hand/pre_equip(mob/living/carbon/human/H)
 	..()
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt
+	shirt = /obj/item/clothing/suit/roguetown/shirt/looseshirt
 	belt = /obj/item/storage/belt/rogue/leather/black
-	shoes = /obj/item/clothing/shoes/roguetown/nobleboot
-	pants = /obj/item/clothing/under/roguetown/tights/black
+	shoes = /obj/item/clothing/shoes/roguetown/ridingboots/gutal
+	pants = /obj/item/clothing/under/roguetown/trou/tobi/dark
 	neck = /obj/item/clothing/neck/roguetown/gorget
-	armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt
+	if(H.gender == MALE)
+		armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand
+		head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
+	else
+		armor = /obj/item/clothing/suit/roguetown/armor/medium/surcoat/heartfelt/hand/female
+		head = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku/female
 	beltr = /obj/item/storage/belt/rogue/pouch/coins/rich
 	gloves = /obj/item/clothing/gloves/roguetown/leather/black
-	beltl = /obj/item/rogueweapon/sword/decorated
+	beltl = /obj/item/rogueweapon/sword/sabre/piandao/dec
 	beltr = /obj/item/scomstone
 	backr = /obj/item/storage/backpack/rogue/satchel/heartfelt
 	mask = /obj/item/clothing/mask/rogue/spectacles/golden
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
+	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, 2, TRUE)
@@ -128,9 +145,15 @@
 
 	ADD_TRAIT(H, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_SEEPRICES, TRAIT_GENERIC)
-	H.cmode_music = 'sound/music/cmode/adventurer/CombatOutlander3.ogg'
+	if(!HAS_TRAIT(H, TRAIT_KAIZOKU))
+		ADD_TRAIT(H, TRAIT_KAIZOKU, TRAIT_GENERIC)
+		to_chat(H, "<span class='info'I am an Islander, and I respectively have the culture of one.</span>")
+	H.cmode_music = 'modular/stonekeep/kaizoku/sound/combat/combat_emperor.ogg'
+	if(H.dna.species.id == "human")	// safeguard if its unlocked for more abyssariads later
+		H.skin_tone = SKIN_COLOR_TROPICALDRY
+		H.grant_language(/datum/language/abyssal)
 
-/datum/migrant_role/heartfelt/knight
+/datum/migrant_role/heartfelt/knight	// ROGTODO Turn into zamurai
 	name = "Knight of Heartfelt"
 	greet_text = "You are a Knight of Heartfelt, once part of a brotherhood in service to your Lord. Now, alone and committed to safeguarding what remains of your court, you ride to Vanderlin, resolved to ensure their safe arrival."
 	outfit = /datum/outfit/job/roguetown/heartfelt/knight
@@ -205,7 +228,7 @@
 	allowed_races = list("Humen")
 	grant_lit_torch = TRUE
 
-/datum/outfit/job/roguetown/heartfelt/magos
+/datum/outfit/job/roguetown/heartfelt/magos	// ROGTODO kaizokufiy
 	allowed_patrons = list(/datum/patron/divine/noc)
 /datum/outfit/job/roguetown/heartfelt/magos/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -252,7 +275,7 @@
 		var/list/spells = list(/obj/effect/proc_holder/spell/invoked/projectile/fireball/greater, /obj/effect/proc_holder/spell/invoked/projectile/fireball, /obj/effect/proc_holder/spell/invoked/projectile/lightningbolt, /obj/effect/proc_holder/spell/invoked/projectile/fetch)
 		for(var/S in spells)
 			H.mind.AddSpell(new S)
-/datum/migrant_role/heartfelt/prior
+/datum/migrant_role/heartfelt/prior	// ROGTODO kaizokufiy
 	name = "Prior of Heartfelt"
 	greet_text = "The Prior of Heartfelt, you were destined for ascension within the Church, but fate intervened with the barony's downfall, delaying it indefinitely. Still guided by the blessings of Astrata, you journey to Vanderlin, determined to offer what aid and solace you can."
 	outfit = /datum/outfit/job/roguetown/heartfelt/prior
