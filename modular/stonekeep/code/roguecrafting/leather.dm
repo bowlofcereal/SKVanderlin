@@ -111,6 +111,14 @@
 	craftdiff = 1
 	req_imperial = TRUE
 
+
+/datum/crafting_recipe/roguetown/leather/armor/haori
+	name = "armor (haori jacket) {fl}"
+	result = list(/obj/item/clothing/suit/roguetown/armor/leather/jacket/haori)
+	reqs = list(/obj/item/natural/hide = 2)
+	req_islander = TRUE
+
+
 /datum/crafting_recipe/roguetown/leather/armor/corset
 	name = "armor (corset)"
 	result = /obj/item/clothing/suit/roguetown/armor/corset
@@ -131,6 +139,36 @@
 	result = /obj/item/clothing/suit/roguetown/armor/leather/jacket/sea
 	reqs = list(/obj/item/natural/hide/cured = 2)
 	craftdiff = 2
+
+
+
+/datum/crafting_recipe/roguetown/leather/armor/abyssal
+	name = "armor (leather lamellar)"
+	result = /obj/item/clothing/suit/roguetown/armor/leather/abyssal
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/dustwalker
+	name = "armor (cavalry)"
+	result = /obj/item/clothing/suit/roguetown/armor/leather/hide/dustwalker
+	reqs = list(/obj/item/natural/hide/cured = 2,
+				/obj/item/natural/fur = 1)
+	craftdiff = 2
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/shozoku
+	name = "armor (stealthy)"
+	result = /obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
+	reqs = list(/obj/item/natural/hide = 2,
+				/obj/item/natural/fur = 1)
+	craftdiff = 2
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/kaizoku	// ROGTODO should be silk according to desc
+	name = "armor (heartfeltean vest)"
+	result = /obj/item/clothing/suit/roguetown/armor/leather/vest/kaizoku
+	reqs = list(/obj/item/natural/hide = 2)
+	craftdiff = 2
+	req_islander = TRUE
 
 /datum/crafting_recipe/roguetown/leather/armor/hide
 	name = "armor (fur)"
@@ -172,6 +210,21 @@
 	name = "shoes (simple}"
 	result = /obj/item/clothing/shoes/roguetown/simpleshoes
 	req_imperial = TRUE
+
+/datum/crafting_recipe/roguetown/leather/jikatabi
+	name = "shoes (jikatabi)"
+	result = list(/obj/item/clothing/shoes/roguetown/boots/jikatabi)
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/cloudhead
+	name = "shoes (cloudhead)"
+	result = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/geta
+	name = "shoes (geta sandals)"
+	result = /obj/item/clothing/shoes/roguetown/sandals/geta
+	req_islander = TRUE
 
 /datum/crafting_recipe/roguetown/leather/furlinedboots
 	name = "shoes (fur lined boots)"
@@ -240,11 +293,24 @@
 	name = "gloves (leather)"
 	result = /obj/item/clothing/gloves/roguetown/leather
 
+/datum/crafting_recipe/roguetown/leather/abyssalgloves
+	name = "gloves (abyssal)"
+	result = /obj/item/clothing/gloves/roguetown/leather/abyssal
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/falcon
+	name = "gloves (falconry)"
+	result = /obj/item/clothing/gloves/roguetown/angle/falcon
+	reqs = list(/obj/item/natural/hide = 1,
+				/obj/item/natural/fur = 1)
+	craftdiff = 1
+	req_islander = TRUE
+
 /datum/crafting_recipe/roguetown/leather/heavygloves
-	name = "gloves (fur-lined)"
+	name = "gloves (heavy leather)"
 	result = /obj/item/clothing/gloves/roguetown/angle
 	reqs = list(/obj/item/natural/hide/cured = 1,
-				/obj/item/natural/fur = 1)
+				/obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 2
 
 /datum/crafting_recipe/roguetown/leather/gloves_fencing
@@ -261,6 +327,11 @@
 	result = list(/obj/item/clothing/under/roguetown/trou/leather)
 	reqs = list(/obj/item/natural/hide/cured = 2)
 	req_imperial = TRUE
+
+/datum/crafting_recipe/roguetown/leather/furtobi
+	name = "pants (fur)"
+	result = list(/obj/item/clothing/under/roguetown/trou/leather/fur)
+	req_islander = TRUE
 
 /datum/crafting_recipe/roguetown/leather/pants_heavy
 	name = "pants (heavy leather)"
@@ -280,6 +351,11 @@
 	name = "bracers (leather)"
 	result = /obj/item/clothing/wrists/roguetown/bracers/leather
 	req_imperial = TRUE
+
+/datum/crafting_recipe/roguetown/leather/khudagach
+	name = "bracers (archery)"
+	result = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
+	req_islander = TRUE
 
 /datum/crafting_recipe/roguetown/leather/bracers_hardened
 	name = "bracers (heavy leather)"
@@ -303,6 +379,36 @@
 	name = "hat (brimmed)"
 	result = /obj/item/clothing/head/roguetown/brimmed
 	reqs = list(/obj/item/natural/hide = 1)
+
+
+
+/datum/crafting_recipe/roguetown/leather/malgai
+	name = "helmet (malgai)"
+	result = /obj/item/clothing/head/roguetown/helmet/leather/malgai
+	reqs = list(/obj/item/natural/hide = 2)
+	craftdiff = 1
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/kaizokuhat
+	name = "hat (heartfeltean)"
+	result = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
+	reqs = list(/obj/item/natural/hide = 2)
+	craftdiff = 1
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/kaizokuhat/female
+	name = "hat (female heartfeltean)"
+	result = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku/female
+	reqs = list(/obj/item/natural/hide = 2)
+	craftdiff = 1
+	req_islander = TRUE
+
+/datum/crafting_recipe/roguetown/leather/arisan
+	name = "helmet (cavalry headgear)"
+	reqs = list(/obj/item/natural/hide = 2,
+				/obj/item/natural/fur = 1)
+	craftdiff = 2
+	req_islander = TRUE
 
 /datum/crafting_recipe/roguetown/leather/coif
 	name = "coif (leather)"
@@ -329,120 +435,3 @@
 	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 
-
-/* UNTIL KAIZOKU ADDED ROGTODO
-
-//////////////////////////////////////////
-// Fogislander Cultured Crafting Area,  //
-//////////////////////////////////////////
-
-
-/datum/crafting_recipe/roguetown/leather/abyssalgloves
-	name = "abyssal leather gloves (x2){fl}"
-	result = list(/obj/item/clothing/gloves/roguetown/leather/abyssal,
-	/obj/item/clothing/gloves/roguetown/leather/abyssal)
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/khudagach
-	name = "archery bracers (x2){fl}"
-	result = list(/obj/item/clothing/wrists/roguetown/bracers/leather/khudagach,
-			/obj/item/clothing/wrists/roguetown/bracers/leather/khudagach)
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/furtobi
-	name = "leather pants {fl}"
-	result = list(/obj/item/clothing/under/roguetown/trou/leather/fur)
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/jikatabi
-	name = "jikatabi (x2){fl}"
-	result = list(/obj/item/clothing/shoes/roguetown/boots/jikatabi,
-				/obj/item/clothing/shoes/roguetown/boots/jikatabi)
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/cloudhead
-	name = "cloudhead shoes {fl}"
-	result = /obj/item/clothing/shoes/roguetown/shortboots/cloudhead
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/geta
-	name = "geta sandals {fl}"
-	result = /obj/item/clothing/shoes/roguetown/sandals/geta
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/haori
-	name = "haori jacket {fl}"
-	result = list(/obj/item/clothing/suit/roguetown/armor/leather/jacket/haori)
-	reqs = list(/obj/item/natural/hide = 2)
-//	req_islander = TRUE
-
-/*.............. recipes requiring skill 1 ..............*/
-
-/datum/crafting_recipe/roguetown/leather/falcon
-	name = "falconry heavy gloves {fl}"
-	result = /obj/item/clothing/gloves/roguetown/angle/falcon
-	reqs = list(/obj/item/natural/hide = 1,
-				/obj/item/natural/fur = 1)
-	craftdiff = 1
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/malgai
-	name = "malgai helmet {fl}"
-	result = /obj/item/clothing/head/roguetown/helmet/leather/malgai
-	reqs = list(/obj/item/natural/hide = 2)
-	craftdiff = 1
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/kaizokuhat
-	name = "heartfeltean hat {fl}"
-	result = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
-	reqs = list(/obj/item/natural/hide = 2)
-	craftdiff = 1
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/kaizokuhat/female
-	name = "female heartfeltean hat {fl}"
-	result = /obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku/female
-	reqs = list(/obj/item/natural/hide = 2)
-	craftdiff = 1
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/abyssalarmor
-	name = "leather lamellar armor {fl}"
-	result = /obj/item/clothing/suit/roguetown/armor/leather/abyssal
-	reqs = list(/obj/item/natural/hide = 2)
-	craftdiff = 1
-//	req_islander = TRUE
-
-/*.............. recipes requiring skill 2 ..............*/
-
-/datum/crafting_recipe/roguetown/leather/dustwalker
-	name = "light cavalry armor {fl}"
-	result = /obj/item/clothing/suit/roguetown/armor/leather/hide/dustwalker
-	reqs = list(/obj/item/natural/hide = 2,
-				/obj/item/natural/fur = 1)
-	craftdiff = 2
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/shozoku
-	name = "stealthy body armor {fl}"
-	result = /obj/item/clothing/suit/roguetown/armor/leather/hide/shozoku
-	reqs = list(/obj/item/natural/hide = 2,
-				/obj/item/natural/fur = 1)
-	craftdiff = 2
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/kaizoku
-	name = "heartfeltean vest {fl}"
-	result = /obj/item/clothing/suit/roguetown/armor/leather/vest/kaizoku
-	reqs = list(/obj/item/natural/hide = 2)
-	craftdiff = 2
-//	req_islander = TRUE
-
-/datum/crafting_recipe/roguetown/leather/arisan
-	name = "cavalry light headgear {fl}"
-	reqs = list(/obj/item/natural/hide = 2,
-				/obj/item/natural/fur = 1)
-	craftdiff = 2
-//	req_islander = TRUE
-*/

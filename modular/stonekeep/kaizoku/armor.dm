@@ -986,32 +986,7 @@
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/skullcap/hachigane
-	name = "hachi-gane"
-	desc = "Simple, lamellar head protection made for humble monks, ronins and the poor - with the material often gathered from iron panning."
-	icon_state = "hachi-gane"
-	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
-	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/skullcap/hachigane/thunder
-	name = "thunder hachi-gane"
-	desc = "Simple, lamellar head protection. Marked in yellow for the mountainous magicians and monks who praises Abyssor's thunders."
-	color = CLOTHING_THUNDER
-
-/obj/item/clothing/head/roguetown/helmet/skullcap/hachigane/storm
-	name = "storm hachi-gane"
-	desc = "Simple, lamellar head protection. Marked in dark blue for the lighthouse keepers of Abyssanctum's faith, who keeps the eternal fire going."
-	color = CLOTHING_STORM
-
-/obj/item/clothing/head/roguetown/helmet/skullcap/hachigane/ocean
-	name = "ocean hachi-gane"
-	desc = "Simple, lamellar head protection. Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the ocean."
-	color = CLOTHING_OCEAN
-
-/obj/item/clothing/head/roguetown/helmet/skullcap/hachigane/island
-	name = "island hachi-gane"
-	desc = "Simple, lamellar head protection. Marked in red for the soilgazers of Abyssanctum's faith, those bent in ensuring no plague shall reach their blessed islands. "
-	color = CLOTHING_ISLAND
 
 /obj/item/clothing/head/roguetown/helmet/zijinguan
 	name = "zijinguan" //This is actually a ming dynasty helmet
@@ -1038,23 +1013,7 @@
 			pic.color = get_detail_color()
 		add_overlay(pic)
 
-/obj/item/clothing/head/roguetown/helmet/jingasa //the same as a Kettle. Just don't want the 64x64 bits.
-	name = "jingasa"
-	desc = "A metal gasa in conical shape. Mainly worn by Ashigarus, it protects against \
-	arrows and direct blow. Most efficient together with padding underneath due to the \
-	large space for the helmet to move after hit, easing impact."
-	icon_state = "jingasa"
-	flags_inv = HIDEEARS
-	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
-	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
-	bloody_icon = 'icons/effects/blood64x64.dmi'
-	bloody_icon_state = "helmetblood_big"
-	flags_inv = HIDEEARS
-	smeltresult = /obj/item/ash
-	flags_inv = HIDEEARS
-	sellprice = VALUE_CHEAP_IRON_HELMET
 
-	body_parts_covered = COVERAGE_HEAD
 
 /obj/item/clothing/head/roguetown/helmet/sallet/tosei_kabuto
 	name = "tosei kabuto"
@@ -1131,28 +1090,6 @@
 	qdel(src)
 
 
-/obj/item/clothing/head/roguetown/heartfelt
-	name = "heartfelt zunari kabuto"
-	desc = "An Etchu Zunari kabuto with Heartfelt markings. It lacks a demonic \
-	mask for intimidation purposes - yet remains just as effective, besides showing \
-	the incredible artistic value that upholds Heartfelt's culture."
-	icon_state = "heartfelt_kabuto"
-	body_parts_covered = HEAD|HAIR|EARS //maskless, protects less of the face.
-	flags_inv = HIDEEARS
-	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
-	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head64.dmi'
-	bloody_icon = 'icons/effects/blood64x64.dmi'
-	bloody_icon_state = "helmetblood_big"
-	worn_x_dimension = 64
-	worn_y_dimension = 64
-	emote_environment = 3
-	sellprice = VALUE_STEEL_HELMET+BONUS_VALUE_SMALL
-	clothing_flags = CANT_SLEEP_IN
-	armor = ARMOR_PLATE
-	armor_class = AC_HEAVY
-	prevent_crits = ALL_CRITICAL_HITS
-	max_integrity = INTEGRITY_STRONG
-
 /obj/item/clothing/head/roguetown/helmet/leather/malgai
 	name = "leather malgai"
 	desc = "A abyssariad leather helmet usually used by those who dwells \
@@ -1160,6 +1097,12 @@
 	icon_state = "malgai"
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
+
+/obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
+	name = "kaizoku hat"
+	desc = "A distinguished hat with three sides of the brim turned up and laced, \
+	forming a triangle. Usually used by the Fog Island's privateer navy - or rich fellows on Heartfelt."
+	icon_state = "tricorn"
 
 /obj/item/clothing/head/roguetown/helmet/leather/malgai/duulga //same changes of 'leather' to 'hide' has been brought over to this hat + mouth protection, because Mongol hat go brrtt
 	name = "arisan duulga"
@@ -1179,17 +1122,84 @@
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
 
-/obj/item/clothing/head/roguetown/helmet/skullcap/rattan
+/obj/item/clothing/head/roguetown/helmet/kaizoku
+	name = "template BUGREPORT"
+	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
+	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
+	sellprice = VALUE_CHEAP_IRON_HELMET
+	max_integrity = INTEGRITY_POOR
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/jingasa //the same as a Kettle. Just don't want the 64x64 bits.
+	name = "jingasa"
+	desc = "A metal gasa in conical shape. Mainly worn by Ashigarus, it protects against \
+	arrows and direct blow. Most efficient together with padding underneath due to the \
+	large space for the helmet to move after hit, easing impact."
+	icon_state = "jingasa"
+	flags_inv = HIDEEARS
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	smeltresult = /obj/item/ash
+	flags_inv = HIDEEARS
+	sellprice = VALUE_CHEAP_IRON_HELMET
+
+	body_parts_covered = COVERAGE_HEAD
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/heartfelt
+	name = "heartfelt zunari kabuto"
+	desc = "An Etchu Zunari kabuto with Heartfelt markings. It lacks a demonic \
+	mask for intimidation purposes - yet remains just as effective, besides showing \
+	the incredible artistic value that upholds Heartfelt's culture."
+	icon_state = "heartfelt_kabuto"
+	body_parts_covered = HEAD|HAIR|EARS //maskless, protects less of the face.
+	flags_inv = HIDEEARS
+	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head64.dmi'
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	emote_environment = 3
+	sellprice = VALUE_STEEL_HELMET+BONUS_VALUE_SMALL
+	clothing_flags = CANT_SLEEP_IN
+	armor = ARMOR_PLATE
+	armor_class = AC_HEAVY
+	prevent_crits = ALL_CRITICAL_HITS
+	max_integrity = INTEGRITY_STRONG
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane
+	name = "hachi-gane"
+	desc = "Simple, lamellar head protection made for humble monks, ronins and the poor - with the material often gathered from iron panning."
+	icon_state = "hachi-gane"
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/thunder
+	name = "thunder hachi-gane"
+	desc = "Simple, lamellar head protection. Marked in yellow for the mountainous magicians and monks who praises Abyssor's thunders."
+	color = CLOTHING_THUNDER
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/storm
+	name = "storm hachi-gane"
+	desc = "Simple, lamellar head protection. Marked in dark blue for the lighthouse keepers of Abyssanctum's faith, who keeps the eternal fire going."
+	color = CLOTHING_STORM
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/ocean
+	name = "ocean hachi-gane"
+	desc = "Simple, lamellar head protection. Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the ocean."
+	color = CLOTHING_OCEAN
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/island
+	name = "island hachi-gane"
+	desc = "Simple, lamellar head protection. Marked in red for the soilgazers of Abyssanctum's faith, those bent in ensuring no plague shall reach their blessed islands. "
+	color = CLOTHING_ISLAND
+
+/obj/item/clothing/head/roguetown/helmet/kaizoku/rattan
 	name = "tengpai dou"
 	icon_state = "rattan_helmet"
 	desc = "A cheap abyssariad helmet made from stripped, oil boiled rattan and iron. \
 	Used only by militia and the humble LinYou raiders. Less protective, but can be easily repaired."
 	flags_inv = HIDEEARS
-	armor = list("melee" = 60, "bullet" = 40, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_LEATHER_GOOD
 	body_parts_covered = HEAD|HAIR|EARS
-	max_integrity = 125
-	sellprice = 20
-	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
+	max_integrity = INTEGRITY_POOR
+	sellprice = 15
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head64.dmi'
 	bloody_icon = 'icons/effects/blood64x64.dmi'
 	bloody_icon_state = "helmetblood_big"
@@ -1258,11 +1268,7 @@
 		return
 	qdel(src)
 
-/obj/item/clothing/head/roguetown/helmet/leather/malgai/kaizoku
-	name = "kaizoku hat"
-	desc = "A distinguished hat with three sides of the brim turned up and laced, \
-	forming a triangle. Usually used by the Fog Island's privateer navy - or rich fellows on Heartfelt."
-	icon_state = "tricorn"
+
 
 /obj/item/clothing/head/roguetown/helmet/visored/abyssalchampion //hounskull tier.
 	name = "winged abyssal helmet"
@@ -1276,7 +1282,7 @@
 	emote_environment = 3
 	block2add = FOV_RIGHT|FOV_LEFT
 
-	armor = list("melee" = 100, "bullet" = 80, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	armor = ARMOR_PLATE
 
 /obj/item/clothing/head/roguetown/helmet/heavy/bucket/soheidemon
 	name = "armored sohei cowl"

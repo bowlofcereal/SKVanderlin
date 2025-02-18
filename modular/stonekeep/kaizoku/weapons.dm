@@ -1,5 +1,120 @@
 // =================================================================
 // ========================		BOMBS	============================
+/obj/item/grenade
+	name = "grenade"
+	desc = ""
+	w_class = WEIGHT_CLASS_SMALL
+	throw_speed = 1
+	throw_range = 7
+	flags_1 = CONDUCT_1
+	slot_flags = ITEM_SLOT_BELT
+	resistance_flags = FLAMMABLE
+	max_integrity = 40
+	var/active = 0
+	var/det_time = 50
+	var/display_timer = 1
+	var/clumsy_check = GRENADE_CLUMSY_FUMBLE
+
+/obj/item/grenade/suicide_act(mob/living/carbon/user)
+	user.visible_message("<span class='suicide'>[user] primes [src], then eats it! It looks like [user.p_theyre()] trying to commit suicide!</span>")
+	playsound(src, 'sound/blank.ogg', 50, TRUE)
+	preprime(user, det_time)
+	user.transferItemToLoc(src, user, TRUE)//>eat a grenade set to 5 seconds >rush captain
+	sleep(det_time)//so you dont die instantly
+	return BRUTELOSS
+
+/obj/item/grenade/deconstruct(disassembled = TRUE)
+	if(!disassembled)
+		prime()
+	if(!QDELETED(src))
+		qdel(src)
+
+/obj/item/grenade/examine(mob/user)
+	. = ..()
+	if(display_timer)
+		if(det_time > 0)
+			. += "The timer is set to [DisplayTimeText(det_time)]."
+		else
+			. += "\The [src] is set for instant detonation."
+
+
+/obj/item/grenade/attack_self(mob/user)
+	if(!active)
+		preprime(user)
+
+/obj/item/grenade/proc/log_grenade(mob/user, turf/T)
+	log_bomber(user, "has primed a", src, "for detonation")
+
+/obj/item/grenade/proc/preprime(mob/user, delayoverride, msg = TRUE, volume = 60)
+	var/turf/T = get_turf(src)
+	log_grenade(user, T) //Inbuilt admin procs already handle null users
+	if(user)
+		if(msg)
+			to_chat(user, "<span class='warning'>I prime [src]! [capitalize(DisplayTimeText(det_time))]!</span>")
+	playsound(src, 'sound/blank.ogg', volume, TRUE)
+	active = TRUE
+	icon_state = initial(icon_state) + "_active"
+	addtimer(CALLBACK(src, PROC_REF(prime)), isnull(delayoverride)? det_time : delayoverride)
+
+/obj/item/grenade/proc/prime()
+
+/obj/item/grenade/proc/update_mob()
+	if(ismob(loc))
+		var/mob/M = loc
+		M.dropItemToGround(src)
+
+/obj/item/grenade/attackby(obj/item/W, mob/user, params)
+	if(!active)
+		if(W.tool_behaviour == TOOL_MULTITOOL)
+			var/newtime = text2num(stripped_input(user, "Please enter a new detonation time", name))
+			if (newtime != null && user.canUseTopic(src, BE_CLOSE))
+				if(change_det_time(newtime))
+					to_chat(user, "<span class='notice'>I modify the time delay. It's set for [DisplayTimeText(det_time)].</span>")
+					if (round(newtime * 10) != det_time)
+						to_chat(user, "<span class='warning'>The new value is out of bounds. The lowest possible time is 3 seconds and highest is 5 seconds. Instant detonations are also possible.</span>")
+			return
+		else if(W.tool_behaviour == TOOL_SCREWDRIVER)
+			if(change_det_time())
+				to_chat(user, "<span class='notice'>I modify the time delay. It's set for [DisplayTimeText(det_time)].</span>")
+	else
+		return ..()
+
+/obj/item/grenade/proc/change_det_time(time) //Time uses real time.
+	. = TRUE
+	if(time != null)
+		if(time < 3)
+			time = 3
+		det_time = round(CLAMP(time * 10, 0, 50))
+	else
+		var/previous_time = det_time
+		switch(det_time)
+			if (0)
+				det_time = 30
+			if (30)
+				det_time = 50
+			if (50)
+				det_time = 0
+		if(det_time == previous_time)
+			det_time = 50
+
+/obj/item/grenade/attack_paw(mob/user)
+	return attack_hand(user)
+
+/obj/item/grenade/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
+	var/obj/projectile/P = hitby
+	if(damage && attack_type == PROJECTILE_ATTACK && P.damage_type != STAMINA && prob(15))
+		owner.visible_message("<span class='danger'>[attack_text] hits [owner]'s [src], setting it off! What a shot!</span>")
+		var/turf/T = get_turf(src)
+		log_game("A projectile ([hitby]) detonated a grenade held by [key_name(owner)] at [COORD(T)]")
+		message_admins("A projectile ([hitby]) detonated a grenade held by [key_name_admin(owner)] at [ADMIN_COORDJMP(T)]")
+		prime()
+		return TRUE //It hit the grenade, not them
+
+/obj/item/grenade/afterattack(atom/target, mob/user)
+	. = ..()
+	if(active)
+		user.throw_item(target)
+
 
 /obj/effect/particle_effect/smoke/bad/stupid
 	lifetime = 20
@@ -145,7 +260,7 @@
 				stop_ignition()
 			else
 				playsound(T, 'sound/items/firesnuff.ogg', 100)
-				new /obj/item/shard (T)
+				new /obj/effect/decal/cleanable/debris/clay (T)
 	qdel(src)
 
 /obj/item/zhentianlei/proc/is_flammable(atom/target)
@@ -546,7 +661,7 @@
 	attack_verb = list("cuts", "slashes")
 	hitsound = list('sound/combat/hits/blunt/flailhit.ogg')
 	swingdelay = 5
-	penfactor = AP_SPEAR_POKE
+	penfactor = AP_AXE_CHOP
 	icon_state = "incut"
 	misscost = 5
 	reach = 2
@@ -603,7 +718,7 @@
 
 /obj/item/rogueweapon/flail/kusarigama
 	force = DAMAGE_NORMAL_FLAIL
-	possible_item_intents = list(/datum/intent/flail/strike/ranged, /datum/intent/flail/strike/ranged/smash, /datum/intent/flail/cut, /datum/intent/flail/cut/chop)
+	possible_item_intents = list(/datum/intent/flail/strike, /datum/intent/flail/strike/smash, /datum/intent/flail/cut, /datum/intent/flail/cut/chop)
 	name = "kusarigama"
 	desc = "A handle with a sickle-like blade, featuring a chain that ends in a spiked ball. Versatile weapon adapted to defeat sword-wielding foes."
 	icon_state = "kusarigama"
@@ -1019,7 +1134,7 @@
 /obj/effect/oilspill
 	anchored = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	icon = 'icons/roguetown/kaizoku/tileset/fire.dmi'
+	icon = 'modular/stonekeep/kaizoku/icons/tileset/fire.dmi'
 	icon_state = "newfire"
 	layer = GASFIRE_LAYER
 
@@ -1095,7 +1210,6 @@
 	block_chance = 0
 	armor_penetration = 5
 	sharpness = IS_SHARP
-	custom_materials = null
 	can_parry = FALSE
 	wlength = 6
 	sellprice = 1
@@ -1366,13 +1480,15 @@
 	attack_verb = list("clangs")
 	animname = "smash"
 	blade_class = BCLASS_CHOP
-	hitsound = list('sound/combat/hits/bladed/dragonslayer.ogg', 'sound/combat/hits/bladed/dragonslayer2.ogg')
+	hitsound = list('modular/stonekeep/kaizoku/sound/dragonslayer.ogg', 'modular/stonekeep/kaizoku/sound/dragonslayer2.ogg')
 	penfactor = 30
 	damfactor = 1.2
 	chargetime = 5
 	swingdelay = 5
 	misscost = 35
 	warnie = "mobwarning"
+
+
 
 // =================================================================
 // ========================		BOW & ARROW	========================
@@ -1482,18 +1598,18 @@
 	base_icon = "yumibow"
 
 
-/obj/item/rogueweapon/sickle/kama
+/obj/item/rogueweapon/sickle/kama	// iron sword worse integrity
 	possible_item_intents = list(/datum/intent/axe/cut,/datum/intent/axe/chop,MACE_STRIKE,/datum/intent/flailthresh)
 	name = "kama"
 	desc = "Originally created for the harvesting of rice, the kama has also found popularity as a commoner's weapon thanks to its axe-like design. On occasion, one is combined with a length of chain to make a kusari gama."
 	icon_state = "kama"
 	icon = 'modular/stonekeep/kaizoku/icons/weapons/32.dmi'
 	associated_skill = /datum/skill/combat/axesmaces
-	force = 15 // Same damage as Iron Swords with less integrity.
-	force_wielded = 20
+	force = DAMAGE_SWORD-1
+	force_wielded = DAMAGE_SWORD_WIELD-1
 	max_blade_int = 100
-	max_integrity = 200
+	max_integrity = INTEGRITY_STANDARD
 	blade_dulling = DULLING_BASHCHOP
-	wdefense = 4
+	wdefense = GOOD_PARRY
 
 
