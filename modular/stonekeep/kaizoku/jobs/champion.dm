@@ -31,10 +31,10 @@
 			H.mind.adjust_skillrank(/datum/skill/misc/climbing, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/athletics, 3, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/misc/reading, 1, TRUE)
-			H.change_stat("strength", 2)
-			H.change_stat("endurance", 3)
-			H.change_stat("intelligence", 1)
-			H.change_stat("speed", -2)
+			H.change_stat(STATKEY_END, 3)
+			H.change_stat(STATKEY_SPD, -2)
+			H.change_stat(STATKEY_STR, 2)
+			H.change_stat(STATKEY_INT, 1)
 
 		r_hand = /obj/item/rogueweapon/polearm/halberd/bisento //Bisento cannot be stored in the back. Sometimes not even spawning. So I gave them an Wakizashi too in case the worst happens.
 		pants = /obj/item/clothing/under/roguetown/trou/leather/fur

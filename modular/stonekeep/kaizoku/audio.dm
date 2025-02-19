@@ -31,55 +31,28 @@
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
 /area/rogue/outdoors
-	name = "outdoors roguetown"
-	icon_state = "outdoors"
-	outdoors = TRUE
-	ambientrain = RAIN_OUT
-//	ambientsounds = list('sound/ambience/wamb.ogg')
-	ambientsounds = AMB_TOWNDAY
-	ambientnight = AMB_TOWNNIGHT
-	spookysounds = SPOOKY_CROWS
-	spookynight = SPOOKY_GEN
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Diaspora.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
 	converted_type = /area/rogue/indoors/shelter
 
 /area/rogue/indoors/shelter
-	icon_state = "shelter"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Zephyr.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
 /area/rogue/outdoors
-	name = "outdoors roguetown"
-	icon_state = "outdoors"
-	outdoors = TRUE
-	ambientrain = RAIN_OUT
-//	ambientsounds = list('sound/ambience/wamb.ogg')
-	ambientsounds = AMB_TOWNDAY
-	ambientnight = AMB_TOWNNIGHT
-	spookysounds = SPOOKY_CROWS
-	spookynight = SPOOKY_GEN
 	droning_sound = 'sound/music/area/townstreets.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Diaspora.ogg'
 	droning_sound_night = 'sound/music/area/sleeping.ogg'
-	converted_type = /area/rogue/indoors/shelter
 
 /area/rogue/indoors/shelter
-	icon_state = "shelter"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Zephyr.ogg'
 	droning_sound_dusk = 'sound/music/area/septimus.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sanctumocean.ogg'
 
 
 /area/rogue/outdoors/woods
-	name = "wilderness"
-	icon_state = "woods"
-	ambientsounds = AMB_FORESTDAY
-	ambientnight = AMB_FORESTNIGHT
-	spookysounds = SPOOKY_CROWS
-	spookynight = SPOOKY_FOREST
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Sibilant.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Penumbra.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sibilant_night.ogg'
@@ -97,56 +70,33 @@
 	converted_type = /area/rogue/indoors/shelter/woods
 */
 /area/rogue/indoors/shelter/woods
-	icon_state = "woods"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Sussurus.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Diaspora.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Sibilant_night.ogg'
 
 
 /area/rogue/outdoors/river
-	name = "river"
-	icon_state = "river"
-	ambientsounds = AMB_RIVERDAY
-	ambientnight = AMB_RIVERNIGHT
-	spookysounds = SPOOKY_FROG
-	spookynight = SPOOKY_FOREST
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Abyssanctum.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/kaizoku.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Abyssariad.ogg'
-	converted_type = /area/rogue/indoors/shelter/woods
 
 /area/rogue/outdoors/beach
-	name = "sophia's cry"
-	icon_state = "beach"
-	ambientsounds = AMB_BEACH
-	ambientnight = AMB_BEACH
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
 
 /area/rogue/under
-	name = "basement"
-	icon_state = "under"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
-	soundenv = 8
-	plane = INDOOR_PLANE
-	converted_type = /area/rogue/outdoors/exposed
+
 
 /area/rogue/outdoors/exposed
-	icon_state = "exposed"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
 
 /area/rogue/under/cave
-	name = "cave"
-	icon_state = "cave"
-	ambientsounds = AMB_GENCAVE
-	ambientnight = AMB_GENCAVE
-	spookysounds = SPOOKY_CAVE
-	spookynight = SPOOKY_CAVE
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Torment.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
@@ -162,19 +112,11 @@
 	converted_type = /area/rogue/outdoors/caves
 */
 /area/rogue/outdoors/caves
-	icon_state = "caves"
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Torment.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/under/cavewet
-	name = "cavewet"
-	icon_state = "cavewet"
-	first_time_text = "The Undersea"
-	ambientsounds = AMB_CAVEWATER
-	ambientnight = AMB_CAVEWATER
-	spookysounds = SPOOKY_CAVE
-	spookynight = SPOOKY_CAVE
 	droning_sound = 'sound/music/area/caves.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
