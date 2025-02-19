@@ -13,8 +13,8 @@
 	"Skylancer",
 	"Ogrun")
 	outfit = /datum/outfit/job/roguetown/adventurer/abyssariad/zamurai
-	maximum_possible_slots = 1
-	pickprob = 50
+	maximum_possible_slots = 0
+	pickprob = 0
 	tutorial = "A lower-ranking zamurai serving the warrior caste that became adrift during a expedition, \
 	keeping their trusty steed. They are expected to uphold their oficial duties and following the strict \
 	martial code of the Abyssal Tide, at least on paper."

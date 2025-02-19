@@ -50,7 +50,6 @@
 	cloak = /obj/item/clothing/cloak/stabard/haramaki/jinbaori/guard //I can't put these somewhere else.
 	shoes = /obj/item/clothing/shoes/roguetown/boots/jikatabi/shinobi
 	belt = /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random
-	H.cmode_music = list('sound/music/kaizoku/combat/combat_changeling.ogg','sound/music/kaizoku/combat/combat_stormwarrior.ogg','sound/music/kaizoku/combat/combat_searaider.ogg','sound/music/kaizoku/combat/combat_oldtides.ogg','sound/music/kaizoku/combat/combat_decapitator.ogg','sound/music/kaizoku/combat/combat_emperor.ogg','sound/music/kaizoku/combat/combat_traditional.ogg','sound/music/kaizoku/combat/combat_navalretainers.ogg','sound/music/kaizoku/combat/combat_kyudo.ogg')
 
 /datum/outfit/job/roguetown/garrison/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -63,6 +62,7 @@
 	H.verbs |= /mob/proc/haltyell
 	ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	H.cmode_music = list('modular/stonekeep/kaizoku/sound/combat/combat_changeling.ogg','modular/stonekeep/kaizoku/sound/combat/combat_stormwarrior.ogg','modular/stonekeep/kaizoku/sound/combat/combat_searaider.ogg','modular/stonekeep/kaizoku/sound/combat/combat_oldtides.ogg','modular/stonekeep/kaizoku/sound/combat/combat_decapitator.ogg','modular/stonekeep/kaizoku/sound/combat/combat_emperor.ogg','modular/stonekeep/kaizoku/sound/combat/combat_traditional.ogg','modular/stonekeep/kaizoku/sound/combat/combat_navalretainers.ogg','modular/stonekeep/kaizoku/sound/combat/combat_kyudo.ogg')
 
 /* ! ! ! Class Selection Section Below ! ! !
 Design philosphy:
@@ -89,7 +89,7 @@ Design philosphy:
 	backr = /obj/item/rogueweapon/shield/wood/rattan
 	beltr = /obj/item/rogueweapon/sword/scimitar/messer/dao
 	beltl = /obj/item/rogueweapon/mace/ararebo
-	backpack_contents = list(/obj/item/keyring/guard)
+	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	//Stats for class
 	H.mind?.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
@@ -118,9 +118,9 @@ Design philosphy:
 	armor = /obj/item/clothing/suit/roguetown/armor/chainmail/tatami
 	shirt = /obj/item/clothing/suit/roguetown/armor/gambeson/ruankai
 	neck = /obj/item/clothing/neck/roguetown/gorget
-	head = /obj/item/clothing/head/roguetown/helmet/jingasa
+	head = /obj/item/clothing/head/roguetown/helmet/kaizoku/jingasa
 	beltr = /obj/item/rogueweapon/sword/scimitar/messer/dao
-	backpack_contents = list(/obj/item/keyring/guard)
+	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	//Stats for class
 	H.mind?.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -162,9 +162,9 @@ Design philosphy:
 	head = /obj/item/clothing/head/roguetown/tengai/gasa
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military
 	wrists = /obj/item/clothing/wrists/roguetown/bracers/leather/khudagach
-	beltr = /obj/item/quiver/arrows
+	beltr = /obj/item/ammo_holder/quiver/arrows
 	beltl = /obj/item/rogueweapon/knife/steel/tanto
-	backpack_contents = list(/obj/item/keyring/guard)
+	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	//Stats for class
 	H.mind?.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
@@ -202,7 +202,7 @@ Design philosphy:
 	head = /obj/item/clothing/head/roguetown/tengai/gasa
 	neck = /obj/item/clothing/neck/roguetown/chaincoif/karuta_zukin/military
 	beltl = /obj/item/rogueweapon/knife/steel/tanto
-	backpack_contents = list(/obj/item/keyring/guard)
+	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 
 	H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)
