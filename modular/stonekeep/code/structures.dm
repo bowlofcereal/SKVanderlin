@@ -217,3 +217,13 @@
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "trellise_empty"
 
+
+
+/obj/structure/flora/rock/pile
+	density = FALSE
+
+/obj/structure/chimney
+	density = TRUE
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "chimney"
+
