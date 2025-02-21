@@ -454,7 +454,7 @@
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/armor.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/armor.dmi'
 	sleeved = 'modular/stonekeep/kaizoku/icons/helpers/sleeves_armor.dmi'
-	armor = ARMOR_LEATHER_POOR
+	armor = ARMOR_LEATHER_BAD
 	blocksound = SOFTHIT
 	blade_dulling = DULLING_BASHCHOP
 	body_parts_covered = CHEST|GROIN|VITALS
