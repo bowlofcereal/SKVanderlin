@@ -1082,7 +1082,6 @@ GLOBAL_LIST_EMPTY(travel_spawn_points)
 	return null
 
 /proc/create_travel_tiles(atom/location, travel_id, travel_goes_to_id, required_trait, tile_path)
-	var/atom/location
 	for(var/obj/effect/landmark/travel_tile_location/landmark as anything in GLOB.travel_tile_locations)
 		if(get_dist(location, landmark) > 5)
 			continue
