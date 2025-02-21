@@ -972,8 +972,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/head/roguetown/soheicloth/ocean
-	name = "ocean sohei coverings"
-	color = CLOTHING_OCEAN
+	name = "sea sohei coverings"
+	color = CLOTHING_SEA
 
 /obj/item/clothing/head/roguetown/soheicloth/island
 	name = "island sohei coverings"
@@ -1183,9 +1183,9 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/ocean
-	name = "ocean hachi-gane"
-	desc = "Simple, lamellar head protection. Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the ocean."
-	color = CLOTHING_OCEAN
+	name = "sea hachi-gane"
+	desc = "Simple, lamellar head protection. Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the seas."
+	color = CLOTHING_SEA
 
 /obj/item/clothing/head/roguetown/helmet/kaizoku/hachigane/island
 	name = "island hachi-gane"
@@ -1327,8 +1327,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/head/roguetown/wizhat/onmyoji/ocean
-	name = "ocean onmyoji warhat"
-	color = CLOTHING_OCEAN
+	name = "sea onmyoji warhat"
+	color = CLOTHING_SEA
 
 /obj/item/clothing/head/roguetown/wizhat/onmyoji/island
 	name = "island onmyoji warhat"
@@ -1810,8 +1810,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/under/roguetown/trou/tobi/ocean
-	name = "ocean tobi pants"
-	color = CLOTHING_OCEAN
+	name = "sea tobi pants"
+	color = CLOTHING_SEA
 
 /obj/item/clothing/under/roguetown/trou/tobi/island
 	name = "island tobi pants"
@@ -2082,9 +2082,9 @@
 	color = CLOTHING_STORM
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/ocean
-	name = "ocean onmyoji's warfare garb"
-	desc = "The garbs used by Abyssariad magicians during times of warfare.  Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the ocean."
-	color = CLOTHING_OCEAN
+	name = "sea onmyoji's warfare garb"
+	desc = "The garbs used by Abyssariad magicians during times of warfare.  Marked in light blue for the expeditionary magicians and monks of Abyssanctum's faith, long married to the seas."
+	color = CLOTHING_SEA
 
 /obj/item/clothing/suit/roguetown/shirt/robe/wizard/guardian/island
 	name = "island onmyoji's warfare garb"
@@ -2142,8 +2142,8 @@
 	color = CLOTHING_STORM
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ocean
-	name = "ocean daisho belt"
-	color = CLOTHING_OCEAN
+	name = "sea daisho belt"
+	color = CLOTHING_SEA
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/island
 	name = "island daisho belt"

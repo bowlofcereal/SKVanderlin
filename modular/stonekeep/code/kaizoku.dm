@@ -17,7 +17,7 @@ get_accent_list()
 
 #define CLOTHING_THUNDER		"#be8b48"
 #define CLOTHING_STORM			"#1a2677"
-#define CLOTHING_OCEAN			"#56928a"
+#define CLOTHING_SEA			"#56928a"
 #define CLOTHING_ISLAND			"#bd3541"
 
 //Kaizoku Assets.
@@ -248,7 +248,7 @@ get_accent_list()
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ocean
 	name = "ocean daisho belt"
-	color = CLOTHING_OCEAN
+	color = CLOTHING_SEA
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/island
 	name = "island daisho belt"
