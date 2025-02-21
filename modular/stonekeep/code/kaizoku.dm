@@ -230,7 +230,7 @@ get_accent_list()
 	mob_overlay_icon ='modular/stonekeep/kaizoku/icons/clothing/belts.dmi'
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/random/Initialize()
-	color = RANDOM_PEASANT_DYES
+	color = pick(GLOB.peasant_dyes)
 	..()
 
 /obj/item/storage/belt/rogue/kaizoku/leather/daisho/ninja/PopulateContents()
