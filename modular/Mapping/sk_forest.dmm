@@ -44,6 +44,10 @@
 "df" = (
 /turf/open/water/river,
 /area/rogue/outdoors/woods)
+"dy" = (
+/obj/effect/landmark/travel_tile_location,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/woods)
 "dG" = (
 /turf/open/floor/rogue/hay,
 /area/rogue/outdoors/woods)
@@ -152,8 +156,8 @@
 /turf/open/floor/rogue/dirt/road,
 /area/rogue/indoors)
 "hT" = (
-/obj/structure/fluff/traveltile/bandit,
-/turf/open/floor/rogue/dirt/road,
+/obj/effect/landmark/travel_spawn_point,
+/turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
 "ip" = (
 /obj/structure/flora/rogueflower/random,
@@ -458,6 +462,10 @@
 "CA" = (
 /turf/open/floor/rogue/dirt,
 /area/rogue/outdoors/woods)
+"CK" = (
+/obj/effect/landmark/travel_tile_location,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "CL" = (
 /obj/item/natural/rock,
 /obj/effect/decal/cleanable/dirt/cobweb,
@@ -499,6 +507,10 @@
 "EK" = (
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave/spider)
+"EZ" = (
+/obj/machinery/light/rogue/firebowl/cold,
+/turf/open/floor/rogue/dirt,
+/area/rogue/outdoors/woods)
 "FJ" = (
 /obj/machinery/light/rogue/firebowl/stump,
 /turf/open/floor/rogue/grass,
@@ -603,6 +615,10 @@
 /obj/item/natural/rock,
 /turf/open/floor/rogue/naturalstone,
 /area/rogue/indoors/cave/volf)
+"MG" = (
+/obj/machinery/light/rogue/firebowl/cold,
+/turf/open/floor/rogue/naturalstone,
+/area/rogue/outdoors/woods)
 "ML" = (
 /obj/effect/decal/cleanable/blood_neu/tracks{
 	dir = 9
@@ -651,6 +667,10 @@
 	dir = 8
 	},
 /turf/open/floor/rogue/grass,
+/area/rogue/outdoors/woods)
+"PI" = (
+/obj/effect/landmark/travel_spawn_point,
+/turf/open/floor/rogue/naturalstone,
 /area/rogue/outdoors/woods)
 "PU" = (
 /obj/machinery/light/rogue/hearth{
@@ -817,42 +837,6 @@
 /area/rogue/indoors)
 
 (1,1,1) = {"
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
 ex
 ex
 ex
@@ -871,59 +855,95 @@ ex
 ex
 ex
 ex
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
 ex
 ex
 ex
@@ -937,17 +957,17 @@ GJ
 GJ
 ex
 ex
-tS
-tS
-tS
-tS
-tS
-tS
-tS
+ex
+ex
+ex
+ex
+ex
+ex
+ex
 VL
 "}
 (2,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1074,10 +1094,10 @@ Au
 dG
 ar
 nv
-tS
+ex
 "}
 (3,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1204,10 +1224,10 @@ Au
 Au
 BX
 BG
-tS
+ex
 "}
 (4,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1239,7 +1259,7 @@ ex
 ex
 ex
 ex
-pT
+CA
 pT
 pT
 pT
@@ -1334,10 +1354,10 @@ mr
 hz
 mr
 mr
-tS
+ex
 "}
 (5,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -1363,13 +1383,13 @@ pT
 pT
 pT
 pT
-pT
-pT
-pT
-pT
-pT
-pT
-pT
+CA
+CA
+uu
+uu
+CA
+CA
+CA
 qU
 uu
 pT
@@ -1464,10 +1484,10 @@ mr
 Tr
 mr
 VS
-tS
+ex
 "}
 (6,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1496,10 +1516,10 @@ CA
 oz
 oz
 iF
-pT
-ww
-pT
-pT
+uu
+uu
+CA
+CA
 uu
 CA
 GJ
@@ -1594,10 +1614,10 @@ mr
 ku
 mr
 Zo
-tS
+ex
 "}
 (7,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1624,7 +1644,7 @@ CA
 uu
 pT
 pT
-pT
+CA
 iF
 uu
 uu
@@ -1724,10 +1744,10 @@ mr
 yK
 mr
 mV
-tS
+ex
 "}
 (8,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1854,10 +1874,10 @@ mr
 te
 mr
 mo
-tS
+ex
 "}
 (9,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -1984,10 +2004,10 @@ mr
 uD
 mr
 Lz
-tS
+ex
 "}
 (10,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2114,10 +2134,10 @@ Au
 In
 mr
 vl
-tS
+ex
 "}
 (11,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2244,10 +2264,10 @@ Au
 uT
 mr
 lj
-tS
+ex
 "}
 (12,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2374,10 +2394,10 @@ ex
 ex
 mr
 nv
-tS
+ex
 "}
 (13,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2504,10 +2524,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (14,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2634,10 +2654,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (15,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2764,10 +2784,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (16,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -2894,10 +2914,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (17,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -3024,10 +3044,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (18,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -3154,10 +3174,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (19,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -3284,10 +3304,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (20,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -3414,10 +3434,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (21,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -3544,10 +3564,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (22,1,1) = {"
-tS
+pT
 pT
 pT
 pT
@@ -3641,8 +3661,8 @@ CA
 CA
 qU
 qU
-iF
 Bv
+CA
 GJ
 aA
 GJ
@@ -3674,10 +3694,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (23,1,1) = {"
-tS
+EZ
 uu
 uu
 qU
@@ -3697,8 +3717,8 @@ pT
 ww
 uu
 uu
-uu
-uu
+CA
+CA
 uu
 uu
 uu
@@ -3804,11 +3824,11 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (24,1,1) = {"
-tS
-hT
+CK
+CA
 CA
 uu
 qU
@@ -3826,8 +3846,8 @@ oz
 pT
 pT
 iF
-iF
-uu
+CA
+CA
 CA
 CA
 uu
@@ -3934,10 +3954,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (25,1,1) = {"
-tS
+CK
 hT
 CA
 CA
@@ -3956,8 +3976,8 @@ oz
 oz
 CA
 iF
-iF
-iF
+CA
+CA
 qU
 CA
 CA
@@ -4064,12 +4084,12 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (26,1,1) = {"
-tS
-hT
-uu
+CK
+CA
+CA
 CA
 CA
 CA
@@ -4194,12 +4214,12 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (27,1,1) = {"
-tS
-pT
-vx
+CA
+CA
+CA
 CA
 CA
 CA
@@ -4324,10 +4344,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (28,1,1) = {"
-tS
+pT
 pT
 pT
 pT
@@ -4454,10 +4474,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (29,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -4584,10 +4604,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (30,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -4714,10 +4734,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (31,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -4844,10 +4864,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (32,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -4974,10 +4994,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (33,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -5104,10 +5124,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (34,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -5225,8 +5245,8 @@ GJ
 Xi
 uu
 uu
-pT
-pT
+CA
+CA
 ex
 ex
 ex
@@ -5234,10 +5254,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (35,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -5356,7 +5376,7 @@ CA
 CA
 CA
 uu
-pT
+CA
 ex
 ex
 ex
@@ -5364,10 +5384,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (36,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -5494,10 +5514,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (37,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -5624,10 +5644,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (38,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -5703,7 +5723,7 @@ df
 nX
 CA
 CA
-CA
+FJ
 GJ
 aA
 aA
@@ -5754,10 +5774,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (39,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -5833,7 +5853,7 @@ df
 nX
 nX
 CA
-FJ
+CA
 CA
 aA
 GM
@@ -5884,10 +5904,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (40,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -6014,10 +6034,10 @@ Mt
 UZ
 ex
 ex
-tS
+ex
 "}
 (41,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -6144,10 +6164,10 @@ bI
 XO
 Ru
 ex
-tS
+ex
 "}
 (42,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -6274,10 +6294,10 @@ uJ
 JN
 mw
 ex
-tS
+ex
 "}
 (43,1,1) = {"
-tS
+ex
 pT
 pT
 pT
@@ -6404,10 +6424,10 @@ DM
 JN
 dM
 ex
-tS
+ex
 "}
 (44,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -6422,7 +6442,7 @@ qU
 pT
 si
 oz
-iF
+CA
 iF
 uu
 uu
@@ -6534,10 +6554,10 @@ JN
 uJ
 ex
 ex
-tS
+ex
 "}
 (45,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -6551,9 +6571,9 @@ uu
 qU
 pT
 oz
-iF
-uu
-uu
+CA
+CA
+CA
 uu
 CA
 Ls
@@ -6664,10 +6684,10 @@ JN
 ex
 ex
 ex
-tS
+ex
 "}
 (46,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -6682,8 +6702,8 @@ iF
 oz
 iF
 pT
-uu
-uu
+CA
+CA
 uu
 Ls
 cn
@@ -6794,10 +6814,10 @@ JN
 ex
 ex
 ex
-tS
+ex
 "}
 (47,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -6812,12 +6832,12 @@ si
 pT
 pT
 pT
-uu
-uu
-uu
 CA
+uu
+uu
 CA
 Ls
+CA
 CA
 iF
 si
@@ -6924,10 +6944,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (48,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -7003,7 +7023,7 @@ pT
 pT
 iF
 iF
-pT
+CA
 GJ
 aA
 aA
@@ -7054,10 +7074,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (49,1,1) = {"
-tS
+ex
 ex
 pT
 uu
@@ -7184,10 +7204,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (50,1,1) = {"
-tS
+ex
 ex
 pT
 iF
@@ -7263,11 +7283,11 @@ iF
 iF
 iF
 uu
-CA
+GJ
 GJ
 aA
 aA
-CA
+GJ
 pT
 HZ
 HZ
@@ -7314,10 +7334,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (51,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -7397,7 +7417,7 @@ GJ
 aA
 aA
 aA
-CA
+GJ
 iF
 CA
 nX
@@ -7444,10 +7464,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (52,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -7522,7 +7542,7 @@ uu
 pT
 pT
 pT
-pT
+CA
 GJ
 aA
 aA
@@ -7574,10 +7594,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (53,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -7652,12 +7672,12 @@ CA
 CA
 CA
 CA
-pT
-pT
+CA
+GJ
 aA
 aA
 GJ
-pT
+CA
 pT
 pT
 CA
@@ -7704,10 +7724,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (54,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -7787,7 +7807,7 @@ aA
 aA
 aA
 CA
-pT
+CA
 pT
 pT
 CA
@@ -7834,10 +7854,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (55,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -7964,10 +7984,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (56,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -8094,10 +8114,10 @@ uu
 qU
 ex
 ex
-tS
+ex
 "}
 (57,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -8171,8 +8191,8 @@ CA
 uu
 pT
 pT
-pT
-pT
+CA
+GJ
 aA
 GJ
 GJ
@@ -8222,12 +8242,12 @@ uu
 uu
 CA
 uu
-pT
 ex
-tS
+ex
+ex
 "}
 (58,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -8352,9 +8372,9 @@ CA
 CA
 CA
 iF
-pT
 ex
-tS
+ex
+ex
 "}
 (59,1,1) = {"
 ex
@@ -8482,9 +8502,9 @@ oz
 CA
 CA
 CA
-pT
 ex
-tS
+ex
+ex
 "}
 (60,1,1) = {"
 ex
@@ -8612,9 +8632,9 @@ uu
 uu
 CA
 CA
-pT
 ex
-tS
+ex
+ex
 "}
 (61,1,1) = {"
 ex
@@ -8742,9 +8762,9 @@ iF
 oz
 CA
 iF
-pT
 ex
-tS
+ex
+ex
 "}
 (62,1,1) = {"
 ex
@@ -8820,7 +8840,7 @@ uu
 iF
 uu
 uu
-pT
+CA
 aA
 aA
 aA
@@ -8874,7 +8894,7 @@ uu
 qU
 ex
 ex
-tS
+ex
 "}
 (63,1,1) = {"
 ex
@@ -9004,7 +9024,7 @@ qU
 pT
 ex
 ex
-tS
+ex
 "}
 (64,1,1) = {"
 DF
@@ -9079,7 +9099,7 @@ uu
 uu
 CA
 CA
-pT
+CA
 GJ
 aA
 aA
@@ -9134,7 +9154,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (65,1,1) = {"
 DF
@@ -9264,7 +9284,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (66,1,1) = {"
 DF
@@ -9343,7 +9363,7 @@ GJ
 GJ
 aA
 GJ
-qU
+GJ
 qU
 uu
 CA
@@ -9394,7 +9414,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (67,1,1) = {"
 ex
@@ -9472,7 +9492,7 @@ CA
 GJ
 aA
 aA
-pT
+GJ
 pT
 qU
 iF
@@ -9524,7 +9544,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (68,1,1) = {"
 ex
@@ -9602,7 +9622,7 @@ GJ
 aA
 aA
 aA
-pT
+GJ
 qU
 pT
 iF
@@ -9654,7 +9674,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (69,1,1) = {"
 ex
@@ -9784,10 +9804,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (70,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -9914,10 +9934,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (71,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10044,10 +10064,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (72,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10174,10 +10194,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (73,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10304,10 +10324,10 @@ pT
 pT
 ex
 ex
-tS
+ex
 "}
 (74,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10434,10 +10454,10 @@ uu
 uu
 qU
 ex
-tS
+ex
 "}
 (75,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10567,7 +10587,7 @@ pT
 ex
 "}
 (76,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10697,7 +10717,7 @@ nX
 ex
 "}
 (77,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10827,7 +10847,7 @@ df
 DF
 "}
 (78,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -10957,7 +10977,7 @@ df
 DF
 "}
 (79,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11087,7 +11107,7 @@ nX
 ex
 "}
 (80,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11214,10 +11234,10 @@ CA
 CA
 CA
 ex
-tS
+ex
 "}
 (81,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11344,10 +11364,10 @@ CA
 CA
 CA
 ex
-tS
+ex
 "}
 (82,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11474,10 +11494,10 @@ pT
 pT
 pT
 ex
-tS
+ex
 "}
 (83,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11604,10 +11624,10 @@ pT
 pT
 ex
 ex
-tS
+ex
 "}
 (84,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11682,7 +11702,7 @@ GJ
 GJ
 GJ
 CA
-CA
+Bv
 uu
 qU
 qU
@@ -11734,10 +11754,10 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (85,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11811,7 +11831,7 @@ GJ
 GJ
 GJ
 GJ
-Bv
+CA
 uu
 iF
 uu
@@ -11864,10 +11884,10 @@ pT
 pT
 ex
 ex
-tS
+ex
 "}
 (86,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -11994,10 +12014,10 @@ uu
 pT
 ex
 ex
-tS
+ex
 "}
 (87,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12124,10 +12144,10 @@ CA
 pT
 ex
 ex
-tS
+ex
 "}
 (88,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12254,10 +12274,10 @@ iF
 pT
 ex
 ex
-tS
+ex
 "}
 (89,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12384,10 +12404,10 @@ iF
 pT
 ex
 ex
-tS
+ex
 "}
 (90,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12514,10 +12534,10 @@ Pn
 pT
 ex
 ex
-tS
+ex
 "}
 (91,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12644,10 +12664,10 @@ Pn
 pT
 ex
 ex
-tS
+ex
 "}
 (92,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12774,10 +12794,10 @@ oz
 pT
 ex
 ex
-tS
+ex
 "}
 (93,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -12904,10 +12924,10 @@ iF
 uu
 pT
 ex
-tS
+ex
 "}
 (94,1,1) = {"
-tS
+ex
 ex
 ex
 CA
@@ -13034,10 +13054,10 @@ iF
 CA
 pT
 ex
-tS
+ex
 "}
 (95,1,1) = {"
-tS
+ex
 ex
 ex
 CA
@@ -13164,10 +13184,10 @@ pT
 uu
 pT
 ex
-tS
+ex
 "}
 (96,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -13294,10 +13314,10 @@ Pn
 iF
 pT
 ex
-tS
+ex
 "}
 (97,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -13424,10 +13444,10 @@ iF
 iF
 pT
 ex
-tS
+ex
 "}
 (98,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -13554,10 +13574,10 @@ Pn
 iF
 pT
 ex
-tS
+ex
 "}
 (99,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -13684,10 +13704,10 @@ Pn
 iF
 pT
 ex
-tS
+ex
 "}
 (100,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -13814,10 +13834,10 @@ Pn
 pT
 pT
 ex
-tS
+ex
 "}
 (101,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -13944,10 +13964,10 @@ iF
 pT
 pT
 ex
-tS
+ex
 "}
 (102,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -14074,10 +14094,10 @@ Pn
 pT
 pT
 ex
-tS
+ex
 "}
 (103,1,1) = {"
-tS
+ex
 ex
 pT
 pT
@@ -14204,10 +14224,10 @@ Pn
 iF
 pT
 ex
-tS
+ex
 "}
 (104,1,1) = {"
-tS
+ex
 ex
 pT
 iF
@@ -14282,7 +14302,7 @@ CA
 GJ
 aA
 aA
-aA
+GJ
 CA
 CA
 iF
@@ -14334,10 +14354,10 @@ iF
 uu
 pT
 ex
-tS
+ex
 "}
 (105,1,1) = {"
-tS
+ex
 pT
 iF
 uu
@@ -14464,10 +14484,10 @@ iF
 iF
 pT
 ex
-tS
+ex
 "}
 (106,1,1) = {"
-tS
+ex
 pT
 uu
 uu
@@ -14594,10 +14614,10 @@ Pn
 Pn
 pT
 ex
-tS
+ex
 "}
 (107,1,1) = {"
-tS
+ex
 pT
 uu
 uu
@@ -14724,10 +14744,10 @@ Pn
 iF
 pT
 ex
-tS
+ex
 "}
 (108,1,1) = {"
-tS
+ex
 pT
 iF
 uu
@@ -14854,10 +14874,10 @@ iF
 uu
 pT
 ex
-tS
+ex
 "}
 (109,1,1) = {"
-tS
+ex
 pT
 iF
 iF
@@ -14984,10 +15004,10 @@ iF
 iF
 pT
 ex
-tS
+ex
 "}
 (110,1,1) = {"
-tS
+ex
 eG
 eG
 eG
@@ -15114,10 +15134,10 @@ iF
 uu
 uu
 pT
-tS
+ex
 "}
 (111,1,1) = {"
-tS
+ex
 Aa
 bE
 CM
@@ -15244,10 +15264,10 @@ uu
 uu
 iF
 pT
-tS
+ex
 "}
 (112,1,1) = {"
-tS
+ex
 Aa
 hP
 no
@@ -15374,10 +15394,10 @@ uu
 iF
 Pn
 pT
-tS
+ex
 "}
 (113,1,1) = {"
-tS
+ex
 ht
 ht
 ht
@@ -15504,10 +15524,10 @@ CA
 iF
 iF
 pT
-tS
+ex
 "}
 (114,1,1) = {"
-tS
+ex
 pT
 iF
 iF
@@ -15634,10 +15654,10 @@ uu
 iF
 Pn
 pT
-tS
+ex
 "}
 (115,1,1) = {"
-tS
+ex
 pT
 iF
 uu
@@ -15764,10 +15784,10 @@ pT
 uu
 iF
 pT
-tS
+ex
 "}
 (116,1,1) = {"
-tS
+ex
 ex
 pT
 CA
@@ -15894,10 +15914,10 @@ iF
 uu
 uu
 pT
-tS
+ex
 "}
 (117,1,1) = {"
-tS
+ex
 ex
 pT
 iF
@@ -16024,10 +16044,10 @@ iF
 uu
 iF
 pT
-tS
+ex
 "}
 (118,1,1) = {"
-tS
+ex
 ex
 pT
 iF
@@ -16129,11 +16149,11 @@ GJ
 GJ
 GJ
 GJ
-aA
-aA
+GJ
+GJ
+GJ
 GJ
 CA
-iF
 CA
 CA
 iF
@@ -16154,10 +16174,10 @@ iF
 iF
 Pn
 pT
-tS
+ex
 "}
 (119,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -16284,10 +16304,10 @@ uu
 iF
 Pn
 pT
-tS
+ex
 "}
 (120,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -16414,10 +16434,10 @@ iF
 Pn
 Pn
 pT
-tS
+ex
 "}
 (121,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -16544,10 +16564,10 @@ Pn
 Pn
 iF
 pT
-tS
+ex
 "}
 (122,1,1) = {"
-tS
+ex
 ex
 ex
 qU
@@ -16656,7 +16676,7 @@ GJ
 aA
 aA
 GJ
-aA
+GJ
 CA
 uu
 iF
@@ -16674,10 +16694,10 @@ iF
 iF
 pT
 ex
-tS
+ex
 "}
 (123,1,1) = {"
-tS
+ex
 ex
 ex
 pT
@@ -16804,10 +16824,10 @@ uu
 pT
 ex
 ex
-tS
+ex
 "}
 (124,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -16934,10 +16954,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (125,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -17064,10 +17084,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (126,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -17194,10 +17214,10 @@ pT
 ex
 ex
 ex
-tS
+ex
 "}
 (127,1,1) = {"
-tS
+ex
 ex
 ex
 ex
@@ -17324,112 +17344,112 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (128,1,1) = {"
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
 ex
 ex
 ex
@@ -17440,21 +17460,21 @@ Ec
 Ec
 Ec
 ex
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
-tS
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
 "}
 
 (1,1,2) = {"
@@ -17715,7 +17735,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (3,1,2) = {"
 ex
@@ -17746,68 +17766,15 @@ ex
 ex
 ex
 ex
-ex
-ex
-ex
-ex
-ex
-Nv
-Nv
-Nv
-Nv
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
+dy
+dy
+dy
 ex
 ex
 Nv
 Nv
 Nv
 Nv
-Nv
-Nv
-Nv
-Nv
-ex
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
 ex
 ex
 ex
@@ -17833,6 +17800,21 @@ Nv
 Nv
 Nv
 Nv
+ex
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
 Nv
 Nv
 ex
@@ -17845,7 +17827,45 @@ ex
 ex
 ex
 ex
-tS
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
 "}
 (4,1,2) = {"
 ex
@@ -17875,6 +17895,10 @@ Nv
 Nv
 Nv
 ex
+MG
+RB
+PI
+RB
 ex
 Nv
 Nv
@@ -17882,64 +17906,6 @@ Nv
 Nv
 Nv
 Nv
-Nv
-Nv
-Nv
-Nv
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-Nv
-ex
-ex
-ex
-ex
-ex
-ex
-ex
-Nv
-Nv
-Nv
-ex
 ex
 ex
 ex
@@ -17965,6 +17931,34 @@ Nv
 Nv
 Nv
 Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+Nv
+Nv
+Nv
 ex
 ex
 ex
@@ -17975,7 +17969,33 @@ ex
 ex
 ex
 ex
-tS
+ex
+ex
+ex
+ex
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+Nv
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
+ex
 "}
 (5,1,2) = {"
 ex
@@ -18105,7 +18125,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (6,1,2) = {"
 ex
@@ -18235,7 +18255,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (7,1,2) = {"
 ex
@@ -18365,7 +18385,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (8,1,2) = {"
 ex
@@ -18495,7 +18515,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (9,1,2) = {"
 ex
@@ -18625,7 +18645,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (10,1,2) = {"
 ex
@@ -18755,7 +18775,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (11,1,2) = {"
 ex
@@ -18885,7 +18905,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (12,1,2) = {"
 ex
@@ -19015,7 +19035,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (13,1,2) = {"
 ex
@@ -19145,7 +19165,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (14,1,2) = {"
 ex
@@ -19275,7 +19295,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (15,1,2) = {"
 ex
@@ -19405,7 +19425,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (16,1,2) = {"
 ex
@@ -19535,7 +19555,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (17,1,2) = {"
 ex
@@ -19665,7 +19685,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (18,1,2) = {"
 ex
@@ -19795,7 +19815,7 @@ Nv
 ex
 ex
 ex
-tS
+ex
 "}
 (19,1,2) = {"
 ex
@@ -19925,7 +19945,7 @@ Nv
 ex
 ex
 ex
-tS
+ex
 "}
 (20,1,2) = {"
 ex
@@ -20055,7 +20075,7 @@ Nv
 ex
 ex
 ex
-tS
+ex
 "}
 (21,1,2) = {"
 ex
@@ -20185,7 +20205,7 @@ Nv
 ex
 ex
 ex
-tS
+ex
 "}
 (22,1,2) = {"
 ex
@@ -20315,7 +20335,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (23,1,2) = {"
 ex
@@ -20445,7 +20465,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (24,1,2) = {"
 ex
@@ -20575,7 +20595,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (25,1,2) = {"
 ex
@@ -20705,7 +20725,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (26,1,2) = {"
 ex
@@ -20835,7 +20855,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (27,1,2) = {"
 ex
@@ -20965,7 +20985,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (28,1,2) = {"
 ex
@@ -21095,7 +21115,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (29,1,2) = {"
 ex
@@ -21225,7 +21245,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (30,1,2) = {"
 ex
@@ -21355,7 +21375,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (31,1,2) = {"
 ex
@@ -21485,7 +21505,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (32,1,2) = {"
 ex
@@ -21615,7 +21635,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (33,1,2) = {"
 ex
@@ -21745,7 +21765,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (34,1,2) = {"
 ex
@@ -21875,7 +21895,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (35,1,2) = {"
 ex
@@ -22005,7 +22025,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (36,1,2) = {"
 ex
@@ -22135,7 +22155,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (37,1,2) = {"
 ex
@@ -22265,7 +22285,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (38,1,2) = {"
 ex
@@ -22395,7 +22415,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (39,1,2) = {"
 ex
@@ -22525,7 +22545,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (40,1,2) = {"
 ex
@@ -22655,7 +22675,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (41,1,2) = {"
 ex
@@ -22785,7 +22805,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (42,1,2) = {"
 ex
@@ -22915,7 +22935,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (43,1,2) = {"
 ex
@@ -23045,7 +23065,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (44,1,2) = {"
 ex
@@ -23175,7 +23195,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (45,1,2) = {"
 ex
@@ -23305,7 +23325,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (46,1,2) = {"
 ex
@@ -23435,7 +23455,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (47,1,2) = {"
 ex
@@ -23565,7 +23585,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (48,1,2) = {"
 ex
@@ -23695,7 +23715,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (49,1,2) = {"
 ex
@@ -23825,7 +23845,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (50,1,2) = {"
 ex
@@ -23955,7 +23975,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (51,1,2) = {"
 ex
@@ -24085,7 +24105,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (52,1,2) = {"
 ex
@@ -24215,7 +24235,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (53,1,2) = {"
 ex
@@ -24345,7 +24365,7 @@ ex
 ex
 ex
 ex
-tS
+ex
 "}
 (54,1,2) = {"
 ex
@@ -24475,7 +24495,7 @@ Nv
 ex
 ex
 ex
-tS
+ex
 "}
 (55,1,2) = {"
 ex
@@ -24605,7 +24625,7 @@ Nv
 ex
 ex
 ex
-tS
+ex
 "}
 (56,1,2) = {"
 ex
@@ -24735,7 +24755,7 @@ Nv
 Nv
 ex
 ex
-tS
+ex
 "}
 (57,1,2) = {"
 ex
@@ -24863,9 +24883,9 @@ Nv
 Nv
 Nv
 Nv
-Nv
+MG
 ex
-tS
+ex
 "}
 (58,1,2) = {"
 ex
@@ -24993,9 +25013,9 @@ Nv
 Nv
 Nv
 Nv
-Nv
+dy
+RB
 ex
-tS
 "}
 (59,1,2) = {"
 ex
@@ -25123,9 +25143,9 @@ Nv
 Nv
 Nv
 Nv
-Nv
+dy
+PI
 ex
-tS
 "}
 (60,1,2) = {"
 ex
@@ -25253,8 +25273,8 @@ Nv
 Nv
 Nv
 Nv
-Nv
-Nv
+dy
+RB
 ex
 "}
 (61,1,2) = {"
@@ -25383,8 +25403,8 @@ Nv
 Nv
 Nv
 Nv
-Nv
-Nv
+ex
+ex
 ex
 "}
 (62,1,2) = {"
@@ -25513,8 +25533,8 @@ Nv
 Nv
 Nv
 Nv
-Nv
-Nv
+ex
+ex
 ex
 "}
 (63,1,2) = {"
@@ -44630,7 +44650,7 @@ ex
 "}
 (82,1,3) = {"
 ex
-RB
+ex
 Nv
 Nv
 Nv
@@ -44760,7 +44780,7 @@ ex
 "}
 (83,1,3) = {"
 ex
-RB
+ex
 RB
 Nv
 Nv
@@ -44890,7 +44910,7 @@ ex
 "}
 (84,1,3) = {"
 ex
-RB
+dy
 RB
 RB
 Nv
@@ -45020,8 +45040,8 @@ ex
 "}
 (85,1,3) = {"
 ex
-RB
-RB
+dy
+PI
 RB
 Nv
 Nv
@@ -45150,7 +45170,7 @@ ex
 "}
 (86,1,3) = {"
 ex
-RB
+dy
 RB
 RB
 Nv
@@ -45280,8 +45300,8 @@ ex
 "}
 (87,1,3) = {"
 ex
-RB
-RB
+ex
+MG
 Nv
 Nv
 Nv
@@ -45410,7 +45430,7 @@ ex
 "}
 (88,1,3) = {"
 ex
-RB
+ex
 Nv
 Nv
 Nv
