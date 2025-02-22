@@ -486,8 +486,8 @@
 /area/rogue/indoors/cave/volf)
 "Ec" = (
 /obj/structure/fluff/traveltile{
-	aportalgoesto = "vanderlin-forest_town-town";
-	aportalid = "vanderlin-forest_town-forest"
+	aportalgoesto = "candlelight-forest";
+	aportalid = "stone_forest"
 	},
 /turf/open/floor/rogue/cobblerock,
 /area/rogue/outdoors/woods)
@@ -17329,7 +17329,7 @@ GJ
 aA
 aA
 aA
-ex
+GJ
 ex
 ex
 ex
@@ -17455,11 +17455,11 @@ ex
 ex
 ex
 ex
-ex
+GJ
 Ec
 Ec
 Ec
-ex
+GJ
 ex
 ex
 ex
