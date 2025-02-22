@@ -32,7 +32,7 @@
 /turf/open/floor/rogue/carpet/green
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
-/turf/open/floor/rogue/cobblerock
+/turf/open/floor/rogue/cobblerock/alt
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
 /turf/open/floor/rogue/cobble/mossy/Initialize()
