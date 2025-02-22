@@ -33,7 +33,19 @@
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 
 /turf/open/floor/rogue/cobblerock/alt
+	icon_state = "cobblerock_alt"
 	icon = 'modular/stonekeep/icons/turfs.dmi'
+	neighborlay = "cobblerock_alt"
+
+/turf/open/floor/rogue/cobblerock/red
+	icon = 'modular/stonekeep/icons/turfs.dmi'
+	icon_state = "cobblerock_red"
+	neighborlay = "cobblerock_red"
+
+
+
+/turf/open/floor/rogue/cobblerock/cardinal_smooth(adjacencies)
+	roguesmooth(adjacencies)
 
 /turf/open/floor/rogue/cobble/mossy/Initialize()
 	. = ..()
@@ -86,6 +98,18 @@
 	color = "#ffffff"
 	. = ..()
 
+
+/turf/open/floor/rogue/grass/mixyel
+	canSmoothWith = list(/turf/open/floor/rogue/grass,
+	/turf/open/floor/rogue/snow,
+	/turf/open/floor/rogue/dirt,)
+
+
+
+/turf/open/floor/rogue/grass/yel
+	canSmoothWith = list(/turf/open/floor/rogue/grass,
+	/turf/open/floor/rogue/snow,
+	/turf/open/floor/rogue/grass/mixyel)
 
 // =================================================================================
 /*--------\
