@@ -14,15 +14,13 @@
 		"Half-Elf",
 		"Tiefling",
 		"Dark Elf",
-		"Aasimar",
-		"Half-Orc",
-		"Rakshari"
+		"Aasimar"
 	)
 	outfit = /datum/outfit/job/roguetown/vagrant
 	bypass_lastclass = TRUE
 	banned_leprosy = FALSE
 
-	tutorial = "The stench of your piss-laden clothes dont bug you anymore, the glances of disgust and loathing others give you is just a friendly greeting; the only reason you've not been killed already is because volfs are known to be repelled by decaying flesh. You're going to be a solemn reminder of what happens when something unwanted is born into this world."
+	tutorial = "The smell of filth and sweat no longer bother you, the glances of disgust or pity others give you familiar  ; the only reason you've not dead in a mud pit already is because you are tough as a old leather sole, hardned by ratbites, sticks and stones."
 	display_order = JDO_VAGRANT
 	show_in_credits = FALSE
 	can_random = FALSE

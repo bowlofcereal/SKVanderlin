@@ -83,7 +83,7 @@
 /obj/item/reagent_containers/food/snacks/rogue/friedfrog
 	name = "fried frog"
 	desc = "are you sure you are going to eat this?"
-	icon = 'icons/roguetown/items/food.dmi'
+	icon = 'modular/stonekeep/icons/food.dmi'
 	icon_state = "fogfrog_cooked"
 	bitesize = 2
 	list_reagents = list(/datum/reagent/consumable/nutriment = 4, /datum/reagent/fogblight = 10) //heat denaturalized the poison, so it is less harmful. Still bad.

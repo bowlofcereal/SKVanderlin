@@ -227,14 +227,14 @@
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "chimney"
 
-/obj/machinery/light/rogue/torchholder/empty
-	lacks_torch = TRUE
-	pixel_y = 32
 
-/obj/machinery/light/rogue/torchholder/cold
-	unlit_torch = TRUE
-	pixel_y = 32
-
-/obj/machinery/light/rogue/firebowl/cold/Initialize()
-	burn_out()
+/obj/structure/bars/cemetery/vines
+	icon = 'modular/stonekeep/icons/structure.dmi'
+/obj/structure/bars/cemetery/vines/Initialize()
+	dir = pick(GLOB.cardinals)
 	. = ..()
+
+
+/obj/structure/table/stone_small/gravekeeper
+	name = "body preparation slate"
+	color = "#b4b4b6"

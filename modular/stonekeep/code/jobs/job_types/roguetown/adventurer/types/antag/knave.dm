@@ -2,7 +2,14 @@
 	name = "Knave"
 	tutorial = "Not all followers of Matthios take by force. Thieves, poachers, and ne'er-do-wells of all forms steal from others from the shadows, long gone before their marks realize their misfortune."
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_PLAYER_RACES_BY_NAME
+	allowed_races = list(
+		"Humen",
+		"Elf",
+		"Half-Elf",
+		"Dwarf",
+		"Tiefling",
+		"Dark Elf"
+	)
 	outfit = /datum/outfit/job/roguetown/bandit/knave
 	category_tags = list(CTAG_BANDIT)
 	cmode_music = 'sound/music/cmode/antag/CombatBandit3.ogg'
@@ -33,11 +40,16 @@
 	shirt = /obj/item/clothing/suit/roguetown/shirt/shortshirt/random
 	shoes = /obj/item/clothing/shoes/roguetown/boots
 	mask = /obj/item/clothing/mask/rogue/facemask/steel
-	neck = /obj/item/clothing/neck/roguetown/coif
-	armor = /obj/item/clothing/suit/roguetown/armor/leather/basic
-	H.change_stat("endurance", 1)
-	H.change_stat("perception", 2)
-	H.change_stat("speed", 3) //It's all about speed and perception
+	var/armor2choose = pickweight(list("Vest" = 2, "Gambeson" = 1))
+	switch(armor2choose)
+		if("Vest")
+			armor = /obj/item/clothing/suit/roguetown/armor/leather/vest/random
+		if("Gambeson")
+			armor = /obj/item/clothing/suit/roguetown/armor/gambeson
+	backr = /obj/item/storage/backpack/rogue/satchel
+	H.change_stat(STATKEY_SPD, 2)
+	H.change_stat(STATKEY_END, 1)
+	H.change_stat(STATKEY_PER, 2)
 	ADD_TRAIT(H, TRAIT_DODGEEXPERT, TRAIT_GENERIC) //gets dodge expert but no medium armor training - gotta stay light
 	H.adjust_blindness(-3)
 	var/weapons = list("Crossbow & Dagger", "Bow & Sword")
@@ -45,19 +57,18 @@
 	H.set_blindness(0)
 	switch(weapon_choice)
 		if("Crossbow & Dagger") //Rogue
+			head = /obj/item/clothing/head/roguetown/roguehood/random/heavy
 			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow //we really need to make this not a grenade launcher subtype
 			beltr = /obj/item/ammo_holder/quiver/bolts
-			cloak = /obj/item/clothing/cloak/raincloak/mortus //cool cloak
-			beltl = /obj/item/rogueweapon/knife/dagger/steel
-			backr = /obj/item/storage/backpack/rogue/satchel
+			beltl = /obj/item/rogueweapon/knife/dagger
 			backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/lockpickring/mundane = 1) //rogue gets lockpicks
 			H.mind.adjust_skillrank(/datum/skill/combat/crossbows, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		if("Bow & Sword") //Poacher
-			backl= /obj/item/rogueweapon/shield/tower/buckleriron
+			backl= /obj/item/gun/ballistic/revolver/grenadelauncher/bow
 			beltr = /obj/item/rogueweapon/sword/short //steel sword like literally every adventurer gets
 			head = /obj/item/clothing/head/roguetown/helmet/leather/volfhelm //cool hat
-			backr = /obj/item/storage/backpack/rogue/satchel
+			neck = /obj/item/clothing/neck/roguetown/coif
 			backpack_contents = list(/obj/item/needle/thorn = 1, /obj/item/natural/cloth = 1, /obj/item/restraints/legcuffs/beartrap = 2) //poacher gets mantraps
 			H.mind.adjust_skillrank(/datum/skill/combat/bows, 1, TRUE)
 			H.mind.adjust_skillrank(/datum/skill/combat/swords, 1, TRUE)

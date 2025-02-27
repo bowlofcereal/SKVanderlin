@@ -31,7 +31,7 @@ All foods are distributed among various categories. Use common sense.
 /obj/item/reagent_containers/food/snacks
 	name = "snack"
 	desc = ""
-	icon = 'icons/roguetown/items/food.dmi'
+	icon = 'modular/stonekeep/icons/food.dmi'
 	icon_state = null
 	lefthand_file = 'icons/roguetown/onmob/lefthand.dmi'
 	righthand_file = 'icons/roguetown/onmob/righthand.dmi'
@@ -685,7 +685,7 @@ All foods are distributed among various categories. Use common sense.
 
 // Proc to handle visuals from plating
 /obj/item/reagent_containers/food/snacks/proc/plated()
-	icon = 'icons/roguetown/items/food.dmi'
+	icon = 'modular/stonekeep/icons/food.dmi'
 	item_state = "plate_food"
 	experimental_inhand = FALSE
 	inhand_x_dimension = 32

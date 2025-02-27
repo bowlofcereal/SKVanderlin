@@ -64,44 +64,23 @@
 
 // Disabled?
 /datum/anvil_recipe/tools/hoe/copper
-	name = "Copper Hoe (+Stick x2)"
-	recipe_name = "a gardening Hoe"
 	req_bar = /obj/item/natural/stoneblock
-	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/hoe/copper
-	i_type = "Tools"
-
-/datum/anvil_recipe/tools/sickle/copper
-	name = "Copper Sickle (+Stick)"
-	recipe_name = "a Sickle"
-	req_bar = /obj/item/natural/stoneblock
-	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/sickle/copper
-	i_type = "Tools"
 
 /datum/anvil_recipe/tools/pitchfork/copper
-	name = "Copper Pitchfork (+Stick x2)"
-	recipe_name = "a Pitchfork"
 	req_bar = /obj/item/natural/stoneblock
-	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/pitchfork/copper
-	i_type = "Tools"
 
 /datum/anvil_recipe/tools/pick/copper
-	name = "Copper Pick (+Stick)"
-	recipe_name = "a digging Pick"
 	req_bar = /obj/item/natural/stoneblock
-	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/pick/copper
-	i_type = "Tools"
 
 /datum/anvil_recipe/tools/hammer/copper
-	name = "Copper Hammer (+Stick)"
 	req_bar = /obj/item/natural/stoneblock
-	recipe_name = "a blacksmithing Hammer"
-	additional_items = list(/obj/item/grown/log/tree/stick)
-	created_item = /obj/item/rogueweapon/hammer/copper
-	i_type = "Tools"
+
+/datum/anvil_recipe/weapons/copper/cmesser
+	req_bar = /obj/item/natural/stoneblock
+
+/datum/anvil_recipe/weapons/copper/cfalx
+	req_bar = /obj/item/natural/stoneblock
+
 
 
 /datum/crafting_recipe/roguetown/woodflail

@@ -28,6 +28,8 @@
 			if("onbelt")
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
+/obj/item/rogueweapon/polearm/halberd/bardiche/woodcutter
+	icon = 'modular/stonekeep/icons/weapons_64.dmi'
 
 /obj/item/rogueweapon/polearm/halberd/bardiche/warcutter
 	name = "war axe"
@@ -85,6 +87,8 @@
 /obj/item/rogueweapon/flail/sflail
 	icon = 'modular/stonekeep/icons/weapons.dmi'
 
+/obj/item/rogueweapon/knife/cleaver/combat
+	force = DAMAGE_DAGGER+2
 
 /obj/item/rogueweapon/mace/copperbludgeon
 	name = "studded club"

@@ -37,12 +37,17 @@
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	neighborlay = "cobblerock_alt"
 
+/turf/open/floor/rogue/cobblerock/alt/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+
 /turf/open/floor/rogue/cobblerock/red
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	icon_state = "cobblerock_red"
 	neighborlay = "cobblerock_red"
 
-
+/turf/open/floor/rogue/blocks/carved
+	icon_state = "carvedstone"
 
 /turf/open/floor/rogue/cobblerock/cardinal_smooth(adjacencies)
 	roguesmooth(adjacencies)
@@ -107,6 +112,7 @@
 
 
 /turf/open/floor/rogue/grass/yel
+	icon = 'modular/stonekeep/icons/turfs.dmi'
 	canSmoothWith = list(/turf/open/floor/rogue/grass,
 	/turf/open/floor/rogue/snow,
 	/turf/open/floor/rogue/grass/mixyel)
@@ -178,7 +184,8 @@
 	dir = pick(GLOB.cardinals)
 	. = ..()
 
-
+// ======================================================================
+/*	..................   Map Generators   ................... */
 /datum/mapGenerator/forest
 	modules = list(/datum/mapGeneratorModule/ambushing,/datum/mapGeneratorModule/forestgrassturf,/datum/mapGeneratorModule/forest,/datum/mapGeneratorModule/forestroad,/datum/mapGeneratorModule/forestgrass,/datum/mapGeneratorModule/forestswampwaterturf,/datum/mapGeneratorModule/forestwaterturf, /datum/mapGeneratorModule/forest_undertree)
 
@@ -232,6 +239,9 @@
 							/obj/item/grown/log/tree/stick = 3,
 							/obj/structure/flora/rogueflower/fallenleaves = 30)
 
+
+// ======================================================================
+/*	..................   Areas   ................... */
 /area/rogue/indoors/cave/volf
 	name = "volf cave"
 	icon_state = "cave"
@@ -239,3 +249,33 @@
 /area/rogue/indoors/cave/spider
 	name = "spider cave"
 	icon_state = "cave"
+
+/area/rogue/outdoors/town/amphitheatre
+	name = "town (amphitheatre)"
+
+
+// ======================================================================
+/*	..................   Bandit Traveltile Landmark   ................... */ // This is so shit but cant be arsed to make the RW One work
+/obj/effect/landmark/map_load_mark/bandit_traveltile
+	name = "Bandit_travel"
+	templates = list( "bandit_tile1","bandit_tile2","bandit_tile3","bandit_tile4"  )
+
+/datum/map_template/bandittravela
+	name = "Bandit_travel_A"
+	id = "bandit_tile1"
+	mappath = "_maps/map_files/candlelight/templates/bantravel_a.dmm"
+
+/datum/map_template/bandittravelb
+	name = "Bandit_travel_B"
+	id = "bandit_tile2"
+	mappath = "_maps/map_files/candlelight/templates/bantravel_b.dmm"
+
+/datum/map_template/bandittravelc
+	name = "Bandit_travel_C"
+	id = "bandit_tile3"
+	mappath = "_maps/map_files/candlelight/templates/bantravel_c.dmm"
+
+/datum/map_template/bandittraveld
+	name = "Bandit_travel_D"
+	id = "bandit_tile4"
+	mappath = "_maps/map_files/candlelight/templates/bantravel_d.dmm"

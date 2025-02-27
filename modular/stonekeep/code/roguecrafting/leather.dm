@@ -431,7 +431,7 @@
 
 /datum/crafting_recipe/roguetown/leather/hood_heavy
 	name = "hood (heavy leather)"
-	result = /obj/item/clothing/head/roguetown/roguehood/heavy
+	result = /obj/item/clothing/head/roguetown/roguehood/random/heavy
 	reqs = 	list(/obj/item/natural/hide/cured = 2, /obj/item/reagent_containers/food/snacks/tallow = 1)
 	craftdiff = 4
 

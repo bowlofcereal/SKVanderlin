@@ -195,6 +195,9 @@
 
 /obj/machinery/light/rogue/firebowl
 	brightness = 10
+/obj/machinery/light/rogue/firebowl/Initialize()
+	. = ..()
+	light_outer_range =  9
 
 /obj/machinery/light/rogue/wallfire
 	brightness = 9
@@ -202,6 +205,24 @@
 /obj/machinery/light/rogue/torchholder
 	brightness = 7
 
+/obj/machinery/light/rogue/campfire
+	brightness = 8
+/obj/machinery/light/rogue/campfire/Initialize()
+	. = ..()
+	light_outer_range =  6
+
+
+/obj/machinery/light/rogue/torchholder/empty
+	lacks_torch = TRUE
+	pixel_y = 32
+
+/obj/machinery/light/rogue/torchholder/cold
+	unlit_torch = TRUE
+	pixel_y = 32
+
+/obj/machinery/light/rogue/firebowl/cold/Initialize(mapload)
+	. = ..()
+	addtimer(CALLBACK(src, PROC_REF(extinguish)), 10)
 
 // =============================================================================
 // ========================		WEATHER EDITS		============================
@@ -363,187 +384,6 @@
 /obj/structure/fluff/walldeco/rags/skull
 	icon_state = "wallskull"
 
-// ======================================================================
-/*	..................   Colony Spider Web   ................... */
-/obj/structure/innocent_web
-	name = ""
-	desc = ""
-	icon = 'modular/stonekeep/icons/32x64.dmi'
-	icon_state = "innocentweb1"
-	layer = ABOVE_ALL_MOB_LAYER
-	density = FALSE
-	max_integrity = 35
-	climbable = FALSE
-	dir = SOUTH
-	debris = list(/obj/item/natural/silk = 1)
-	var/lucky_escape
-
-/obj/structure/innocent_web/Initialize()
-	. = ..()
-	icon_state = "innocentweb[rand(1,2)]"
-	return ..()
-
-/obj/structure/innocent_web/attack_hand()
-	playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 100)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
-	qdel(src)
-
-/obj/structure/innocent_web/attackby(obj/item, /mob/user, params)
-	playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 100)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
-	qdel(src)
-
-/obj/structure/innocent_web/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
-	playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 100)
-	new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
-	qdel(src)
-
-/obj/structure/innocent_web/Crossed(atom/movable/AM)
-	..()
-	if(isliving(AM))
-		var/mob/living/carbon/human/L = AM
-		lucky_escape = ( L.STALUC * 4 )
-		L.Immobilize(5)
-		if(L.m_intent == MOVE_INTENT_WALK)
-			L.Immobilize(10)
-			if(prob(lucky_escape))
-				to_chat(L, "<span class='warning'>The flimsy web breaks.</span>")
-				qdel(src)
-			else
-				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
-				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
-				qdel(src)
-		if(L.m_intent == MOVE_INTENT_RUN)
-			to_chat(L, "<span class='warning'>I'm stuck in the web!</span>")
-			L.Immobilize(20)
-			if(prob(lucky_escape))
-				to_chat(L, "<span class='warning'>The flimsy web breaks.</span>")
-				qdel(src)
-			else
-				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
-				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
-				qdel(src)
-		else
-			to_chat(L, "<span class='warning'>I'm stuck in the web!</span>")
-			L.Immobilize(5)
-			if(prob(lucky_escape))
-				to_chat(L, "<span class='warning'>The flimsy web breaks.</span>")
-				qdel(src)
-			else
-				playsound(src, pick('sound/misc/jumpscare (1).ogg','sound/misc/jumpscare (2).ogg','sound/misc/jumpscare (3).ogg','sound/misc/jumpscare (4).ogg'), 120)
-				new /mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy (get_turf(src))
-				qdel(src)
-
-
-/mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy
-	name = "hairy spider"
-	desc = "The forest canopies hides more than leaves...These creachers make honey from flowers and spin silk from their abdomen, when not consuming prey."
-	icon = 'modular/stonekeep/icons/spider.dmi'
-	icon_state = "spider"
-	icon_living = "spider"
-	icon_dead = "spider-dead"
-	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange = 1,
-							/obj/item/natural/silk = 1)
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange= 2,
-							/obj/item/reagent_containers/food/snacks/spiderhoney = 1,
-							/obj/item/natural/silk = 2)
-	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/rogue/meat/strange = 2,
-							/obj/item/reagent_containers/food/snacks/spiderhoney = 2,
-							/obj/item/natural/silk = 3)
-
-
-
-// Corpses
-/obj/effect/mob_spawn/human/orc/corpse
-	icon = 'icons/effects/blood.dmi'
-	icon_state = "remains"
-	color = "#aa9b00"
-	mob_type = /mob/living/carbon/human/species/orc
-
-/obj/effect/mob_spawn/human/orc/corpse/savageorc
-	mob_name = "Savage Orc"
-	name = "Savage Orc"
-	skin_tone = "#50715C"
-	hairstyle = "Bald"
-	facial_hairstyle = "Shaved"
-	outfit = /datum/outfit/savageorc
-
-/obj/effect/mob_spawn/human/orc/corpse/savageorc2
-	mob_name = "Savage Orc"
-	name = "Savage Orc"
-	skin_tone = "#50715C"
-	hairstyle = "Bald"
-	facial_hairstyle = "Shaved"
-	outfit = /datum/outfit/savageorc2
-
-/datum/outfit/savageorc
-//	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag	Vanderlin clothing
-	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
-
-/datum/outfit/savageorc2
-//	shirt = /obj/item/clothing/suit/roguetown/shirt/tribalrag
-	pants =	/obj/item/clothing/under/roguetown/loincloth/brown
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedanklets
-	head = /obj/item/clothing/head/roguetown/helmet/leather
-
-/obj/effect/mob_spawn/human/orc/corpse/orcmarauder
-	mob_name = "Orc Marauder"
-	name = "Orc Marauder"
-	skin_tone = "#50715C"
-	hairstyle = "Bald"
-	facial_hairstyle = "Shaved"
-//	outfit = /datum/outfit/orcmarauder  doesnt actually equip this TO DO
-	mob_type = /mob/living/carbon/human/species/orc/marauder
-/*
-/datum/outfit/orcmarauder
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants =	/obj/item/clothing/under/roguetown/chainlegs
-	shoes = /obj/item/clothing/shoes/roguetown/boots/furlinedboots
-	head = /obj/item/clothing/head/roguetown/helmet/leather
-*/
-/obj/effect/mob_spawn/human/orc/corpse/orcravager
-	mob_name = "Orc Ravager"
-	name = "Orc Ravager"
-	skin_tone = "#50715C"
-	hairstyle = "Bald"
-	facial_hairstyle = "Shaved"
-	outfit = /datum/outfit/orcravager
-
-/datum/outfit/orcravager
-	armor = /obj/item/clothing/suit/roguetown/armor/chainmail
-	pants =	/obj/item/clothing/under/roguetown/chainlegs
-	shoes = /obj/item/clothing/shoes/roguetown/boots/armor
-	head = /obj/item/clothing/head/roguetown/helmet/skullcap
-	gloves = /obj/item/clothing/gloves/roguetown/chain
-	neck = /obj/item/clothing/neck/roguetown/chaincoif
-///	mask = /obj/item/clothing/mask/rogue/skullmask	Vanderlin clothing TO DO review it
-
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion
-	color = "#82aa00"
-	mob_type = /mob/living/carbon/human/species/orc/dwarfinvasion
-
-/mob/living/carbon/human/species/orc/dwarfinvasion/after_creation()
-	..()
-	equipOutfit(new /datum/outfit/job/roguetown/npc/orc/dead_invader)
-
-/datum/outfit/job/roguetown/npc/orc/dead_invader/pre_equip(mob/living/carbon/human/H)
-	..()
-	var/loadout = rand(1,5)
-	switch(loadout)
-		if(1)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
-		if(2)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
-			cloak = /obj/item/clothing/cloak/raincloak/brown
-		if(3)
-			cloak = /obj/item/clothing/cloak/raincloak/brown
-		if(4)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
-			cloak = /obj/item/clothing/cloak/raincloak/brown
-		if(5)
-			armor = /obj/item/clothing/suit/roguetown/armor/leather/hide/orc
-			cloak = /obj/item/clothing/cloak/raincloak/brown
 
 /*	..................   Dwarf Underdweller Corpse   ................... */
 /obj/effect/mob_spawn/human/corpse/damaged/underdweller
@@ -579,6 +419,7 @@
 	. = ..()
 
 /obj/structure/flora/rogueflower/random
+	icon_state = "ppflowers"
 /obj/structure/flora/rogueflower/random/Initialize()
 	icon_state = pick("reedbush", "lavendergrass", "ywflowers", "brflower", "ppflowers")
 	. = ..()
@@ -586,6 +427,9 @@
 /obj/structure/flora/rogueflower/fallenleaves
 	icon_state = "leaves"
 	alpha = 200
+/obj/structure/flora/rogueflower/fallenleaves/Crossed(mob/living/L)
+	. = ..()
+	playsound(L.loc, "plantcross", 50, FALSE, -1)
 
 /obj/structure/flora/rogueflower/reedbush
 	icon_state = "reedbush"
@@ -616,6 +460,7 @@
 
 /obj/structure/flora/roguegrass/herb
 	icon = 'modular/stonekeep/icons/pigflora.dmi'
+	alpha = 230
 
 /*	..................   Bear pelt better   ................... */
 /obj/structure/bearpelt
@@ -1043,7 +888,7 @@
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
 
-
+/*	could not get this to work. Randomiszes where travel tiles appear, from BS/RW branch, see their map for examples.
 GLOBAL_LIST_EMPTY(travel_tile_locations)
 
 /obj/effect/landmark/travel_tile_location
@@ -1104,3 +949,13 @@ GLOBAL_LIST_EMPTY(travel_spawn_points)
 		log_world("Unable to find spot for random travel transition: [travel_id] [travel_goes_to_id]")
 		return
 	create_travel_tiles(location, travel_id, travel_goes_to_id, required_trait, path)
+*/
+
+
+/obj/effect/landmark/start/gravekeeper
+	name = "Gravekeeper"
+	icon_state = "arrow"
+
+/obj/structure/handcart/corpse
+	name = "corpse cart"
+	color = "#b4b4b6"

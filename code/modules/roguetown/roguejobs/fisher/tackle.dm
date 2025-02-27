@@ -133,7 +133,7 @@
 	desc = "A small amount of dough, rolled into a ball. Tends to attract carps."
 	fishinglist = list(/obj/item/reagent_containers/food/snacks/fish/carp = 4,
 						/obj/item/reagent_containers/food/snacks/fish/shrimp = 1)
-	icon = 'icons/roguetown/items/food.dmi'
+	icon = 'modular/stonekeep/icons/food.dmi'
 	icon_state = "doughslice"
 
 /obj/item/fishing/bait/gray
