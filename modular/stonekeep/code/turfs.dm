@@ -36,6 +36,7 @@
 	icon_state = "cobblerock_alt"
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	neighborlay = "cobblerock_alt"
+	smooth = SMOOTH_TRUE	// needed ?
 
 /turf/open/floor/rogue/cobblerock/alt/Initialize()
 	. = ..()
@@ -145,7 +146,10 @@
 	tiled_dirt = FALSE
 	landsound = 'sound/foley/jumpland/grassland.wav'
 	slowdown = 0
+	neighborlay = "hayedge"
 
+/turf/open/floor/rogue/hay/cardinal_smooth(adjacencies)
+	roguesmooth(adjacencies)
 
 /*	..................   Kaizoku Sand   ................... */
 /turf/open/floor/rogue/sand
@@ -279,3 +283,97 @@
 	name = "Bandit_travel_D"
 	id = "bandit_tile4"
 	mappath = "_maps/map_files/candlelight/templates/bantravel_d.dmm"
+
+
+/area/rogue/outdoors/mountains/deception
+	name = "deception"
+	icon_state = "deception"
+	first_time_text = "THE CANYON OF DECEPTION"
+	ambush_types = list(
+				/turf/open/floor/rogue/dirt)
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 20,
+				/mob/living/carbon/human/species/skeleton/skilled/fighter = 15,
+				/mob/living/carbon/human/species/goblin/skilled/ambush/hell = 50)
+
+/area/rogue/outdoors/mountains/decap
+	name = "mt decapitation"
+	icon_state = "decap"
+	ambush_types = list(
+				/turf/open/floor/rogue/dirt)
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/troll = 15,
+				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 25,
+				/mob/living/carbon/human/species/skeleton/skilled/fighter = 25)
+	droning_sound = 'sound/music/area/decap.ogg'
+	droning_sound_dusk = null
+	droning_sound_night = null
+	first_time_text = "MOUNT DECAPITATION"
+	ambush_times = list("night","dawn","dusk","day")
+	converted_type = /area/rogue/indoors/shelter/mountains/decap
+
+
+/area/rogue/outdoors/woods/stone
+	ambush_types = list(
+				/turf/open/floor/rogue/grass)
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/wolf = 20,
+				/mob/living/simple_animal/hostile/retaliate/rogue/spider/hairy = 10)
+	first_time_text = "HOWLING FOREST"
+	converted_type = /area/rogue/indoors/shelter/woods
+
+
+/area/rogue/outdoors/beach
+	name = "beach"
+	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
+	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
+	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
+
+/area/rogue/under/cave/abandoned_mine
+	name = "abandoned mine"
+	first_time_text = "Abandoned Mine"
+	ambush_types = list(
+				/turf/open/floor/rogue/dirt)
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 30,
+				/mob/living/carbon/human/species/goblin/skilled/ambush/cave = 20)
+
+
+
+/area/rogue/under/catacombs
+	name = "catacombs"
+	icon_state = "cavewet"
+	first_time_text = "The Catacombs"
+	ambientsounds = AMB_CAVEWATER
+	ambientnight = AMB_CAVEWATER
+	spookysounds = SPOOKY_CAVE
+	spookynight = SPOOKY_CAVE
+	droning_sound = 'sound/music/area/caves.ogg'
+	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
+	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
+	ambush_times = list("night","dawn","dusk","day")
+	ambush_types = list(
+				/turf/open/water/swamp)
+	ambush_mobs = list(
+				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 30,
+				/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 10)
+	converted_type = /area/rogue/outdoors/caves
+
+/area/rogue/under/catacombs/dwarfoutpost
+	name = "underrock outpost"
+	first_time_text = "Underrock Outpost"
+	ambush_types = list(
+				/turf/open/water/swamp)
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/rogue/lamia = 30,
+				/mob/living/simple_animal/hostile/retaliate/rogue/headless = 20)
+
+/area/rogue/under/catacombs/dwarfoutpost/orcy
+	ambush_types = list(
+				/turf/open/floor/rogue/blocks/newstone/alt)
+	ambush_mobs = list(
+				/mob/living/carbon/human/species/orc/skilled/savage = 50)
+
+/area/rogue/under/town/caverogue/saltmine
+	name = "salt mine"
+	first_time_text = "Salt Mine"

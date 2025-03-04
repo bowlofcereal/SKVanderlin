@@ -187,43 +187,6 @@
 
 
 
-// =================================================================================
-/*----------------\
-| Lighting tweaks |
-\----------------*/
-// base was 8, 5 for torches
-
-/obj/machinery/light/rogue/firebowl
-	brightness = 10
-/obj/machinery/light/rogue/firebowl/Initialize()
-	. = ..()
-	light_outer_range =  9
-
-/obj/machinery/light/rogue/wallfire
-	brightness = 9
-
-/obj/machinery/light/rogue/torchholder
-	brightness = 7
-
-/obj/machinery/light/rogue/campfire
-	brightness = 8
-/obj/machinery/light/rogue/campfire/Initialize()
-	. = ..()
-	light_outer_range =  6
-
-
-/obj/machinery/light/rogue/torchholder/empty
-	lacks_torch = TRUE
-	pixel_y = 32
-
-/obj/machinery/light/rogue/torchholder/cold
-	unlit_torch = TRUE
-	pixel_y = 32
-
-/obj/machinery/light/rogue/firebowl/cold/Initialize(mapload)
-	. = ..()
-	addtimer(CALLBACK(src, PROC_REF(extinguish)), 10)
-
 // =============================================================================
 // ========================		WEATHER EDITS		============================
 
@@ -326,23 +289,6 @@
 	icon_state = "tracks"
 
 
-
-// ==============================================================
-/*	..................   Various mapping aides   ................... */
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken
-	desc = "A long shirt of maille, this one is made for a short man it seems."
-/obj/item/clothing/suit/roguetown/armor/chainmail/hauberk/broken/Initialize()
-	. = ..()
-	obj_break()
-
-/obj/item/clothing/suit/roguetown/armor/chainmail/battered
-	desc = "A good quality haubergon, but weakened by many blows."
-	max_integrity = INTEGRITY_STANDARD
-/*
-/obj/structure/roguethrone/statues
-	icon = 'modular/Mapping/icons/96x96.dmi
-*/
-
 /*	..................   Misc   ................... */
 /obj/item/roguestatue/gnome	// for the wizards tower
 	name = "petrified gnome"
@@ -385,25 +331,6 @@
 	icon_state = "wallskull"
 
 
-/*	..................   Dwarf Underdweller Corpse   ................... */
-/obj/effect/mob_spawn/human/corpse/damaged/underdweller
-	icon = 'icons/effects/blood.dmi'
-	icon_state = "remains"
-	color = "#aa9b00"
-	mob_type = /mob/living/carbon/human/species/dwarf/mountain
-	mob_name = "Dwarf Underdweller"
-	name = "Dwarf Underdweller"
-	hairstyle = "Miner"
-	facial_hairstyle = "Pick"
-	outfit = /datum/outfit/deadunderdweller
-
-/datum/outfit/deadunderdweller
-	armor = /obj/item/clothing/suit/roguetown/armor/cuirass/iron
-	shirt = /obj/item/clothing/suit/roguetown/shirt/undershirt/sailor/red
-	pants = /obj/item/clothing/under/roguetown/trou/leather
-	shoes = /obj/item/clothing/shoes/roguetown/simpleshoes/buckle
-	backl = /obj/item/storage/backpack/rogue/backpack
-	head = /obj/item/clothing/head/roguetown/helmet/leather/minershelm
 
 
 // =============================================================================
@@ -478,41 +405,6 @@
 	name = "Herbal Soap"
 	cost = 20
 	contains = /obj/item/soap
-
-
-// =============================================================================
-// ============================		LANDMARKS	================================
-
-/*	..................   Dwarf Outpost   ................... */
-/obj/effect/landmark/map_load_mark/dwarf_outpost
-	name = "Dwarf Outpost"
-	templates = list( "Dwarf_Outpost_1","Dwarf_Outpost_2" )
-
-/datum/map_template/dwarf_outpost_i
-	name = "Dwarf Outpost Orc"
-	id = "Dwarf_Outpost_1"
-	mappath = "_maps/map_files/templates/dwarf_outpost/Dwarf_Outpost_1.dmm"
-
-/datum/map_template/dwarf_outpost_ii
-	name = "Dwarf Outpost Beastmen"
-	id = "Dwarf_Outpost_2"
-	mappath = "_maps/map_files/templates/dwarf_outpost/Dwarf_Outpost_2.dmm"
-
-
-/*	..................   Roadblock   ................... */
-/obj/effect/landmark/map_load_mark/hamlet_roadblock
-	name = "Roadblock"
-	templates = list( "roadblock_1","roadblock_2" )
-
-/datum/map_template/roadblock_i
-	name = "Roadblock"
-	id = "roadblock_1"
-	mappath = "_maps/map_files/templates/stonehamlet/roadblock_1.dmm"
-
-/datum/map_template/roadblock_ii
-	name = "No roadblock"
-	id = "roadblock_2"
-	mappath = "_maps/map_files/templates/stonehamlet/roadblock_2.dmm"
 
 
 // =============================================================================
@@ -959,3 +851,4 @@ GLOBAL_LIST_EMPTY(travel_spawn_points)
 /obj/structure/handcart/corpse
 	name = "corpse cart"
 	color = "#b4b4b6"
+

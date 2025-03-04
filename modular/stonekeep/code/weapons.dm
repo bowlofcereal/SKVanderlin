@@ -86,6 +86,7 @@
 
 /obj/item/rogueweapon/flail/sflail
 	icon = 'modular/stonekeep/icons/weapons.dmi'
+	icon_state = "sflail"
 
 /obj/item/rogueweapon/knife/cleaver/combat
 	force = DAMAGE_DAGGER+2

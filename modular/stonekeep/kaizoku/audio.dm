@@ -80,11 +80,6 @@
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/kaizoku.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Abyssariad.ogg'
 
-/area/rogue/outdoors/beach
-	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
-	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
-	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Defenestration.ogg'
-
 /area/rogue/under
 	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Oceansanct.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Town_in_Rogue.ogg'
@@ -120,45 +115,6 @@
 	droning_sound = 'sound/music/area/caves.ogg'
 	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
-
-
-/area/rogue/under/catacombs
-	name = "catacombs"
-	icon_state = "cavewet"
-	first_time_text = "The Catacombs"
-	ambientsounds = AMB_CAVEWATER
-	ambientnight = AMB_CAVEWATER
-	spookysounds = SPOOKY_CAVE
-	spookynight = SPOOKY_CAVE
-	droning_sound = 'sound/music/area/caves.ogg'
-	droning_sound_dusk = 'modular/stonekeep/kaizoku/sound/ambience/Bucolic.ogg'
-	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
-/*
-	ambush_times = list("night","dawn","dusk","day")
-	ambush_types = list(
-				/turf/open/water/swamp)
-	ambush_mobs = list(
-				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 30,
-				/mob/living/simple_animal/hostile/retaliate/rogue/bigrat = 10)
-	converted_type = /area/rogue/outdoors/caves
-*/
-/area/rogue/under/catacombs/dwarfoutpost
-	name = "underrock outpost"
-	first_time_text = "Underrock Outpost"
-/*
-	ambush_types = list(
-				/turf/open/water/swamp)
-	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/rogue/lamia = 30,
-				/mob/living/simple_animal/hostile/retaliate/rogue/headless = 20)
-*/
-/area/rogue/under/catacombs/dwarfoutpost/orcy
-/*
-	ambush_types = list(
-				/turf/open/floor/rogue/blocks/newstone/alt)
-	ambush_mobs = list(
-				/mob/living/carbon/human/species/orc/skilled/savage = 50)
-*/
 
 
 
